@@ -1,0 +1,47 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+מכירת אדמות בארצות הברית עם ליווי מקצועי מלא. Peleg Group מתמחה בהשקעות קרקע רווחיות בשוק האמריקאי. גלו הזדמנויות השקעה ייחודיות היום!
+
+### הזדמנויות
+https://example.com/opportunities
+גלו אדמות למכירה ארצות הברית במיקומים אסטרטגיים. מגוון הזדמנויות השקעה בקרקעות עם פוטנציאל צמיחה גבוה. בדקו את הנכסים הזמינים שלנו עכשיו!
+
+### בדיקת נאותות
+https://example.com/due-diligence
+שירותי בדיקת נאותות מקצועיים לרכישת קרקעות בארצות הברית. אנו בודקים כל פרט משפטי ופיזי כדי להבטיח השקעה בטוחה ורווחית. קבלו ייעוץ מומחים!
+
+### צור קשר
+https://example.com/contact
+צרו קשר עם מומחי Peleg Group לייעוץ אישי במכירת אדמות בארצות הברית. נשמח לענות על כל שאלה ולהציע הזדמנויות השקעה מותאמות אישית. התקשרו היום!
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
