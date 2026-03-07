@@ -1,7 +1,6 @@
 {
   "he": {
     "translation": {
-      "nav-home": "בית",
       "home_h1_1": "השקעה בקרקעות אמריקאיות, ממופה בבהירות",
       "home_h2_2": "דרך ממושמעת להעריך קרקעות",
       "home_h2_3": "הזדמנויות, מוצגות כערכי אטלס.",
@@ -786,7 +785,6 @@
   },
   "en": {
     "translation": {
-      "nav-home": "Home",
       "home_h1_1": "American Land Investment, Mapped with Clarity",
       "home_h2_2": "A Disciplined Way to Evaluate Land",
       "home_h2_3": "Opportunities, Presented as Atlas Values.",
