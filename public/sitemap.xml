@@ -2,129 +2,129 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com</loc>
+    <loc>https://peleg-group-llc.zappy5.app</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app" />
   </url>
   <url>
-    <loc>https://example.com/en</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app" />
   </url>
   <url>
-    <loc>https://example.com/opportunities</loc>
+    <loc>https://peleg-group-llc.zappy5.app/opportunities</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/opportunities" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/opportunities" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/opportunities" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/opportunities" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/opportunities" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/opportunities" />
   </url>
   <url>
-    <loc>https://example.com/en/opportunities</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/opportunities</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/opportunities" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/opportunities" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/opportunities" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/opportunities" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/opportunities" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/opportunities" />
   </url>
   <url>
-    <loc>https://example.com/due-diligence</loc>
+    <loc>https://peleg-group-llc.zappy5.app/due-diligence</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/due-diligence" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/due-diligence" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/due-diligence" />
   </url>
   <url>
-    <loc>https://example.com/en/due-diligence</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/due-diligence</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/due-diligence" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/due-diligence" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/due-diligence" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/due-diligence" />
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
+    <loc>https://peleg-group-llc.zappy5.app/contact</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/contact" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/contact" />
   </url>
   <url>
-    <loc>https://example.com/en/contact</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/contact</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/contact" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/contact" />
   </url>
   <url>
-    <loc>https://example.com/privacy</loc>
+    <loc>https://peleg-group-llc.zappy5.app/privacy</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/privacy" />
   </url>
   <url>
-    <loc>https://example.com/en/privacy</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/privacy</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/privacy" />
   </url>
   <url>
-    <loc>https://example.com/terms</loc>
+    <loc>https://peleg-group-llc.zappy5.app/terms</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/terms" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/terms" />
   </url>
   <url>
-    <loc>https://example.com/en/terms</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/terms</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/terms" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/terms" />
   </url>
   <url>
-    <loc>https://example.com/accessibility</loc>
+    <loc>https://peleg-group-llc.zappy5.app/accessibility</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/accessibility" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/accessibility" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/accessibility" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/accessibility" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/accessibility" />
   </url>
   <url>
-    <loc>https://example.com/en/accessibility</loc>
+    <loc>https://peleg-group-llc.zappy5.app/en/accessibility</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://example.com/accessibility" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/accessibility" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/accessibility" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://peleg-group-llc.zappy5.app/accessibility" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://peleg-group-llc.zappy5.app/en/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peleg-group-llc.zappy5.app/accessibility" />
   </url>
 </urlset>
