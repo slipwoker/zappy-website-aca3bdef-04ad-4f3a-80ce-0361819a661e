@@ -1,6 +1,4 @@
-# Peleg Group LLC — Generative Engine Optimization Map
-
-> A real estate business specializing in land sales in the United States, focusing on property investment opportunities and land transactions for buyers interested in American real estate market.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -40,19 +38,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About Peleg Group LLC
-A real estate business specializing in land sales in the United States, focusing on property investment opportunities and land transactions for buyers interested in American real estate market.
-
-## Services/Products
-- מכירת אדמות בארצות הברית
-
-## Target Audience
-- משקיעים מחפשי אדמות
-- יזמי בנייה
-
-## Industry
-נדל"ן
-
+## About Business
 ---
 
 # Additional Resources
