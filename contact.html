@@ -218,7 +218,12 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="דברו איתנו על השקעה בקרקעות ארה״ב — Peleg Group LLC">
+    <title data-i18n="contact_page_title">דברו איתנו על השקעה בקרקעות ארה״ב — Peleg Group LLC</title>
+  
+  
+  
+  
+  <meta property="og:title" content="דברו איתנו על השקעה בקרקעות ארה״ב — Peleg Group LLC">
   <meta property="og:description" content="צרו קשר עם מומחי Peleg Group לייעוץ אישי במכירת אדמות בארצות הברית. נשמח לענות על כל שאלה ולהציע הזדמנויות השקעה מותאמות אישית. התקשרו היום!">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
@@ -242,6 +247,576 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+    <!-- Iconify for cross-platform flag icons -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script><style id="zappy-multilang-css">
+/* ============================================
+   DIRECTION OVERRIDE STYLES
+   Only set direction property, NOT text-align
+   This preserves centered elements
+   ============================================ */
+
+/* Base direction for LTR */
+html[dir="ltr"], html[dir="ltr"] body {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] main,
+html[dir="ltr"] article,
+html[dir="ltr"] section,
+html[dir="ltr"] .content,
+html[dir="ltr"] .container,
+html[dir="ltr"] .wrapper {
+  direction: ltr !important;
+}
+
+/* ONLY apply text-align to legal page content that needs LTR alignment */
+html[dir="ltr"] .legal-content,
+html[dir="ltr"] .terms-content,
+html[dir="ltr"] .privacy-content,
+html[dir="ltr"] .legal-content p,
+html[dir="ltr"] .terms-content p,
+html[dir="ltr"] .privacy-content p,
+html[dir="ltr"] .legal-content li,
+html[dir="ltr"] .terms-content li,
+html[dir="ltr"] .privacy-content li {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Base direction for RTL */
+html[dir="rtl"], html[dir="rtl"] body {
+  direction: rtl !important;
+}
+
+html[dir="rtl"] main,
+html[dir="rtl"] article,
+html[dir="rtl"] section,
+html[dir="rtl"] .content,
+html[dir="rtl"] .container,
+html[dir="rtl"] .wrapper {
+  direction: rtl !important;
+}
+
+/* ONLY apply text-align to legal page content that needs RTL alignment */
+html[dir="rtl"] .legal-content,
+html[dir="rtl"] .terms-content,
+html[dir="rtl"] .privacy-content,
+html[dir="rtl"] .legal-content p,
+html[dir="rtl"] .terms-content p,
+html[dir="rtl"] .privacy-content p,
+html[dir="rtl"] .legal-content li,
+html[dir="rtl"] .terms-content li,
+html[dir="rtl"] .privacy-content li {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+
+/* ============================================
+   V2 NAVIGATION FIX
+   CRITICAL: For V2 sites created in RTL (Hebrew), the nav elements
+   inherit direction:rtl from the body. This reverses how flex order
+   is interpreted. For LTR pages, we MUST set direction:ltr on nav
+   containers to make the flex order work correctly.
+   
+   This section is ONLY included for V2 sites (detected by nav-right-group
+   or nav-cta-container classes) to avoid affecting V1 site layouts.
+   ============================================ */
+
+/* Fix V2 navbar layout for LTR pages */
+/* Direction must apply to all screen sizes, but flex-direction: row is desktop-only */
+html[dir="ltr"] header,
+html[dir="ltr"] nav,
+html[dir="ltr"] .navbar,
+html[dir="ltr"] .nav-container {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-right-group {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+html[dir="ltr"] .nav-cta-container {
+  direction: ltr !important;
+  order: 1 !important;
+  margin-left: auto !important;
+}
+
+html[dir="ltr"] .nav-menu,
+html[dir="ltr"] #navMenu {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-brand {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+/* DESKTOP ONLY: Horizontal flex layout for navbar elements */
+@media (min-width: 769px) {
+  html[dir="ltr"] header,
+  html[dir="ltr"] nav,
+  html[dir="ltr"] .navbar,
+  html[dir="ltr"] .nav-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-right-group,
+  html[dir="ltr"] .nav-cta-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] #navMenu {
+    flex-direction: row !important;
+  }
+}
+
+
+/* Language Switcher Container - Fixed Position */
+.zappy-lang-switcher-container {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* RTL: Move to left side */
+html[dir="rtl"] .zappy-lang-switcher-container {
+  right: auto;
+  left: 12px;
+}
+
+/* Language Switcher Styles */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Language switcher positioning - minimal, only gap spacing */
+/* NOTE: Removed margin-left:auto rules that broke V2 layouts */
+/* V2 layouts handle positioning via flexbox, we just add small gap */
+header .lang-switcher,
+nav .lang-switcher,
+.navbar .lang-switcher {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.lang-switcher-current {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.lang-switcher-current:hover {
+  opacity: 0.7;
+}
+
+/* ===========================================
+   LANGUAGE DROPDOWN POSITIONING
+   CRITICAL: position: absolute !important overrides any
+   mobile responsive CSS that resets absolute positioning
+   to relative. The dropdown MUST be absolutely positioned
+   relative to its parent .lang-switcher.
+   
+   HIGH SPECIFICITY SELECTORS needed to override:
+   [style*="position: absolute"]:not(...) { position: relative !important }
+   That selector has specificity ~0,4,0 so we need 0,5,0+ to win
+   =========================================== */
+.lang-switcher-dropdown,
+.lang-switcher .lang-switcher-dropdown,
+div.lang-switcher-dropdown,
+.nav-cta-container .lang-switcher .lang-switcher-dropdown,
+.navbar .nav-cta-container .lang-switcher-dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align dropdown's left edge to switcher's left edge */
+  left: 0;
+  right: auto;
+  margin-top: 6px;
+  min-width: 150px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  z-index: 1002 !important;
+}
+
+/* Ultra-high specificity override for problematic mobile responsive CSS */
+/* The problematic rule [style*="position: absolute"]:not():not():not() has specificity 0,4,0 */
+/* We need 0,5,0+ to win, so we add extra class/attribute selectors */
+.lang-switcher .lang-switcher-dropdown[style*="position: absolute"],
+.lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
+.nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
+.navbar .nav-cta-container .lang-switcher-dropdown[style],
+div.lang-switcher > div.lang-switcher-dropdown[style] {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align to left */
+  left: 0;
+  right: auto;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.15s ease;
+}
+
+html[dir="rtl"] .lang-option {
+  text-align: right;
+}
+
+/* RTL: align dropdown's right edge to switcher's right edge */
+html[dir="rtl"] .lang-switcher-dropdown,
+html[lang="he"] .lang-switcher-dropdown,
+html[lang="ar"] .lang-switcher-dropdown {
+  right: 0;
+  left: auto;
+}
+
+.lang-option:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  /* Hide desktop lang-switcher on mobile - hamburger menu handles it */
+  /* High specificity needed to override stored CSS: .nav-cta-container .lang-switcher { display: flex !important } */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+  
+  .zappy-lang-switcher-container {
+    display: none !important;
+  }
+  
+  /* ===========================================
+     MOBILE LANGUAGE SUBMENU (inside hamburger)
+     =========================================== */
+  .mobile-lang-menu {
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+  
+  .mobile-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .mobile-lang-toggle {
+    text-align: right;
+  }
+  
+  .mobile-lang-chevron {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  
+  html[dir="rtl"] .mobile-lang-chevron {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .mobile-lang-options {
+    display: none;
+    flex-direction: column;
+    padding: 0 0 8px 0;
+  }
+  
+  .mobile-lang-options.open {
+    display: flex !important;
+  }
+  
+  .mobile-lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 30px 12px 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  
+  html[dir="rtl"] .mobile-lang-option {
+    text-align: right;
+    padding: 12px 50px 12px 30px;
+  }
+  
+  .mobile-lang-option:hover,
+  .mobile-lang-option:active {
+    opacity: 1;
+  }
+  
+  .mobile-lang-option img {
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+/* ===========================================
+   RTL MOBILE HORIZONTAL OVERFLOW FIX
+   Prevents left whitespace gap in RTL mobile
+   caused by elements extending past viewport
+   =========================================== */
+
+/* Prevent horizontal scroll on RTL pages */
+/* Using 'clip' instead of 'hidden' to avoid breaking position:sticky */
+/* 'hidden' causes overflow-y to compute as 'auto', creating a scroll container */
+html[dir="rtl"],
+html[dir="rtl"] body {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+}
+
+/* Ensure carousel containers clip overflow to prevent horizontal scroll */
+.zappy-carousel-container,
+.zappy-carousel-wrapper,
+.benefits-section,
+.testimonials-section,
+[class*="carousel"] {
+  overflow-x: hidden !important;
+}
+
+/* Ensure lang-switcher parent clips its positioned children */
+.lang-switcher {
+  overflow: visible; /* Keep visible for dropdown to show */
+}
+
+/* ===========================================
+   MOBILE NAV BUTTON POSITIONING
+   CSS handles positioning based on html[dir] attribute.
+   This allows dynamic RTL/LTR switching without inline styles.
+   
+   LTR (default): hamburger LEFT (20px), phone RIGHT (20px)
+   RTL: hamburger RIGHT (20px), phone LEFT (20px) - mirrored
+   =========================================== */
+@media (max-width: 768px) {
+  /* Base positioning and visibility for mobile nav buttons */
+  /* CRITICAL: display: flex overrides any desktop display: none rules */
+  .mobile-toggle,
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    display: flex !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1001 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Phone button color - use accent color for visibility */
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    color: var(--accent, #f59e0b) !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+    fill: currentColor !important;
+  }
+  
+  /* LTR positioning (default) - hamburger LEFT, phone RIGHT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle,
+  html[dir="ltr"] .mobile-toggle {
+    left: 20px !important;
+    right: auto !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]):not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"])[dir="ltr"] .phone-header-btn {
+    right: 20px !important;
+    left: auto !important;
+  }
+  
+  /* LTR mobile menu slides from LEFT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html[dir="ltr"] .nav-menu {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  /* ===========================================
+     MOBILE NAV MENU - VERTICAL LAYOUT FIX
+     CRITICAL: Override any desktop flex-direction: row rules
+     The mobile menu MUST stack vertically (column), not horizontally (row)
+     =========================================== */
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] .nav-menu.active,
+  html[dir="ltr"] #navMenu,
+  html[dir="ltr"] #navMenu.active,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu.active {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  /* RTL mobile menu - also vertical layout */
+  html[dir="rtl"] .nav-menu,
+  html[dir="rtl"] .nav-menu.active,
+  html[dir="rtl"] #navMenu,
+  html[dir="rtl"] #navMenu.active,
+  html[lang="he"] .nav-menu,
+  html[lang="he"] .nav-menu.active,
+  html[lang="ar"] .nav-menu,
+  html[lang="ar"] .nav-menu.active {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  /* LTR mobile menu text alignment - left aligned */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu li,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu a,
+  html[dir="ltr"] .nav-menu li,
+  html[dir="ltr"] .nav-menu a {
+    text-align: left !important;
+  }
+  
+  /* ===========================================
+     LTR MOBILE NAV-CONTAINER LAYOUT FIX
+     V2 sites have nav-container with flex-direction: row-reverse
+     for RTL. For LTR, we need flex-direction: row and centered logo.
+     =========================================== */
+  html[dir="ltr"] .nav-container,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  /* LTR: Center the logo/nav-brand in mobile navbar */
+  html[dir="ltr"] .nav-brand,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-brand {
+    order: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  /* RTL: Center the logo/nav-brand in mobile navbar */
+  html[dir="rtl"] .nav-brand,
+  html[lang="he"] .nav-brand,
+  html[lang="ar"] .nav-brand {
+    order: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  /* RTL lang-switcher dropdown constraint */
+  html[dir="rtl"] .lang-switcher {
+    position: relative;
+  }
+  
+  html[dir="rtl"] .lang-switcher-dropdown {
+    left: auto !important;
+    right: 0 !important;
+    max-width: calc(100vw - 20px);
+  }
+  
+  /* ===========================================
+     RTL MOBILE NAV BUTTON POSITIONING
+     In RTL: hamburger RIGHT, phone LEFT (mirror of LTR)
+     =========================================== */
+  html[dir="rtl"] .mobile-toggle,
+  html[lang="he"] .mobile-toggle,
+  html[lang="ar"] .mobile-toggle {
+    left: auto !important;
+    right: 20px !important;
+  }
+  
+  html[dir="rtl"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="he"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="ar"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  /* Explicitly hide phone button on e-commerce sites (cleaner than fighting with e-commerce CSS). */
+  html[data-zappy-site-type="ecommerce"] .phone-header-btn {
+    display: none !important;
+  }
+  
+  /* RTL mobile menu slides from RIGHT */
+  html[dir="rtl"] .nav-menu,
+  html[lang="he"] .nav-menu,
+  html[lang="ar"] .nav-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+  
+  /* ===========================================
+     MOBILE LANGUAGE SWITCHER
+     Desktop lang-switcher is hidden on mobile.
+     Language selection is handled by the hamburger
+     menu submenu (.mobile-lang-menu) instead.
+     High specificity to override stored CSS.
+     =========================================== */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+}
+
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -323,18 +898,18 @@
 </head>
 <body>
 
-  <nav class="navbar" dir="rtl">
+  <nav class="navbar">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+    <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;">
       <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
   
   <button class="phone-header-btn" aria-label="Call">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
@@ -342,14 +917,22 @@
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/peleg-group-llc-logo-1772571220222-t2cycm.webp?v=1772571220553-kir61b" alt="Peleg Group LLC" class="logo">
+        <img src="/assets/peleg-group-llc-logo-1772571220222-t2cycm.webp?v=1772571220553-kir61b" alt="Peleg Group LLC" class="logo" data-i18n-alt="contact_alt_81">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/opportunities">הזדמנויות</a></li><li><a href="/due-diligence">בדיקת נאותות</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/opportunities" data-i18n="contact_nav_78">הזדמנויות</a></li><li><a href="/due-diligence" data-i18n="contact_nav_79">בדיקת נאותות</a></li></ul></div>
     
     
     
-    <div class="nav-cta-container">
-      <a href="/contact" class="nav-cta-btn">צור קשר</a>
+    
+<div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#FFF7ED" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
+  <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:#FFF7ED;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="#FFF7ED" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+  </button>
+  <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
+    <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</button>
+  </div>
+</div><div class="nav-cta-container">
+      <a href="/contact" class="nav-cta-btn" data-i18n="contact_nav_80">צור קשר</a>
     </div>
   </div>
 </nav>
@@ -785,23 +1368,23 @@
   <main>
     <section class="contact-hero-section" data-layout-spec="צור קשר-hero" data-hero-type="fullscreen-scrim">
   <div class="contact-hero-section__bg-wrapper">
-    <img data-hero-bg="true" data-placeholder="contact-hero-bg" data-context="Calm aerial landscape photograph of vast open land in the United States, showing rolling hills or plains with soft natural colors, gentle sky gradient from warm cream to soft blue, peaceful and professional atmosphere for real estate business, shot from high altitude with sense of space and opportunity, natural lighting, serene mood" width="1920" height="800" src="/assets/site-contact-hero-bg.webp" alt="נוף אווירי של אדמות בארצות הברית" class="contact-hero-section__bg-image" data-preserve-bg="0">
+    <img data-hero-bg="true" data-placeholder="contact-hero-bg" data-context="Calm aerial landscape photograph of vast open land in the United States, showing rolling hills or plains with soft natural colors, gentle sky gradient from warm cream to soft blue, peaceful and professional atmosphere for real estate business, shot from high altitude with sense of space and opportunity, natural lighting, serene mood" width="1920" height="800" src="/assets/site-contact-hero-bg.webp" alt="נוף אווירי של אדמות בארצות הברית" class="contact-hero-section__bg-image" data-preserve-bg="0" data-i18n-alt="contact_alt_82">
   </div>
   <div class="contact-hero-section__scrim" aria-hidden="true"></div>
   <div class="contact-hero-section__content-wrapper">
     <div class="contact-hero-section__content">
-      <h1 class="contact-hero-section__title">בקשו תמונת מצב של חלקה</h1>
-      <h3 class="contact-hero-section__subtitle">שתפו את הקריטריונים שלכם ונשיב עם נקודת התחלה מותאמת וסקירה ברורה ומקצועית</h3>
-      <a href="#contact-form" class="contact-hero-section__cta btn-primary">שלחו את הקריטריונים שלכם</a>
+      <h1 class="contact-hero-section__title" data-i18n="contact_h1_1">בקשו תמונת מצב של חלקה</h1>
+      <h3 class="contact-hero-section__subtitle" data-i18n="contact_h3_5">שתפו את הקריטריונים שלכם ונשיב עם נקודת התחלה מותאמת וסקירה ברורה ומקצועית</h3>
+      <a href="#contact-form" class="contact-hero-section__cta btn-primary" data-i18n="contact_link_44">שלחו את הקריטריונים שלכם</a>
     </div>
   </div>
   <div class="contact-hero-section__divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1200 80" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="contact-hero-fog-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <lineargradient id="contact-hero-fog-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" style="stop-color:#FBF5EE;stop-"></stop>
           <stop offset="100%" style="stop-color:#FBF5EE;stop-opacity:1"></stop>
-        </linearGradient>
+        </lineargradient>
       </defs>
       <path d="M0,80 L0,50 Q100,45 200,48 T400,42 Q500,48 600,45 T800,50 Q900,45 1000,48 T1200,50 L1200,80 Z" fill="var(--bg-light)"></path>
     </svg>
@@ -810,61 +1393,61 @@
 
 <section class="contact-contact-section" data-layout-spec="צור קשר-contact">
   <div class="contact-contact-container">
-    <h2 class="contact-contact-heading">ספרו לנו מה אתם מחפשים</h2>
+    <h2 class="contact-contact-heading" data-i18n="contact_h2_2">ספרו לנו מה אתם מחפשים</h2>
     
     <div class="contact-contact-grid">
       <!-- Form Column -->
       <div class="contact-contact-form-wrapper">
         <form class="contact-form">
           <div class="contact-form-group">
-            <label for="contact-name" class="contact-form-label">שם מלא</label>
+            <label for="contact-name" class="contact-form-label" data-i18n="contact_label_57">שם מלא</label>
             <input type="text" id="contact-name" name="name" class="contact-form-input" required="">
           </div>
           
           <div class="contact-form-group">
-            <label for="contact-email" class="contact-form-label">דוא"ל</label>
+            <label for="contact-email" class="contact-form-label" data-i18n="contact_label_58">דוא"ל</label>
             <input type="email" id="contact-email" name="email" class="contact-form-input" required="">
           </div>
           
           <div class="contact-form-group">
-            <label for="contact-phone" class="contact-form-label">טלפון</label>
+            <label for="contact-phone" class="contact-form-label" data-i18n="contact_label_59">טלפון</label>
             <input type="tel" id="contact-phone" name="phone" class="contact-form-input" required="">
           </div>
           
           <div class="contact-form-group">
-            <label for="contact-message" class="contact-form-label">הודעה</label>
+            <label for="contact-message" class="contact-form-label" data-i18n="contact_label_60">הודעה</label>
             <textarea id="contact-message" name="message" class="contact-form-textarea" rows="6" required=""></textarea>
           </div>
           
-          <button type="submit" class="contact-form-submit">שלח הודעה</button>
+          <button type="submit" class="contact-form-submit" data-i18n="contact_btn_56">שלח הודעה</button>
         </form>
       </div>
       
       <!-- Guidance Panel -->
       <div class="contact-guidance-panel">
-        <h3 class="contact-guidance-heading">פרטים שימושיים</h3>
+        <h3 class="contact-guidance-heading" data-i18n="contact_h3_6">פרטים שימושיים</h3>
         
         <div class="contact-guidance-content">
-          <p class="contact-guidance-item">מדינות או אזורים מועדפים</p>
-          <p class="contact-guidance-item">טווח שטח (באקרים)</p>
-          <p class="contact-guidance-item">העדפות גישה ותשתיות</p>
-          <p class="contact-guidance-item">שימוש מיועד</p>
-          <p class="contact-guidance-item">לוח זמנים וקריטריונים להחלטה</p>
+          <p class="contact-guidance-item" data-i18n="contact_p_14">מדינות או אזורים מועדפים</p>
+          <p class="contact-guidance-item" data-i18n="contact_p_15">טווח שטח (באקרים)</p>
+          <p class="contact-guidance-item" data-i18n="contact_p_16">העדפות גישה ותשתיות</p>
+          <p class="contact-guidance-item" data-i18n="contact_p_17">שימוש מיועד</p>
+          <p class="contact-guidance-item" data-i18n="contact_p_18">לוח זמנים וקריטריונים להחלטה</p>
         </div>
         
-        <p class="contact-response-note">בדרך כלל אנו עונים עם מתווה צעדים ברור.</p>
+        <p class="contact-response-note" data-i18n="contact_p_19">בדרך כלל אנו עונים עם מתווה צעדים ברור.</p>
       </div>
     </div>
   </div>
   
   <!-- Bottom Divider: Contour-line wave -->
   <div class="contact-contact-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1200 100" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="contour-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <lineargradient id="contour-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" style="stop-color:var(--bg-light);stop-opacity:1"></stop>
           <stop offset="100%" style="stop-color:var(--bg-dark);stop-opacity:1"></stop>
-        </linearGradient>
+        </lineargradient>
       </defs>
       <path d="M0,100 L0,65 Q60,62 120,65 T240,63 Q300,65 360,62 T480,65 Q540,63 600,65 T720,62 Q780,65 840,63 T960,65 Q1020,62 1080,65 T1200,63 L1200,100 Z" fill="var(--bg-light)" opacity="0.3"></path>
       <path d="M0,100 L0,70 Q60,68 120,70 T240,69 Q300,70 360,68 T480,70 Q540,69 600,70 T720,68 Q780,70 840,69 T960,70 Q1020,68 1080,70 T1200,69 L1200,100 Z" fill="var(--bg-light)" opacity="0.4"></path>
@@ -877,39 +1460,39 @@
 
 <section class="contact-details-section" data-layout-spec="צור קשר-details">
   <div class="contact-details-container">
-    <h2 class="contact-details-title">ברור, מקצועי, ומתוך חובת בדיקה ראשונה.</h2>
+    <h2 class="contact-details-title" data-i18n="contact_h2_3">ברור, מקצועי, ומתוך חובת בדיקה ראשונה.</h2>
     
     <div class="contact-details-cards">
       <article class="contact-details-card">
-        <h3 class="contact-details-card-title">סיכום תמציתי</h3>
-        <p class="contact-details-card-text">אתם מקבלים מסמך ממוקד עם הפרטים החיוניים: מיקום, שטח, מחיר, וסיכוני בדיקה ראשוניים. ללא מילוי מיותר – רק המידע שצריך כדי להתקדם.</p>
+        <h3 class="contact-details-card-title" data-i18n="contact_h3_7">סיכום תמציתי</h3>
+        <p class="contact-details-card-text" data-i18n="contact_p_20">אתם מקבלים מסמך ממוקד עם הפרטים החיוניים: מיקום, שטח, מחיר, וסיכוני בדיקה ראשוניים. ללא מילוי מיותר – רק המידע שצריך כדי להתקדם.</p>
       </article>
       
       <article class="contact-details-card">
-        <h3 class="contact-details-card-title">תשובות ישירות</h3>
-        <p class="contact-details-card-text">אנחנו זמינים לשאלות הבהרה ומספקים תשובות ברורות. אם משהו לא ברור או דורש בדיקה נוספת, נדווח על כך באופן גלוי ומקצועי.</p>
+        <h3 class="contact-details-card-title" data-i18n="contact_h3_8">תשובות ישירות</h3>
+        <p class="contact-details-card-text" data-i18n="contact_p_21">אנחנו זמינים לשאלות הבהרה ומספקים תשובות ברורות. אם משהו לא ברור או דורש בדיקה נוספת, נדווח על כך באופן גלוי ומקצועי.</p>
       </article>
       
       <article class="contact-details-card">
-        <h3 class="contact-details-card-title">ללא לחץ</h3>
-        <p class="contact-details-card-text">אנחנו לא מפעילים לחץ ולא דוחפים להחלטה מהירה. תפקידנו להציג את המידע, לא למכור. ההחלטה תמיד שלכם, לאחר בדיקה מושכלת.</p>
+        <h3 class="contact-details-card-title" data-i18n="contact_h3_9">ללא לחץ</h3>
+        <p class="contact-details-card-text" data-i18n="contact_p_22">אנחנו לא מפעילים לחץ ולא דוחפים להחלטה מהירה. תפקידנו להציג את המידע, לא למכור. ההחלטה תמיד שלכם, לאחר בדיקה מושכלת.</p>
       </article>
     </div>
     
     <div class="contact-details-notation">
-      <p class="contact-details-notation-item">פורמט: תמציתי</p>
-      <p class="contact-details-notation-item">אות: סיכונים לאימות</p>
-      <p class="contact-details-notation-item">פעולה: שאלות המשך</p>
+      <p class="contact-details-notation-item" data-i18n="contact_p_23">פורמט: תמציתי</p>
+      <p class="contact-details-notation-item" data-i18n="contact_p_24">אות: סיכונים לאימות</p>
+      <p class="contact-details-notation-item" data-i18n="contact_p_25">פעולה: שאלות המשך</p>
     </div>
   </div>
   
   <div class="contact-details-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1200 60" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="contact-details-ink-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+        <lineargradient id="contact-details-ink-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
           <stop offset="0%" style="stop-color:#0F1E3A;stop-"></stop>
           <stop offset="100%" style="stop-color:#0F1E3A;stop-opacity:0.08"></stop>
-        </linearGradient>
+        </lineargradient>
       </defs>
       <path d="M0,60 L0,30 Q300,25 600,30 T1200,30 L1200,60 Z" fill="var(--bg-light)"></path>
     </svg>
@@ -920,25 +1503,25 @@
   <div class="contact-cta-container">
     <div class="contact-cta-content">
       <div class="contact-cta-text">
-        <h2>מוכנים לחקור הזדמנויות קרקע בארצות הברית?</h2>
-        <p>פנו אלינו עם הקריטריונים שלכם ואנו נחזור אליכם עם נקודת התחלה מותאמת וקריאה.</p>
+        <h2 data-i18n="contact_h2_4">מוכנים לחקור הזדמנויות קרקע בארצות הברית?</h2>
+        <p data-i18n="contact_p_26">פנו אלינו עם הקריטריונים שלכם ואנו נחזור אליכם עם נקודת התחלה מותאמת וקריאה.</p>
         <div class="contact-cta-buttons">
-          <a href="#contact-form" class="btn-primary">שלחו הודעה</a>
-          <a href="/opportunities" class="btn-secondary">צפו בהזדמנויות</a>
+          <a href="#contact-form" class="btn-primary" data-i18n="contact_link_45">שלחו הודעה</a>
+          <a href="/opportunities" class="btn-secondary" data-i18n="contact_link_46">צפו בהזדמנויות</a>
         </div>
       </div>
       <div class="contact-cta-snapshot">
-        <div class="snapshot-label">דוגמת השקעה</div>
-        <div class="snapshot-line"><span class="snapshot-key">APN:</span> <span class="snapshot-value">123-456-789-00</span></div>
-        <div class="snapshot-line"><span class="snapshot-key">מחוז/מדינה:</span> <span class="snapshot-value">Mohave, Arizona</span></div>
-        <div class="snapshot-line"><span class="snapshot-key">שטח:</span> <span class="snapshot-value">2.5 אקר</span></div>
-        <div class="snapshot-line"><span class="snapshot-key">גישה:</span> <span class="snapshot-value">כביש עפר מתוחזק</span></div>
+        <div class="snapshot-label" data-i18n="contact_div_73">דוגמת השקעה</div>
+        <div class="snapshot-line" data-i18n="contact_div_74"><span class="snapshot-key" data-i18n="contact_span_29">APN:</span> <span class="snapshot-value">123-456-789-00</span></div>
+        <div class="snapshot-line" data-i18n="contact_div_75"><span class="snapshot-key" data-i18n="contact_span_30">מחוז/מדינה:</span> <span class="snapshot-value" data-i18n="contact_span_31">Mohave, Arizona</span></div>
+        <div class="snapshot-line" data-i18n="contact_div_76"><span class="snapshot-key" data-i18n="contact_span_32">שטח:</span> <span class="snapshot-value" data-i18n="contact_span_33">2.5 אקר</span></div>
+        <div class="snapshot-line" data-i18n="contact_div_77"><span class="snapshot-key" data-i18n="contact_span_34">גישה:</span> <span class="snapshot-value" data-i18n="contact_span_35">כביש עפר מתוחזק</span></div>
       </div>
     </div>
   </div>
-  <svg class="contact-cta-texture" data-no-icon-edit="true" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <svg class="contact-cta-texture" data-no-icon-edit="true" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 800" preserveaspectratio="xMidYMid slice">
     <defs>
-      <pattern id="contour-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <pattern id="contour-pattern" x="0" y="0" width="120" height="120" patternunits="userSpaceOnUse">
         <path d="M0,60 Q30,50 60,60 T120,60" stroke="rgba(255,247,237,0.03)" stroke-width="1" fill="none"></path>
         <path d="M0,70 Q30,60 60,70 T120,70" stroke="rgba(255,247,237,0.03)" stroke-width="1" fill="none"></path>
         <path d="M0,80 Q30,70 60,80 T120,80" stroke="rgba(255,247,237,0.03)" stroke-width="1" fill="none"></path>
@@ -950,13 +1533,2399 @@
 </section>
   </main>
   
-  <footer class="site-footer"><div class="footer-container"><div class="footer-top"><div class="footer-column footer-about"><img src="/assets/peleg-group-llc-logo-1772571220222-t2cycm.webp?v=1772571220553-kir61b" alt="Peleg Group LLC" class="logo"><p class="footer-description">Peleg Group LLC - מובילים בתחום הנדל"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.</p></div><div class="footer-column footer-links"><h3 class="footer-heading">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/opportunities">הזדמנויות</a></li><li><a href="/due-diligence">בדיקת נאותות</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-column footer-contact"><h3 class="footer-heading">צור קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:peleggroup1@gmail.com">peleggroup1@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:19849776997">19849776997</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States</span></a></li></ul></div><div class="footer-column footer-hours" data-element-id="element-ai-1772886593778-h9k2m5" data-element-type="business-hours"><h3 class="footer-heading">שעות פעילות</h3><ul class="contact-list"><li><i class="fas fa-clock"></i><span>יום שני: 08:00 - 20:00</span></li><li><i class="fas fa-clock"></i><span>יום שלישי: 08:00 - 20:00</span></li><li><i class="fas fa-clock"></i><span>יום רביעי: 08:00 - 20:00</span></li><li><i class="fas fa-clock"></i><span>יום חמישי: 08:00 - 20:00</span></li><li><i class="fas fa-clock"></i><span>יום שישי: 08:00 - 20:00</span></li><li><i class="fas fa-clock"></i><span>יום שבת: סגור</span></li><li><i class="fas fa-clock"></i><span>יום ראשון: סגור</span></li></ul></div><div class="footer-column footer-social"><h3 class="footer-heading">עקבו אחרינו</h3><div class="social-links"><a href="https://facebook.com/Peleg%20Group%20LLC" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a><a href="#" aria-label="WhatsApp" style="display:none !important;"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-bottom-content"><p class="copyright">© 2026 Peleg Group LLC. כל הזכויות שמורות.</p><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a><span class="separator">|</span><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></div></footer>
+  <footer class="site-footer"><div class="footer-container"><div class="footer-top"><div class="footer-column footer-about"><img src="/assets/peleg-group-llc-logo-1772571220222-t2cycm.webp?v=1772571220553-kir61b" alt="Peleg Group LLC" class="logo" data-i18n-alt="contact_alt_83"><p class="footer-description" data-i18n="contact_p_27">Peleg Group LLC - מובילים בתחום הנדל"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.</p></div><div class="footer-column footer-links"><h3 class="footer-heading" data-i18n="contact_h3_10">קישורים מהירים</h3><ul class="footer-nav"><li data-i18n="contact_li_61"><a href="/opportunities" data-i18n="contact_link_47">הזדמנויות</a></li><li data-i18n="contact_li_62"><a href="/due-diligence" data-i18n="contact_link_48">בדיקת נאותות</a></li><li data-i18n="contact_li_63"><a href="/contact" data-i18n="contact_link_49">צור קשר</a></li></ul></div><div class="footer-column footer-contact"><h3 class="footer-heading" data-i18n="contact_h3_11">צור קשר</h3><ul class="contact-list"><li data-i18n="contact_li_64"><i class="fas fa-envelope"></i><a href="mailto:peleggroup1@gmail.com" data-i18n="contact_link_50">peleggroup1@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:19849776997">19849776997</a></li><li data-i18n="contact_li_65"><a href="/" data-i18n="contact_link_51"><i class="fas fa-map-marker-alt"></i><span data-i18n="contact_span_36">500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States</span></a></li></ul></div><div class="footer-column footer-hours" data-element-id="element-ai-1772886593778-h9k2m5" data-element-type="business-hours"><h3 class="footer-heading" data-i18n="contact_h3_12">שעות פעילות</h3><ul class="contact-list"><li data-i18n="contact_li_66"><i class="fas fa-clock"></i><span data-i18n="contact_span_37">יום שני: 08:00 - 20:00</span></li><li data-i18n="contact_li_67"><i class="fas fa-clock"></i><span data-i18n="contact_span_38">יום שלישי: 08:00 - 20:00</span></li><li data-i18n="contact_li_68"><i class="fas fa-clock"></i><span data-i18n="contact_span_39">יום רביעי: 08:00 - 20:00</span></li><li data-i18n="contact_li_69"><i class="fas fa-clock"></i><span data-i18n="contact_span_40">יום חמישי: 08:00 - 20:00</span></li><li data-i18n="contact_li_70"><i class="fas fa-clock"></i><span data-i18n="contact_span_41">יום שישי: 08:00 - 20:00</span></li><li data-i18n="contact_li_71"><i class="fas fa-clock"></i><span data-i18n="contact_span_42">יום שבת: סגור</span></li><li data-i18n="contact_li_72"><i class="fas fa-clock"></i><span data-i18n="contact_span_43">יום ראשון: סגור</span></li></ul></div><div class="footer-column footer-social"><h3 class="footer-heading" data-i18n="contact_h3_13">עקבו אחרינו</h3><div class="social-links"><a href="https://facebook.com/Peleg%20Group%20LLC" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a><a href="#" aria-label="WhatsApp" style="display:none !important;"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-bottom-content"><p class="copyright" data-i18n="contact_p_28">© 2026 Peleg Group LLC. כל הזכויות שמורות.</p><div class="footer-legal"><a href="/privacy" data-i18n="contact_link_52">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms" data-i18n="contact_link_53">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility" data-i18n="contact_link_54">הצהרת נגישות</a><span class="separator">|</span><a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="contact_link_55">Generated by Zappy</a></div></div></div></div></footer>
   
   <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   
   <div data-integration="accessibility:toolbar"></div>
+
+<!-- i18next Multi-Language Support -->
+<script>
+(function() {
+  // Language resources (inline to avoid CDN dependency)
+  const resources = {
+  "he": {
+    "translation": {
+      "home_h1_1": "השקעה בקרקעות אמריקאיות, ממופה בבהירות",
+      "home_h2_2": "דרך ממושמעת להעריך קרקעות",
+      "home_h2_3": "הזדמנויות, מוצגות כערכי אטלס.",
+      "home_h2_4": "הביטחון נולד מהבהירות.",
+      "home_h2_5": "קבלו את הכניסה הבאה לאטלס בתיבת הדואר שלכם.",
+      "home_h3_6": "Peleg Group LLC מאתרת ומציגה הזדמנויות קרקע בארה\"ב עם תצוגה דמוית אטלס: הקשר מיקום, מדדי חלקה ואותות בדיקת נאותות—בנויים להחלטות בטוחות.",
+      "home_h3_7": "שווקים מכוסים",
+      "home_h3_8": "סוגי חלקות",
+      "home_h3_9": "שדות תמונת מצב",
+      "home_p_22": "כל הזדמנות מוצגת עם הקשר מלא—מיקום, נגישות, רמזי ייעוד, והערות סיכון—כך שתוכלו להשוות חלקות כמו דפים באטלס.",
+      "home_p_23": "אזורים נבחרים בארה\"ב",
+      "home_p_24": "כפרי, פנאי, מילוי",
+      "home_p_25": "APN, אקרים, גישה, שירותים",
+      "home_p_26": "צעדים ברורים תוך ימים",
+      "home_p_27": "סיכומים מוכנים למשקיעים",
+      "home_p_28": "שאלות בדיקת נאותות מודרכות",
+      "home_p_29": "אוסף נבחר של חלקות קרקע עם תמונות מצב ברורות – כדי שתוכלו לסנן במהירות ולשאול את שאלות הבדיקה הנכונות.",
+      "home_p_30": "APN: 0542-183-09-0000",
+      "home_p_31": "מחוז: Mohave County, AZ",
+      "home_p_32": "שטח: 40 אקר",
+      "home_p_33": "נוף פתוח עם פוטנציאל לפיתוח עתידי ליד צמתי תחבורה מתפתחים.",
+      "home_p_34": "APN: 1205-447-22-0000",
+      "home_p_35": "מחוז: Coconino County, AZ",
+      "home_p_36": "שטח: 35 אקר",
+      "home_p_37": "מיקום שקט בסביבה טבעית, מושלם למשקיעים המחפשים נכס נופש.",
+      "home_p_38": "APN: 0309-621-15-0000",
+      "home_p_39": "מחוז: Pinal County, AZ",
+      "home_p_40": "שטח: 20 אקר",
+      "home_p_41": "קרבה לאזורי התפשטות עירונית עם אפשרויות פיתוח לטווח ארוך.",
+      "home_p_42": "APN: 0418-305-08-0000",
+      "home_p_43": "מחוז: Yavapai County, AZ",
+      "home_p_44": "שטח: 10 אקר",
+      "home_p_45": "אידיאלי למי שמחפש פרטיות ואורח חיים עצמאי באזור טבעי.",
+      "home_p_46": "APN: 0627-890-31-0000",
+      "home_p_47": "מחוז: Maricopa County, AZ",
+      "home_p_48": "שטח: 5 אקר",
+      "home_p_49": "השקעה יציבה באזור עם תשתיות קיימות ונגישות נוחה.",
+      "home_p_50": "APN: 0735-214-47-0000",
+      "home_p_51": "מחוז: Navajo County, AZ",
+      "home_p_52": "שטح: 15 אקר",
+      "home_p_53": "קרקע נגישה עם פוטנציאל מסחרי בזכות מיקומה המרכזי.",
+      "home_p_54": "משקיעים מעריכים מצגת שמכבדת גם את סיפור הקרקע וגם את משמעת המספרים.",
+      "home_p_55": "\"התיעוד המפורט של החלקות, כולל מפות ונתוני שטח מדויקים, העניק לי את הביטחון להתקדם בהשקעה. כל פרט היה שקוף וברור.\"",
+      "home_p_56": "משקיע, אסטרטגיית החזקה ארוכת טווח",
+      "home_p_57": "\"התגובה המהירה והמקצועית לכל שאלה, יחד עם הצגת השלבים הבאים בצורה ברורה, גרמו לתהליך להרגיש מאורגן ונגיש. הרגשתי מלווה לאורך כל הדרך.\"",
+      "home_p_58": "משקיעה, תיק נדל\"ן מגוון",
+      "home_p_59": "\"המפות והמדדים המפורטים סיפקו לי תמונה שלמה של הנכס והפוטנציאל שלו. הרגשתי שאני מבין בדיוק במה אני משקיע, ללא הפתעות.\"",
+      "home_p_60": "משקיע, התמחות באדמות חקלאיות",
+      "home_p_61": "ספרו לנו מה אתם מחפשים—אזור, טווח שטח, צרכי גישה—ואנחנו נשיב עם נקודת התחלה מותאמת אישית וסקירה מעמיקה המתמקדת בבדיקת נאותות.",
+      "home_p_62": "קואורדינטות: 34.0522°N, 118.2437°W",
+      "home_p_63": "APN: 5421-003-017",
+      "home_p_64": "שטח: 40 אקר",
+      "home_p_65": "גישה: כביש עפר מתוחזק, 1.2 מייל מכביש ראשי",
+      "home_p_66": "הערות: בדקו זיקת הנאה, זכויות מים, ותקנות אזוריות",
+      "home_p_67": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "home_p_68": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "home_h3_10": "זמן תגובה",
+      "home_h3_11": "תיעוד",
+      "home_h3_12": "תמיכה",
+      "home_h3_13": "שטח במדבר הגבוה",
+      "home_h3_14": "שטח יערות לפנאי",
+      "home_h3_15": "חלקה ליד מסדרון צמיחה",
+      "home_h3_16": "קרקע למגורים מחוץ לרשת",
+      "home_h3_17": "חלקת ערך להחזקה ארוכה",
+      "home_h3_18": "חלקה עם גישה לכביש מחוזי",
+      "home_h3_19": "קישורים מהירים",
+      "home_h3_20": "צור קשר",
+      "home_h3_21": "עקבו אחרינו",
+      "terms_h1_1": "תנאי שימוש",
+      "terms_h2_2": "1. הגדרות",
+      "terms_h2_3": "2. תיאור השירותים",
+      "terms_h2_4": "3. תנאי השימוש",
+      "terms_h2_5": "4. חובות המשתמש",
+      "terms_h2_6": "5. מדיניות תשלומים והחזרים",
+      "terms_h2_7": "6. הגבלת אחריות",
+      "terms_h2_8": "7. זכויות יוצרים וקניין רוחני",
+      "terms_h2_9": "8. פרטיות",
+      "terms_p_18": "Peleg Group LLC מספקת נדל\"ן דרך האתר. השירותים כפופים לתנאים המפורטים במסמך זה \n            ועשויים להשתנות מעת לעת.",
+      "terms_p_19": "השימוש באתר מותנה בעמידה בתנאים הבאים:",
+      "terms_p_20": "במידה והשירותים כוללים תשלום:",
+      "terms_p_21": "השירותים ניתנים \"כפי שהם\" ללא אחריות מכל סוג. החברה לא תהיה אחראית לנזקים עקיפים, \n            תוצאתיים או מיוחדים הנובעים משימוש באתר, למעט במקרים בהם החוק קובע אחרת.",
+      "terms_p_22": "כל התכנים באתר, כולל טקסטים, תמונות, עיצוב וקוד, מוגנים בזכויות יוצרים השייכות לPeleg Group LLC. \n            אסור לשכפל, להפיץ או לעשות שימוש מסחרי בתכנים ללא אישור בכתב.",
+      "terms_p_23": "איסוף ושימוש במידע אישי כפופים למדיניות הפרטיות שלנו. השימוש באתר מהווה הסכמה \n            למדיניות הפרטיות כפי שמפורט בנפרד.",
+      "terms_p_24": "החברה רשאית לשנות תנאי שימוש אלה בכל עת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת \n            של 30 יום. המשך השימוש לאחר השינוי מהווה הסכמה לתנאים החדשים.",
+      "terms_p_25": "החברה רשאית להפסיק או להגביל את השירות בכל עת, לרבות במקרה של הפרת תנאי השימוש. \n            במקרה של סיום השירות, יישמרו הוראות הסעיפים הרלוונטיים.",
+      "terms_p_26": "תנאי שימוש אלה כפופים לחוקי מדינת ישראל. כל סכסוך יידון בבתי המשפט המוסמכים בישראל, \n            תוך מתן עדיפות לבוררות או גישור במידת האפשר.",
+      "terms_p_27": "לשאלות או הבהרות בנוגע לתנאי השימוש:",
+      "terms_p_28": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "terms_p_29": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "home_li_129": "הזדמנויות",
+      "home_li_130": "בדיקת נאותות",
+      "home_li_131": "צור קשר",
+      "home_li_132": "peleggroup1@gmail.com",
+      "home_li_133": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_h2_10": "9. שינוי תנאי השימוש",
+      "terms_h2_11": "10. סיום השירות",
+      "terms_h2_12": "11. דין חל ויישוב סכסוכים",
+      "terms_h2_13": "12. הוראות כלליות",
+      "terms_h2_14": "13. פרטי יצירת קשר",
+      "terms_h3_15": "קישורים מהירים",
+      "terms_h3_16": "צור קשר",
+      "terms_h3_17": "עקבו אחרינו",
+      "terms_li_41": "\"החברה\" - Peleg Group LLC",
+      "terms_li_42": "\"המשתמש\" - כל מי שגולש או משתמש באתר",
+      "terms_li_43": "\"השירותים\" - נדל\"ן הניתנים דרך האתר",
+      "terms_li_44": "השימוש באתר למטרות חוקיות בלבד",
+      "terms_li_45": "אי-הפרעה לפעילות האתר או משתמשים אחרים",
+      "terms_li_46": "אי-העלאת תוכן פוגעני, לא חוקי או מזיק",
+      "terms_li_47": "כיבוד זכויות יוצרים וקניין רוחני",
+      "terms_li_48": "אי-ביצוע פעולות שעלולות לפגוע באבטחת האתר",
+      "terms_li_49": "מתן מידע נכון ומדויק בעת הרשמה או הזמנה",
+      "terms_li_50": "שמירה על סודיות פרטי הגישה לחשבון",
+      "terms_li_51": "הודעה מיידית על כל שימוש לא מורשה בחשבון",
+      "terms_li_52": "עדכון מידע אישי במידת הצורך",
+      "terms_li_53": "התשלומים מבוצעים דרך מערכות בטוחות ומוצפנות",
+      "terms_li_54": "המחירים כוללים מע\"ם כנדרש בחוק",
+      "terms_li_55": "זכות ביטול עסקה תעמוד בהתאם לחוק הגנת הצרכן",
+      "terms_li_56": "החזרים יבוצעו תוך 14 ימי עסקים מאישור הביטול",
+      "terms_li_57": "אם חלק מהתנאים יוכרז כבלתי תקף, יישארו שאר התנאים בתוקף",
+      "terms_li_58": "אי-אכיפה של זכות לא תחשב כוויתור עליה",
+      "terms_li_59": "תנאי השימוש מהווים את מלוא ההסכם בין הצדדים",
+      "terms_li_60": "חברה: Peleg Group LLC",
+      "terms_li_61": "אימייל: info@company.com",
+      "terms_li_62": "טלפון: 19849776997",
+      "terms_li_63": "כתובת: כתובת החברה, ישראל",
+      "terms_li_64": "הזדמנויות",
+      "terms_li_65": "בדיקת נאותות",
+      "terms_li_66": "צור קשר",
+      "terms_li_67": "peleggroup1@gmail.com",
+      "terms_li_68": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_h1_1": "בקשו תמונת מצב של חלקה",
+      "contact_h2_2": "ספרו לנו מה אתם מחפשים",
+      "contact_h2_3": "ברור, מקצועי, ומתוך חובת בדיקה ראשונה.",
+      "contact_h2_4": "מוכנים לחקור הזדמנויות קרקע בארצות הברית?",
+      "contact_h3_5": "שתפו את הקריטריונים שלכם ונשיב עם נקודת התחלה מותאמת וסקירה ברורה ומקצועית",
+      "contact_h3_6": "פרטים שימושיים",
+      "contact_h3_7": "סיכום תמציתי",
+      "contact_h3_8": "תשובות ישירות",
+      "contact_h3_9": "ללא לחץ",
+      "contact_p_14": "מדינות או אזורים מועדפים",
+      "contact_p_15": "טווח שטח (באקרים)",
+      "contact_p_16": "העדפות גישה ותשתיות",
+      "contact_p_17": "שימוש מיועד",
+      "contact_p_18": "לוח זמנים וקריטריונים להחלטה",
+      "contact_p_19": "בדרך כלל אנו עונים עם מתווה צעדים ברור.",
+      "contact_p_20": "אתם מקבלים מסמך ממוקד עם הפרטים החיוניים: מיקום, שטח, מחיר, וסיכוני בדיקה ראשוניים. ללא מילוי מיותר – רק המידע שצריך כדי להתקדם.",
+      "contact_p_21": "אנחנו זמינים לשאלות הבהרה ומספקים תשובות ברורות. אם משהו לא ברור או דורש בדיקה נוספת, נדווח על כך באופן גלוי ומקצועי.",
+      "contact_p_22": "אנחנו לא מפעילים לחץ ולא דוחפים להחלטה מהירה. תפקידנו להציג את המידע, לא למכור. ההחלטה תמיד שלכם, לאחר בדיקה מושכלת.",
+      "contact_p_23": "פורמט: תמציתי",
+      "contact_p_24": "אות: סיכונים לאימות",
+      "contact_p_25": "פעולה: שאלות המשך",
+      "contact_p_26": "פנו אלינו עם הקריטריונים שלכם ואנו נחזור אליכם עם נקודת התחלה מותאמת וקריאה.",
+      "contact_p_27": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "contact_p_28": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "home_alt_146": "Peleg Group LLC",
+      "home_alt_147": "נוף אווירי של אדמות במדבר האמריקאי עם קווי גבול חלקות",
+      "home_alt_148": "Peleg Group LLC",
+      "home_div_137": "מיקוד\n            החזקות קרקע ארוכות טווח",
+      "home_div_138": "כיסוי\n            שווקים נבחרים בארה\"ב",
+      "home_div_139": "תוצרים\n            תמונת מצב חלקה + רשימת בדיקת נאותות",
+      "home_div_140": "APN:\n            123-456-789-00",
+      "home_div_141": "שטח:\n            5.2 אקר",
+      "home_div_142": "סמכות:\n            מחוז מוהאבי, קליפורניה",
+      "home_nav_143": "הזדמנויות",
+      "home_nav_144": "בדיקת נאותות",
+      "home_nav_145": "צור קשר",
+      "home_span_69": "מיקוד",
+      "home_span_70": "החזקות קרקע ארוכות טווח",
+      "home_span_71": "כיסוי",
+      "home_span_72": "שווקים נבחרים בארה\"ב",
+      "home_span_73": "תוצרים",
+      "home_span_74": "תמונת מצב חלקה + רשימת בדיקת נאותות",
+      "home_span_75": "APN:",
+      "home_span_76": "שטח:",
+      "home_span_77": "5.2 אקר",
+      "home_span_78": "סמכות:",
+      "home_span_79": "מחוז מוהאבי, קליפורניה",
+      "home_span_80": "מומלץ",
+      "home_span_81": "APN:",
+      "home_span_82": "מחוז:",
+      "home_span_83": "שטח:",
+      "home_span_84": "APN:",
+      "home_span_85": "מחוז:",
+      "home_span_86": "שטח:",
+      "home_span_87": "פוטנציאל",
+      "home_span_88": "APN:",
+      "home_span_89": "מחוז:",
+      "home_span_90": "שטח:",
+      "home_span_91": "APN:",
+      "home_span_92": "מחוז:",
+      "home_span_93": "שטח:",
+      "home_span_94": "APN:",
+      "home_span_95": "מחוז:",
+      "home_span_96": "שטח:",
+      "home_span_97": "APN:",
+      "home_span_98": "מחוז:",
+      "home_span_99": "שטح:",
+      "privacy_h1_1": "מדיניות פרטיות",
+      "privacy_h2_2": "1. איסוף מידע",
+      "privacy_h2_3": "2. שימוש במידע",
+      "privacy_h2_4": "3. שיתוף מידע",
+      "privacy_h2_5": "4. זכויות המשתמש",
+      "privacy_h2_6": "5. עוגיות (Cookies)",
+      "privacy_h2_7": "6. אבטחת מידע",
+      "privacy_h2_8": "7. שינויים במדיניות",
+      "privacy_h2_9": "8. יצירת קשר",
+      "privacy_p_13": "Peleg Group LLC (\"החברה\", \"אנו\", \"שלנו\") מחויבת להגן על פרטיותכם. מדיניות פרטיות זו מסבירה כיצד אנו אוספים, \n            משתמשים ומגינים על המידע שלכם בעת השימוש באתר www.company.com (\"השירות\").",
+      "privacy_p_14": "אנו עשויים לאסוף את סוגי המידע הבאים:",
+      "privacy_p_15": "אנו משתמשים במידע שנאסף למטרות הבאות:",
+      "privacy_p_16": "אנו לא נמכור, נחכיר או נשתף את המידע האישי שלכם עם צדדים שלישיים, למעט במקרים הבאים:",
+      "privacy_p_17": "בהתאם לחוק הגנת הפרטיות התשמ\"א-1981, יש לכם הזכויות הבאות:",
+      "privacy_p_18": "אתרנו משתמש בעוגיות לשיפור חוויית השימוש. ניתן לנהל את העוגיות דרך הגדרות הדפדפן שלכם. \n            השבתת עוגיות עלולה להשפיע על פונקציונליות האתר.",
+      "privacy_p_19": "אנו נוקטים באמצעי אבטחה סבירים להגנה על המידע שלכם, כולל הצפנה, חומות אש ובקרת גישה מוגבלת. \n            עם זאת, אף שיטת העברה או אחסון אינה בטוחה ב-100%.",
+      "privacy_p_20": "אנו עשויים לעדכן מדיניות פרטיות זו מעת לעת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת של 30 יום.",
+      "privacy_p_21": "לשאלות או בקשות בנוגע למדיניות פרטיות זו, ניתן לפנות אלינו:",
+      "privacy_p_22": "רשם מאגרי המידע: לתלונות ניתן לפנות לרשם מאגרי המידע במשרד המשפטים",
+      "privacy_p_23": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "privacy_p_24": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "terms_alt_74": "Peleg Group LLC",
+      "terms_alt_75": "Peleg Group LLC",
+      "terms_div_69": "עדכון אחרון: 27.2.2026",
+      "terms_div_70": "השימוש באתר זה מהווה הסכמה לתנאי השימוש המפורטים להלן. אנא קראו בעיון לפני השימוש.",
+      "terms_nav_71": "הזדמנויות",
+      "terms_nav_72": "בדיקת נאותות",
+      "terms_nav_73": "צור קשר",
+      "contact_h3_10": "קישורים מהירים",
+      "contact_h3_11": "צור קשר",
+      "contact_h3_12": "שעות פעילות",
+      "contact_h3_13": "עקבו אחרינו",
+      "contact_li_61": "הזדמנויות",
+      "contact_li_62": "בדיקת נאותות",
+      "contact_li_63": "צור קשר",
+      "contact_li_64": "peleggroup1@gmail.com",
+      "contact_li_65": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_li_66": "יום שני: 08:00 - 20:00",
+      "contact_li_67": "יום שלישי: 08:00 - 20:00",
+      "contact_li_68": "יום רביעי: 08:00 - 20:00",
+      "contact_li_69": "יום חמישי: 08:00 - 20:00",
+      "contact_li_70": "יום שישי: 08:00 - 20:00",
+      "contact_li_71": "יום שבת: סגור",
+      "contact_li_72": "יום ראשון: סגור",
+      "home_link_110": "צפייה בהזדמנויות",
+      "home_link_111": "שיחה עם הצוות שלנו",
+      "home_link_112": "בקשת תמונת מצב מלאה",
+      "home_link_113": "בקשת תמונת מצב מלאה",
+      "home_link_114": "בקשת תמונת מצב מלאה",
+      "home_link_115": "בקשת תמונת מצב מלאה",
+      "home_link_116": "בקשת תמונת מצב מלאה",
+      "home_link_117": "בקשת תמונת מצב מלאה",
+      "home_link_118": "צרו קשר עם Peleg Group",
+      "home_link_119": "חקרו הזדמנויות",
+      "home_link_120": "הזדמנויות",
+      "home_link_121": "בדיקת נאותות",
+      "home_link_122": "צור קשר",
+      "home_link_123": "peleggroup1@gmail.com",
+      "home_link_124": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "home_link_125": "מדיניות פרטיות",
+      "home_link_126": "תנאים והגבלות",
+      "home_link_127": "הצהרת נגישות",
+      "home_link_128": "Generated by Zappy",
+      "home_span_100": "קואורדינטות:",
+      "home_span_101": "34.0522°N, 118.2437°W",
+      "home_span_102": "APN:",
+      "home_span_103": "שטח:",
+      "home_span_104": "40 אקר",
+      "home_span_105": "גישה:",
+      "home_span_106": "כביש עפר מתוחזק, 1.2 מייל מכביש ראשי",
+      "home_span_107": "הערות:",
+      "home_span_108": "בדקו זיקת הנאה, זכויות מים, ותקנות אזוריות",
+      "home_span_109": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "privacy_h3_10": "קישורים מהירים",
+      "privacy_h3_11": "צור קשר",
+      "privacy_h3_12": "עקבו אחרינו",
+      "privacy_li_36": "מידע אישי: שם, כתובת אימייל, מספר טלפון וכתובת",
+      "privacy_li_37": "מידע טכני: כתובת IP, סוג דפדפן, מערכת הפעלה ונתוני שימוש באתר",
+      "privacy_li_38": "עוגיות: מידע הנשמר במחשבכם לשיפור חוויית השימוש",
+      "privacy_li_39": "מתן השירותים המבוקשים",
+      "privacy_li_40": "שיפור השירות וחוויית המשתמש",
+      "privacy_li_41": "יצירת קשר עמכם בנוגע לשירותינו",
+      "privacy_li_42": "עמידה בדרישות חוקיות",
+      "privacy_li_43": "בהסכמתכם המפורשת",
+      "privacy_li_44": "כאשר נדרש על פי חוק",
+      "privacy_li_45": "להגנה על זכויותינו או בטחון משתמשינו",
+      "privacy_li_46": "עם ספקי שירות המסייעים בהפעלת השירות (תחת הסכמי סודיות)",
+      "privacy_li_47": "זכות עיון במידע האישי השמור עליכם",
+      "privacy_li_48": "זכות לתיקון מידע שגוי או לא מדויק",
+      "privacy_li_49": "זכות למחיקת מידע אישי בנסיבות מסוימות",
+      "privacy_li_50": "זכות להתנגד לעיבוד מידע למטרות שיווק",
+      "privacy_li_51": "זכות להגשת תלונה לרשם מאגרי המידע",
+      "privacy_li_52": "חברה: Peleg Group LLC",
+      "privacy_li_53": "אימייל: info@company.com",
+      "privacy_li_54": "טלפון: 19849776997",
+      "privacy_li_55": "כתובת: כתובת החברה, ישראל",
+      "privacy_li_56": "הזדמנויות",
+      "privacy_li_57": "בדיקת נאותות",
+      "privacy_li_58": "צור קשר",
+      "privacy_li_59": "peleggroup1@gmail.com",
+      "privacy_li_60": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_link_31": "info@company.com",
+      "terms_link_32": "הזדמנויות",
+      "terms_link_33": "בדיקת נאותות",
+      "terms_link_34": "צור קשר",
+      "terms_link_35": "peleggroup1@gmail.com",
+      "terms_link_36": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_link_37": "מדיניות פרטיות",
+      "terms_link_38": "תנאים והגבלות",
+      "terms_link_39": "הצהרת נגישות",
+      "terms_link_40": "Generated by Zappy",
+      "terms_span_30": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_alt_81": "Peleg Group LLC",
+      "contact_alt_82": "נוף אווירי של אדמות בארצות הברית",
+      "contact_alt_83": "Peleg Group LLC",
+      "contact_btn_56": "שלח הודעה",
+      "contact_div_73": "דוגמת השקעה",
+      "contact_div_74": "APN: 123-456-789-00",
+      "contact_div_75": "מחוז/מדינה: Mohave, Arizona",
+      "contact_div_76": "שטח: 2.5 אקר",
+      "contact_div_77": "גישה: כביש עפר מתוחזק",
+      "contact_nav_78": "הזדמנויות",
+      "contact_nav_79": "בדיקת נאותות",
+      "contact_nav_80": "צור קשר",
+      "home_quote_134": "\"התיעוד המפורט של החלקות, כולל מפות ונתוני שטח מדויקים, העניק לי את הביטחון להתקדם בהשקעה. כל פרט היה שקוף וברור.\"",
+      "home_quote_135": "\"התגובה המהירה והמקצועית לכל שאלה, יחד עם הצגת השלבים הבאים בצורה ברורה, גרמו לתהליך להרגיש מאורגן ונגיש. הרגשתי מלווה לאורך כל הדרך.\"",
+      "home_quote_136": "\"המפות והמדדים המפורטים סיפקו לי תמונה שלמה של הנכס והפוטנציאל שלו. הרגשתי שאני מבין בדיוק במה אני משקיע, ללא הפתעות.\"",
+      "privacy_alt_65": "Peleg Group LLC",
+      "privacy_alt_66": "Peleg Group LLC",
+      "privacy_div_61": "עדכון אחרון: 27.2.2026",
+      "privacy_nav_62": "הזדמנויות",
+      "privacy_nav_63": "בדיקת נאותות",
+      "privacy_nav_64": "צור קשר",
+      "contact_link_44": "שלחו את הקריטריונים שלכם",
+      "contact_link_45": "שלחו הודעה",
+      "contact_link_46": "צפו בהזדמנויות",
+      "contact_link_47": "הזדמנויות",
+      "contact_link_48": "בדיקת נאותות",
+      "contact_link_49": "צור קשר",
+      "contact_link_50": "peleggroup1@gmail.com",
+      "contact_link_51": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_link_52": "מדיניות פרטיות",
+      "contact_link_53": "תנאים והגבלות",
+      "contact_link_54": "הצהרת נגישות",
+      "contact_link_55": "Generated by Zappy",
+      "contact_span_29": "APN:",
+      "contact_span_30": "מחוז/מדינה:",
+      "contact_span_31": "Mohave, Arizona",
+      "contact_span_32": "שטח:",
+      "contact_span_33": "2.5 אקר",
+      "contact_span_34": "גישה:",
+      "contact_span_35": "כביש עפר מתוחזק",
+      "contact_span_36": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_span_37": "יום שני: 08:00 - 20:00",
+      "contact_span_38": "יום שלישי: 08:00 - 20:00",
+      "contact_span_39": "יום רביעי: 08:00 - 20:00",
+      "contact_span_40": "יום חמישי: 08:00 - 20:00",
+      "contact_span_41": "יום שישי: 08:00 - 20:00",
+      "contact_span_42": "יום שבת: סגור",
+      "contact_span_43": "יום ראשון: סגור",
+      "home_page_title": "השקעה בקרקעות אמריקה עם תשואה מובטחת — Peleg Group LLC",
+      "privacy_link_26": "info@company.com",
+      "privacy_link_27": "הזדמנויות",
+      "privacy_link_28": "בדיקת נאותות",
+      "privacy_link_29": "צור קשר",
+      "privacy_link_30": "peleggroup1@gmail.com",
+      "privacy_link_31": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "privacy_link_32": "מדיניות פרטיות",
+      "privacy_link_33": "תנאים והגבלות",
+      "privacy_link_34": "הצהרת נגישות",
+      "privacy_link_35": "Generated by Zappy",
+      "privacy_span_25": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_label_57": "שם מלא",
+      "contact_label_58": "דוא\"ל",
+      "contact_label_59": "טלפון",
+      "contact_label_60": "הודעה",
+      "legal_terms_h1_1": "תנאי שימוש",
+      "legal_terms_h2_2": "1. הגדרות",
+      "legal_terms_h2_3": "2. תיאור השירותים",
+      "legal_terms_h2_4": "3. תנאי השימוש",
+      "legal_terms_h2_5": "4. חובות המשתמש",
+      "legal_terms_h2_6": "5. מדיניות תשלומים והחזרים",
+      "legal_terms_h2_7": "6. הגבלת אחריות",
+      "legal_terms_h2_8": "7. זכויות יוצרים וקניין רוחני",
+      "legal_terms_h2_9": "8. פרטיות",
+      "legal_terms_p_15": "Peleg Group LLC מספקת שירותים כלליים דרך האתר. השירותים כפופים לתנאים המפורטים במסמך זה \n            ועשויים להשתנות מעת לעת.",
+      "legal_terms_p_16": "השימוש באתר מותנה בעמידה בתנאים הבאים:",
+      "legal_terms_p_17": "במידה והשירותים כוללים תשלום:",
+      "legal_terms_p_18": "השירותים ניתנים \"כפי שהם\" ללא אחריות מכל סוג. החברה לא תהיה אחראית לנזקים עקיפים, \n            תוצאתיים או מיוחדים הנובעים משימוש באתר, למעט במקרים בהם החוק קובע אחרת.",
+      "legal_terms_p_19": "כל התכנים באתר, כולל טקסטים, תמונות, עיצוב וקוד, מוגנים בזכויות יוצרים השייכות לPeleg Group LLC. \n            אסור לשכפל, להפיץ או לעשות שימוש מסחרי בתכנים ללא אישור בכתב.",
+      "legal_terms_p_20": "איסוף ושימוש במידע אישי כפופים למדיניות הפרטיות שלנו. השימוש באתר מהווה הסכמה \n            למדיניות הפרטיות כפי שמפורט בנפרד.",
+      "legal_terms_p_21": "החברה רשאית לשנות תנאי שימוש אלה בכל עת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת \n            של 30 יום. המשך השימוש לאחר השינוי מהווה הסכמה לתנאים החדשים.",
+      "legal_terms_p_22": "החברה רשאית להפסיק או להגביל את השירות בכל עת, לרבות במקרה של הפרת תנאי השימוש. \n            במקרה של סיום השירות, יישמרו הוראות הסעיפים הרלוונטיים.",
+      "legal_terms_p_23": "תנאי שימוש אלה כפופים לחוקי מדינת ישראל. כל סכסוך יידון בבתי המשפט המוסמכים בישראל, \n            תוך מתן עדיפות לבוררות או גישור במידת האפשר.",
+      "legal_terms_p_24": "לשאלות או הבהרות בנוגע לתנאי השימוש:",
+      "terms_page_title": "תנאי שימוש",
+      "legal_terms_h2_10": "9. שינוי תנאי השימוש",
+      "legal_terms_h2_11": "10. סיום השירות",
+      "legal_terms_h2_12": "11. דין חל ויישוב סכסוכים",
+      "legal_terms_h2_13": "12. הוראות כלליות",
+      "legal_terms_h2_14": "13. פרטי יצירת קשר",
+      "legal_terms_li_27": "\"החברה\" - Peleg Group LLC",
+      "legal_terms_li_28": "\"המשתמש\" - כל מי שגולש או משתמש באתר",
+      "legal_terms_li_29": "\"השירותים\" - שירותים כלליים הניתנים דרך האתר",
+      "legal_terms_li_30": "השימוש באתר למטרות חוקיות בלבד",
+      "legal_terms_li_31": "אי-הפרעה לפעילות האתר או משתמשים אחרים",
+      "legal_terms_li_32": "אי-העלאת תוכן פוגעני, לא חוקי או מזיק",
+      "legal_terms_li_33": "כיבוד זכויות יוצרים וקניין רוחני",
+      "legal_terms_li_34": "אי-ביצוע פעולות שעלולות לפגוע באבטחת האתר",
+      "legal_terms_li_35": "מתן מידע נכון ומדויק בעת הרשמה או הזמנה",
+      "legal_terms_li_36": "שמירה על סודיות פרטי הגישה לחשבון",
+      "legal_terms_li_37": "הודעה מיידית על כל שימוש לא מורשה בחשבון",
+      "legal_terms_li_38": "עדכון מידע אישי במידת הצורך",
+      "legal_terms_li_39": "התשלומים מבוצעים דרך מערכות בטוחות ומוצפנות",
+      "legal_terms_li_40": "המחירים כוללים מע\"ם כנדרש בחוק",
+      "legal_terms_li_41": "זכות ביטול עסקה תעמוד בהתאם לחוק הגנת הצרכן",
+      "legal_terms_li_42": "החזרים יבוצעו תוך 14 ימי עסקים מאישור הביטול",
+      "legal_terms_li_43": "אם חלק מהתנאים יוכרז כבלתי תקף, יישארו שאר התנאים בתוקף",
+      "legal_terms_li_44": "אי-אכיפה של זכות לא תחשב כוויתור עליה",
+      "legal_terms_li_45": "תנאי השימוש מהווים את מלוא ההסכם בין הצדדים",
+      "legal_terms_li_46": "חברה: Peleg Group LLC",
+      "legal_terms_li_47": "אימייל: peleggroup1@gmail.com",
+      "legal_terms_li_48": "טלפון: 19849776997",
+      "legal_terms_li_49": "כתובת: 500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_h1_1": "הצהרת נגישות",
+      "accessibility_h2_2": "1. מדיניות הנגישות",
+      "accessibility_h2_3": "2. הסדרי הנגישות באתר",
+      "accessibility_h2_4": "3. טכנולוגיות מסייעות נתמכות",
+      "accessibility_h2_5": "4. בדיקות נגישות",
+      "accessibility_h2_6": "5. שיפורים מתמשכים",
+      "accessibility_h2_7": "6. יצירת קשר ומשוב",
+      "accessibility_h3_8": "תאימות לתקן WCAG 2.1",
+      "accessibility_h3_9": "קישורים מהירים",
+      "accessibility_p_12": "Peleg Group LLC מחויבת להנגיש את השירותים לכלל הציבור. אנו פועלים ליישם את הנחיות התקן הישראלי \n            (ת\"י 5568) המבוסס על הנחיות WCAG 2.1 ברמת AA.",
+      "accessibility_p_13": "אנו מאמינים בשוויון זכויות ובזכותו של כל אדם לקבל מידע ושירותים בצורה עצמאית ושוויונית. \n            אתר זה תוכנן ונבנה תוך מתן דגש מיוחד על נגישות לאנשים עם מוגבלויות.",
+      "accessibility_p_14": "האתר תואם לרמת AA של תקן WCAG 2.1, הכולל:",
+      "accessibility_p_15": "האתר נבדק באמצעות:",
+      "accessibility_p_16": "אנו עובדים באופן מתמשך לשיפור נגישות האתר ומעדכנים אותו בהתאם להתפתחויות טכנולוגיות ולמשוב מהמשתמשים.",
+      "accessibility_p_17": "אם נתקלתם בבעיית נגישות באתר או זקוקים לסיוע, אנא פנו אלינו:",
+      "accessibility_p_18": "זמני מענה: נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.",
+      "accessibility_p_19": "תלונות: ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות",
+      "accessibility_p_20": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "accessibility_p_21": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "contact_page_title": "דברו איתנו על השקעה בקרקעות ארה״ב — Peleg Group LLC",
+      "due_diligence_h2_1": "בדיקת נאותות, מוצגת כרשימת בדיקה ברורה",
+      "due_diligence_h2_2": "מה לבדוק לפני שממשיכים קדימה",
+      "due_diligence_h2_3": "דוגמאות לחשיבה בבדיקת נאותות",
+      "due_diligence_h2_4": "משאבים ושאלות",
+      "due_diligence_h2_5": "רוצים סקירה עם רמזי בדיקה?",
+      "due_diligence_h3_6": "גישה וזכויות מעבר",
+      "due_diligence_h3_7": "ייעוד ושימוש מותר",
+      "due_diligence_h3_8": "תשתיות וכדאיות",
+      "due_diligence_h3_9": "טופוגרפיה וניקוז",
+      "due_diligence_p_25": "לפני רכישת אדמות בארצות הברית, חיוני לבצע בדיקת נאותות מקיפה. אנו ממליצים לוודא גישה לנכס, תכנון ואזורי שימוש, זמינות תשתיות (חשמל, מים, ביוב), וסיכוני שיטפונות או שריפות. בנוסף, חשוב לבדוק תקנות מקומיות, מיסוי, והיתרי בנייה רלוונטיים.",
+      "due_diligence_p_26": "המטרה שלנו היא לספק לכם את כל המידע הנדרש כדי לקבל החלטות מושכלות ובטוחות. Peleg Group מלווה אתכם בכל שלב, מאיתור הנכס ועד לסגירת העסקה, ומבטיחה שתהיו מצוידים בכל הנתונים הדרושים להשקעה מוצלחת בקרקעות אמריקה.",
+      "due_diligence_p_27": "השתמשו בעמוד זה כמדריך שיחה כאשר אתם מבקשים תמונת מצב מפורטת של הנכס.",
+      "due_diligence_p_28": "אמתו מסלול גישה חוקי וזכויות מעבר רשומות",
+      "due_diligence_p_29": "בדקו האם קיימת דרך פרטית או ציבורית מאושרת",
+      "due_diligence_p_30": "וודאו שאין מגבלות על זכויות המעבר בעתיד",
+      "due_diligence_p_31": "שאלו את המחוז על מרחקים מינימליים ושימושים מותרים",
+      "due_diligence_p_32": "בדקו תקנות אזוריות והגבלות בנייה עתידיות",
+      "due_diligence_p_33": "וודאו שהייעוד תואם את תוכניות הפיתוח שלכם",
+      "due_diligence_p_34": "בררו זמינות חשמל, מים וביוב באזור",
+      "due_diligence_p_35": "העריכו עלויות חיבור לתשתיות ציבוריות",
+      "due_diligence_p_36": "בדקו אפשרויות חלופיות כמו באר פרטית או מערכת סולארית",
+      "due_diligence_p_37": "סקרו את השטח לזיהוי שיפועים ואזורי ניקוז",
+      "due_diligence_p_38": "בדקו סיכוני הצפה והיסטוריית מזג אויר קיצוני",
+      "due_diligence_p_39": "וודאו שהקרקע מתאימה לבנייה ולא דורשת עבודות יקרות",
+      "due_diligence_p_40": "בדקו היסטוריית תשלומי ארנונה ומיסי נכס",
+      "due_diligence_p_41": "וודאו שאין עיקולים או חובות רשומים על הנכס",
+      "due_diligence_p_42": "העריכו את עלויות המיסים השנתיות לתכנון תקציבי",
+      "due_diligence_p_43": "סיירו באזור לזיהוי מפעלים, כבישים עמוסים או רעש",
+      "due_diligence_p_44": "בדקו תוכניות פיתוח עתידיות שעלולות להשפיע על הנכס",
+      "due_diligence_p_45": "שוחחו עם תושבים מקומיים לקבלת תמונה מלאה",
+      "due_diligence_p_46": "הבינו את תהליך קבלת היתרי בנייה במחוז",
+      "due_diligence_p_47": "בררו זמני המתנה משוערים ודרישות מיוחדות",
+      "due_diligence_p_48": "התייעצו עם קבלן מקומי לגבי אתגרים ידועים",
+      "due_diligence_p_49": "העריכו את פוטנציאל המכירה החוזר והביקוש באזור",
+      "due_diligence_p_50": "בדקו מגמות שוק מקומיות ומחירי עסקאות אחרונות",
+      "due_diligence_p_51": "תכננו אסטרטגיית יציאה ברורה עוד לפני הרכישה",
+      "due_diligence_p_52": "נכס שנראה צמוד לכביש ציבורי עשוי להיות מופרד ממנו ברצועת זכות מעבר פרטית או רצועה שמורה שאין לה גישה חוקית. בדקנו תעודת בעלות היסטורית וגילינו שהדרך הסמוכה אינה רשומה כזכות מעבר לנכס הנדון, והבעלים הקודמים השתמשו בהסכם שכנים לא רשום. ללא עדכון משפטי, הקונה עלול למצוא עצמו ללא גישה חוקית.",
+      "due_diligence_p_53": "לקח מרכזי: בדיקת זכויות מעבר ברשומות המחוז חיונית גם כשהגישה נראית פשוטה.",
+      "due_diligence_p_54": "קו חשמל העובר במרחק 200 מטר מהנכס אינו מבטיח חיבור זול או אפילו אפשרי. בדקנו עם חברת החשמל המקומית וגילינו שהרחבת הקו תעלה מעל 50,000 דולר, ושהחברה דורשת ערבות מוקדמת. במקרים אחרים, מקור המים הקרוב ביותר היה באר פרטית של שכן, ללא זכות שימוש משותפת. תיאום מוקדם עם ספקי השירותים חושף את העלויות האמיתיות.",
+      "due_diligence_p_55": "לקח מרכזי: קרבה פיזית לשירותים אינה שווה לזמינות משפטית או כלכלית—יש לבדוק עם הספקים.",
+      "due_diligence_p_56": "תקנות אזוריות במחוזות כפריים לעיתים מעורפלות או לא מעודכנות באתר האינטרנט. שוחחנו ישירות עם מחלקת התכנון והם הבהירו שאזור חקלאי מסוים דורש מינימום 10 דונם לבניית מגורים, ולא 5 כפי שכתוב במסמך ישן. בנוסף, גילינו שיש הגבלות על סוגי מבנים מסוימים שלא מופיעים בחיפוש מקוון. שיחה טלפונית קצרה חוסכת חודשים של תסכול.",
+      "due_diligence_p_57": "לקח מרכזי: תיאום ישיר עם רשויות המחוז מספק תשובות מדויקות ומונע הפתעות משפטיות.",
+      "due_diligence_p_58": "בדקו את תוכניות הייעוד העתידיות, מגבלות בנייה ופרויקטים מתוכננים באזור. המידע הזה חיוני להבנת הפוטנציאל ארוך הטווח של הנכס.",
+      "due_diligence_p_59": "קבלו גישה למפות רשמיות, מספרי APN, היסטוריית מיסוי ושווי נכסים. המידע הזה מאפשר להעריך את עלויות האחזקה השנתיות ולוודא תיאום עם רישומי הבעלות.",
+      "due_diligence_p_60": "ודאו גישה חוקית לחלקה, זכויות מעבר קיימות ומצב הכבישים הסמוכים. חלקות ללא גישה מוכחת עלולות להיות בעייתיות למכירה או פיתוח עתידי.",
+      "due_diligence_p_61": "בדקו את מפות ה-FEMA לסיכוני שיטפונות ואת דירוג סיכוני השריפות הפדרליים. הבנת הסיכונים הטבעיים חיונית לביטוח, להשגת אשראי ולתכנון עתידי.",
+      "due_diligence_p_62": "שימוש מיועד: האם אתם מחפשים קרקע למגורים, השקעה, חקלאות או פיתוח מסחרי?",
+      "due_diligence_p_63": "אזור מועדף: מדינות או מחוזות ספציפיים שמעניינים אתכם בארצות הברית?",
+      "due_diligence_p_64": "דרישות גישה: האם נדרשת גישה סלולה, חיבור לחשמל או מים, או שאתם מעוניינים בקרקע מרוחקת?",
+      "due_diligence_p_65": "נשתף איתכם סקירה תמציתית ואת השאלות הכדאיות לשאול בהמשך עבור החלקות שאתם שוקלים.",
+      "due_diligence_p_66": "לאמת: סוג גישה",
+      "due_diligence_p_67": "לשאול: הערות ייעוד",
+      "due_diligence_p_68": "לאשר: סטטוס מס",
+      "due_diligence_p_69": "לבדוק: מגבלות סמוכות",
+      "due_diligence_p_70": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "due_diligence_p_71": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "legal_privacy_h1_1": "מדיניות פרטיות",
+      "legal_privacy_h2_2": "1. איסוף מידע",
+      "legal_privacy_h2_3": "2. שימוש במידע",
+      "legal_privacy_h2_4": "3. שיתוף מידע",
+      "legal_privacy_h2_5": "4. זכויות המשתמש",
+      "legal_privacy_h2_6": "5. עוגיות (Cookies)",
+      "legal_privacy_h2_7": "6. אבטחת מידע",
+      "legal_privacy_h2_8": "7. שינויים במדיניות",
+      "legal_privacy_h2_9": "8. יצירת קשר",
+      "legal_privacy_p_10": "Peleg Group LLC (\"החברה\", \"אנו\", \"שלנו\") מחויבת להגן על פרטיותכם. מדיניות פרטיות זו מסבירה כיצד אנו אוספים, \n            משתמשים ומגינים על המידע שלכם בעת השימוש באתר www.company.com (\"השירות\").",
+      "legal_privacy_p_11": "אנו עשויים לאסוף את סוגי המידע הבאים:",
+      "legal_privacy_p_12": "אנו משתמשים במידע שנאסף למטרות הבאות:",
+      "legal_privacy_p_13": "אנו לא נמכור, נחכיר או נשתף את המידע האישי שלכם עם צדדים שלישיים, למעט במקרים הבאים:",
+      "legal_privacy_p_14": "בהתאם לחוק הגנת הפרטיות התשמ\"א-1981, יש לכם הזכויות הבאות:",
+      "legal_privacy_p_15": "אתרנו משתמש בעוגיות לשיפור חוויית השימוש. ניתן לנהל את העוגיות דרך הגדרות הדפדפן שלכם. \n            השבתת עוגיות עלולה להשפיע על פונקציונליות האתר.",
+      "legal_privacy_p_16": "אנו נוקטים באמצעי אבטחה סבירים להגנה על המידע שלכם, כולל הצפנה, חומות אש ובקרת גישה מוגבלת. \n            עם זאת, אף שיטת העברה או אחסון אינה בטוחה ב-100%.",
+      "legal_privacy_p_17": "אנו עשויים לעדכן מדיניות פרטיות זו מעת לעת. שינויים מהותיים יפורסמו באתר עם הודעה מוקדמת של 30 יום.",
+      "legal_privacy_p_18": "לשאלות או בקשות בנוגע למדיניות פרטיות זו, ניתן לפנות אלינו:",
+      "legal_privacy_p_19": "רשם מאגרי המידע: לתלונות ניתן לפנות לרשם מאגרי המידע במשרד המשפטים",
+      "legal_terms_div_50": "עדכון אחרון: 7.3.2026",
+      "legal_terms_div_51": "השימוש באתר זה מהווה הסכמה לתנאי השימוש המפורטים להלן. אנא קראו בעיון לפני השימוש.",
+      "opportunities_h2_1": "הזדמנויות קרקע עדכניות.",
+      "opportunities_h2_2": "מרשימת המועדפים לביטחון מלא.",
+      "opportunities_h2_3": "שאלות נפוצות",
+      "opportunities_h2_4": "בקש תמונת מצב של חלקה.",
+      "opportunities_h3_5": "חלקת נוף מדברי",
+      "opportunities_h3_6": "ספרו לנו מה אתם מחפשים",
+      "opportunities_h3_7": "קבלו תמונת מצב מקצועית",
+      "opportunities_h3_8": "עברו על רשימת הבדיקות",
+      "opportunities_h3_9": "החליטו על הצעד הבא",
+      "opportunities_p_20": "מבחר חבילות קרקע בארה\"ב המוצגות עם תמונות מצב עקביות—כך שתוכלו להשוות במהירות ולבקש פרטים כאשר חלקה מתאימה לאסטרטגיה שלכם.",
+      "opportunities_p_21": "APN + תחום שיפוט",
+      "opportunities_p_22": "שטח + גישה",
+      "opportunities_p_23": "רמזי תשתיות",
+      "opportunities_p_24": "הערות סיכון + צעדים הבאים",
+      "opportunities_p_25": "הוסף את תוכן הטקסט שלך כאן. זהו טקסט ממלא מקום שניתן לערוך.",
+      "opportunities_p_26": "APN: 542-180-34-00",
+      "opportunities_p_27": "מחוז/מדינה: Mohave, AZ",
+      "opportunities_p_28": "שטח: 5.2 אקר",
+      "opportunities_p_29": "גישה מופיעה דרך כביש מחוזי מתוחזק; יש לאמת זכויות מעבר וחיבורי תשתית.",
+      "opportunities_p_30": "בקשת תיק מלא",
+      "opportunities_p_31": "כשאתם מגיעים אלינו עם רשימת מועדפים או קריטריונים ספציפיים, אנחנו לא רק שולחים קישורים – אנחנו מכינים לכם תמונת מצב מקצועית. תקבלו סיכום מפורט של כל חלקה, הקשר מיקומי מדויק, ורשימת סימני אזהרה שכדאי לבדוק מול הרשויות המקומיות או הסוכנים. זה לא תחליף לבדיקת נאותות מלאה, אבל זה נותן לכם את הכלים להחליט האם להמשיך הלאה או לעבור לאפשרות הבאה.",
+      "opportunities_p_32": "התהליך שלנו בנוי כדי לחסוך לכם זמן ולהעניק בהירות. במקום לנווט לבד בין מסמכים ציבוריים ומפות מסובכות, אתם מקבלים חבילת מידע מסודרת ומובנת – עם כל הפרטים הרלוונטיים שצריך כדי לשאול את השאלות הנכונות ולהתקדם בביטחון.",
+      "opportunities_p_33": "שתפו אותנו בקריטריונים שלכם – גודל חלקה, אזור מועדף, תקציב, או כל דרישה מיוחדת. זה יכול להיות שיחה קצרה או טופס מפורט, תלוי במה שנוח לכם.",
+      "opportunities_p_34": "נשלח לכם מסמך מסודר עם פרטי החלקה, מיקום מדויק, תמונות לוויין, ונתונים בסיסיים על האזור. הכל במקום אחד, מוכן לעיון.",
+      "opportunities_p_35": "נציין בפניכם נקודות קריטיות לבדיקה – זכויות גישה, מגבלות ייעוד, תשתיות זמינות, ועוד. אלו השאלות שכדאי לשאול את המחוז או הסוכן לפני החלטה סופית.",
+      "opportunities_p_36": "עם כל המידע בידיים, תוכלו להחליט בביטחון – להמשיך לבדיקת נאותות מלאה, לבקש פרטים נוספים, או לעבור לאפשרות אחרת. אתם בשליטה מלאה.",
+      "opportunities_p_37": "תמונת מצב מפורטת של החלקה עם כל הנתונים הבסיסיים",
+      "opportunities_p_38": "הקשר מיקומי מלא – מפות, גישה, קרבה לתשתיות ושירותים",
+      "opportunities_p_39": "רשימת סיכונים ונקודות לבדיקה מול הרשויות והסוכנים",
+      "opportunities_p_40": "שאלות מוצעות לשאול לפני קבלת החלטה סופית",
+      "opportunities_p_41": "אנו מנתחים מגמות שוק, נתוני ביקוש, פוטנציאל פיתוח ונגישות. כל חלקה עוברת בדיקת נאותות מקיפה כדי להבטיח שהיא עונה על סטנדרטים גבוהים של השקעה ומציעה פוטנציאל צמיחה ארוך טווח למשקיעים שלנו.",
+      "opportunities_p_42": "כן, אנו מספקים ניתוח מפורט של מכירות דומות באזור, מגמות שוק ונתוני שווי נוכחי. חבילת המידע שלנו כוללת מפות, תיעוד משפטי ונתונים פיננסיים כדי לסייע לך לקבל החלטות מושכלות.",
+      "opportunities_p_43": "מומלץ לבדוק זכויות קניין, הגבלות אזוריות, זכויות גישה, זכויות מים והיסטוריית סביבתית. אנו מספקים מסמכים בסיסיים, אך כדאי להתייעץ עם עורך דין מקומי או מומחה נדל\"ן לאימות מלא.",
+      "opportunities_p_44": "לאחר קבלת כל המידע ובדיקת הנאותות, רוב העסקאות יכולות להסתיים תוך 2-4 שבועות. התהליך תלוי במהירות אישור המימון שלך, סקירת המסמכים וזמני סגירה עם חברת הבלעה.",
+      "opportunities_p_45": "אנו מתמחים באזורי צמיחה ברחבי ארצות הברית, כולל טקסס, אריזונה, פלורידה ומדינות דרום מזרח. אנו מזהים שווקים עם פיתוח תשתיות חזק, גידול אוכלוסייה ותנאים כלכליים חיוביים.",
+      "opportunities_p_46": "צור קשר דרך דף הצור קשר שלנו או שלח לנו אימייל ישירות. אנו נספק לך חבילת מידע מפורטת הכוללת מפות, מסמכים משפטיים, ניתוח פיננסי ותמונות של החלקה.",
+      "opportunities_p_47": "נשיב לך עם סיכום ברור ושלבי בדיקת נאותות הבאים—ללא רעש, ללא לחץ.",
+      "opportunities_p_48": "תגובה: תזמון יום עסקים",
+      "opportunities_p_49": "פורמט: תמונת מצב תמציתית",
+      "opportunities_p_50": "מיקוד: בהירות תחילה",
+      "opportunities_p_51": "Peleg Group LLC - מובילים בתחום הנדל\"ן עם פתרונות מקצועיים ומותאמים אישית לכל לקוח.",
+      "opportunities_p_52": "© 2026 Peleg Group LLC. כל הזכויות שמורות.",
+      "privacy_page_title": "מדיניות פרטיות",
+      "accessibility_h3_10": "צור קשר",
+      "accessibility_h3_11": "עקבו אחרינו",
+      "accessibility_li_33": "תמיכה בניווט באמצעות מקלדת",
+      "accessibility_li_34": "תמיכה בקוראי מסך",
+      "accessibility_li_35": "ניגודיות צבעים מתאימה",
+      "accessibility_li_36": "גדלי פונט גמישים וניתנים להגדלה",
+      "accessibility_li_37": "תיאורי תמונות (Alt text) מפורטים",
+      "accessibility_li_38": "כותרות מובנות היררכית",
+      "accessibility_li_39": "קישורים תיאוריים וברורים",
+      "accessibility_li_40": "תמיכה בזום עד 200% ללא אובדן תוכן",
+      "accessibility_li_41": "נתפס (Perceivable): המידע מוצג בדרכים שמשתמשים יכולים לתפוס",
+      "accessibility_li_42": "פעיל (Operable): רכיבי הממשק ניתנים להפעלה",
+      "accessibility_li_43": "מובן (Understandable): המידע וממשק המשתמש מובנים",
+      "accessibility_li_44": "חזק (Robust): התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות",
+      "accessibility_li_45": "NVDA (Windows)",
+      "accessibility_li_46": "JAWS (Windows)",
+      "accessibility_li_47": "VoiceOver (Mac/iOS)",
+      "accessibility_li_48": "TalkBack (Android)",
+      "accessibility_li_49": "Dragon NaturallySpeaking",
+      "accessibility_li_50": "Switch navigation",
+      "accessibility_li_51": "כלים אוטומטיים לבדיקת נגישות",
+      "accessibility_li_52": "בדיקות ידניות עם קוראי מסך",
+      "accessibility_li_53": "ניווט באמצעות מקלדת בלבד",
+      "accessibility_li_54": "בדיקת ניגודיות צבעים",
+      "accessibility_li_55": "בדיקה עם משתמשים עם מוגבלויות",
+      "accessibility_li_56": "חברה: Peleg Group LLC",
+      "accessibility_li_57": "אימייל: info@company.com",
+      "accessibility_li_58": "טלפון: 19849776997",
+      "accessibility_li_59": "הזדמנויות",
+      "accessibility_li_60": "בדיקת נאותות",
+      "accessibility_li_61": "צור קשר",
+      "accessibility_li_62": "peleggroup1@gmail.com",
+      "accessibility_li_63": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_h3_10": "מיסים ועיקולים",
+      "due_diligence_h3_11": "מטרדים סמוכים",
+      "due_diligence_h3_12": "ציפיות לרישוי",
+      "due_diligence_h3_13": "שיקולי יציאה",
+      "due_diligence_h3_14": "כשהגישה נראית ברורה—אך אינה כזו",
+      "due_diligence_h3_15": "שירותים בסביבה מול שירותים זמינים",
+      "due_diligence_h3_16": "פרשנות תקנות המחוז ללא ניחושים",
+      "due_diligence_h3_17": "משרד התכנון המחוזי",
+      "due_diligence_h3_18": "שמאי ומפות חלקות",
+      "due_diligence_h3_19": "רישומי כבישים וזכויות מעבר",
+      "due_diligence_h3_20": "מידע על סיכוני שיטפונות ושריפות",
+      "due_diligence_h3_21": "שאלות לשלוח עם הפנייה שלכם",
+      "due_diligence_h3_22": "קישורים מהירים",
+      "due_diligence_h3_23": "צור קשר",
+      "due_diligence_h3_24": "עקבו אחרינו",
+      "due_diligence_li_87": "הזדמנויות",
+      "due_diligence_li_88": "בדיקת נאותות",
+      "due_diligence_li_89": "צור קשר",
+      "due_diligence_li_90": "peleggroup1@gmail.com",
+      "due_diligence_li_91": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_privacy_li_22": "מידע אישי: שם, כתובת אימייל, מספר טלפון וכתובת",
+      "legal_privacy_li_23": "מידע טכני: כתובת IP, סוג דפדפן, מערכת הפעלה ונתוני שימוש באתר",
+      "legal_privacy_li_24": "עוגיות: מידע הנשמר במחשבכם לשיפור חוויית השימוש",
+      "legal_privacy_li_25": "מתן השירותים המבוקשים",
+      "legal_privacy_li_26": "שיפור השירות וחוויית המשתמש",
+      "legal_privacy_li_27": "יצירת קשר עמכם בנוגע לשירותינו",
+      "legal_privacy_li_28": "עמידה בדרישות חוקיות",
+      "legal_privacy_li_29": "בהסכמתכם המפורשת",
+      "legal_privacy_li_30": "כאשר נדרש על פי חוק",
+      "legal_privacy_li_31": "להגנה על זכויותינו או בטחון משתמשינו",
+      "legal_privacy_li_32": "עם ספקי שירות המסייעים בהפעלת השירות (תחת הסכמי סודיות)",
+      "legal_privacy_li_33": "זכות עיון במידע האישי השמור עליכם",
+      "legal_privacy_li_34": "זכות לתיקון מידע שגוי או לא מדויק",
+      "legal_privacy_li_35": "זכות למחיקת מידע אישי בנסיבות מסוימות",
+      "legal_privacy_li_36": "זכות להתנגד לעיבוד מידע למטרות שיווק",
+      "legal_privacy_li_37": "זכות להגשת תלונה לרשם מאגרי המידע",
+      "legal_privacy_li_38": "חברה: Peleg Group LLC",
+      "legal_privacy_li_39": "אימייל: peleggroup1@gmail.com",
+      "legal_privacy_li_40": "טלפון: 19849776997",
+      "legal_privacy_li_41": "כתובת: 500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_terms_link_25": "peleggroup1@gmail.com",
+      "legal_terms_link_26": "← חזרה לאתר",
+      "opportunities_h3_10": "מה תקבלו:",
+      "opportunities_h3_11": "כיצד נבחרות החלקות?",
+      "opportunities_h3_12": "האם אתם מספקים דוחות השוואה?",
+      "opportunities_h3_13": "איזה בדיקות נאותות עלי לבצע?",
+      "opportunities_h3_14": "כמה מהר אני יכול להתקדם?",
+      "opportunities_h3_15": "באילו שווקים אתם מתמקדים?",
+      "opportunities_h3_16": "כיצד אני מבקש פרטים נוספים?",
+      "opportunities_h3_17": "קישורים מהירים",
+      "opportunities_h3_18": "צור קשר",
+      "opportunities_h3_19": "עקבו אחרינו",
+      "opportunities_li_71": "הזדמנויות",
+      "opportunities_li_72": "בדיקת נאותות",
+      "opportunities_li_73": "צור קשר",
+      "opportunities_li_74": "peleggroup1@gmail.com",
+      "opportunities_li_75": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_alt_69": "Peleg Group LLC",
+      "accessibility_alt_70": "Peleg Group LLC",
+      "accessibility_div_64": "עדכון אחרון: 27.2.2026",
+      "accessibility_div_65": "רמת נגישות: AA (תקן ישראלי ת\"י 5568)",
+      "accessibility_nav_66": "הזדמנויות",
+      "accessibility_nav_67": "בדיקת נאותות",
+      "accessibility_nav_68": "צור קשר",
+      "due_diligence_alt_96": "Peleg Group LLC",
+      "due_diligence_alt_97": "מפת וינייט אילוסטרטיבית של מדינה בארצות הברית עם קווי מחוז",
+      "due_diligence_alt_98": "תצלום אווירי של חלקת קרקע כפרית בארצות הברית עם גבולות נכס נראים לעין",
+      "due_diligence_alt_99": "תצלום אווירי של קרקע לא מפותחת בארצות הברית עם תשתיות שירותים בסביבה",
+      "due_diligence_div_92": "רשימת בדיקה מומלצת",
+      "due_diligence_nav_93": "הזדמנויות",
+      "due_diligence_nav_94": "בדיקת נאותות",
+      "due_diligence_nav_95": "צור קשר",
+      "legal_privacy_div_42": "עדכון אחרון: 7.3.2026",
+      "opportunities_alt_79": "Peleg Group LLC",
+      "opportunities_alt_80": "נוף מדברי עם צמחייה פזורה והרים רחוקים",
+      "opportunities_alt_81": "Peleg Group LLC",
+      "opportunities_nav_76": "הזדמנויות",
+      "opportunities_nav_77": "בדיקת נאותות",
+      "opportunities_nav_78": "צור קשר",
+      "accessibility_link_23": "info@company.com",
+      "accessibility_link_24": "הזדמנויות",
+      "accessibility_link_25": "בדיקת נאותות",
+      "accessibility_link_26": "צור קשר",
+      "accessibility_link_27": "peleggroup1@gmail.com",
+      "accessibility_link_28": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_link_29": "מדיניות פרטיות",
+      "accessibility_link_30": "תנאים והגבלות",
+      "accessibility_link_31": "הצהרת נגישות",
+      "accessibility_link_32": "Generated by Zappy",
+      "accessibility_span_22": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_alt_100": "תצלום אווירי של חלקות קרקע חקלאיות כפריות בארצות הברית עם סימון גבולות ואזורים",
+      "due_diligence_alt_101": "Peleg Group LLC",
+      "due_diligence_link_77": "התחילו שיחה",
+      "due_diligence_link_78": "הזדמנויות",
+      "due_diligence_link_79": "בדיקת נאותות",
+      "due_diligence_link_80": "צור קשר",
+      "due_diligence_link_81": "peleggroup1@gmail.com",
+      "due_diligence_link_82": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_link_83": "מדיניות פרטיות",
+      "due_diligence_link_84": "תנאים והגבלות",
+      "due_diligence_link_85": "הצהרת נגישות",
+      "due_diligence_link_86": "Generated by Zappy",
+      "due_diligence_span_72": "לאמת:",
+      "due_diligence_span_73": "לשאול:",
+      "due_diligence_span_74": "לאשר:",
+      "due_diligence_span_75": "לבדוק:",
+      "due_diligence_span_76": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "home_meta_description": "מכירת אדמות בארצות הברית עם ליווי מקצועי מלא. Peleg Group מתמחה בהשקעות קרקע רווחיות בשוק האמריקאי. גלו הזדמנויות השקעה ייחודיות היום!",
+      "legal_privacy_link_20": "peleggroup1@gmail.com",
+      "legal_privacy_link_21": "← חזרה לאתר",
+      "opportunities_link_59": "בקשת תיק מלא",
+      "opportunities_link_60": "צור קשר",
+      "opportunities_link_61": "חזרה לדף הבית",
+      "opportunities_link_62": "הזדמנויות",
+      "opportunities_link_63": "בדיקת נאותות",
+      "opportunities_link_64": "צור קשר",
+      "opportunities_link_65": "peleggroup1@gmail.com",
+      "opportunities_link_66": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "opportunities_link_67": "מדיניות פרטיות",
+      "opportunities_link_68": "תנאים והגבלות",
+      "opportunities_link_69": "הצהרת נגישות",
+      "opportunities_link_70": "Generated by Zappy",
+      "opportunities_span_53": "APN:",
+      "opportunities_span_54": "מחוז/מדינה:",
+      "opportunities_span_55": "Mohave, AZ",
+      "opportunities_span_56": "שטח:",
+      "opportunities_span_57": "5.2 אקר",
+      "opportunities_span_58": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_terms_page_title": "תנאי שימוש - Peleg Group LLC",
+      "terms_meta_description": "תנאי השימוש באתר - הזכויות והחובות של המשתמשים",
+      "legal_accessibility_p_9": "Peleg Group LLC מחויבת להנגיש את השירותים לכלל הציבור. אנו פועלים ליישם את הנחיות התקן הישראלי \n            (ת\"י 5568) המבוסס על הנחיות WCAG 2.1 ברמת AA.",
+      "accessibility_page_title": "הצהרת נגישות",
+      "contact_meta_description": "צרו קשר עם מומחי Peleg Group לייעוץ אישי במכירת אדמות בארצות הברית. נשמח לענות על כל שאלה ולהציע הזדמנויות השקעה מותאמות אישית. התקשרו היום!",
+      "due_diligence_page_title": "בדיקת נאותות מקיפה לקרקעות בארה״ב — Peleg Group LLC",
+      "legal_accessibility_h1_1": "הצהרת נגישות",
+      "legal_accessibility_h2_2": "1. מדיניות הנגישות",
+      "legal_accessibility_h2_3": "2. הסדרי הנגישות באתר",
+      "legal_accessibility_h2_4": "3. טכנולוגיות מסייעות נתמכות",
+      "legal_accessibility_h2_5": "4. בדיקות נגישות",
+      "legal_accessibility_h2_6": "5. שיפורים מתמשכים",
+      "legal_accessibility_h2_7": "6. יצירת קשר ומשוב",
+      "legal_accessibility_h3_8": "תאימות לתקן WCAG 2.1",
+      "legal_accessibility_p_10": "אנו מאמינים בשוויון זכויות ובזכותו של כל אדם לקבל מידע ושירותים בצורה עצמאית ושוויונית. \n            אתר זה תוכנן ונבנה תוך מתן דגש מיוחד על נגישות לאנשים עם מוגבלויות.",
+      "legal_accessibility_p_11": "האתר תואם לרמת AA של תקן WCAG 2.1, הכולל:",
+      "legal_accessibility_p_12": "האתר נבדק באמצעות:",
+      "legal_accessibility_p_13": "אנו עובדים באופן מתמשך לשיפור נגישות האתר ומעדכנים אותו בהתאם להתפתחויות טכנולוגיות ולמשוב מהמשתמשים.",
+      "legal_accessibility_p_14": "אם נתקלתם בבעיית נגישות באתר או זקוקים לסיוע, אנא פנו אלינו:",
+      "legal_accessibility_p_15": "זמני מענה: נענה לפניות בנושא נגישות תוך 3 ימי עסקים ונפעל לפתרון תוך 10 ימי עסקים.",
+      "legal_accessibility_p_16": "תלונות: ניתן להגיש תלונה למשרד המשפטים - הנציבות לשוויון זכויות לאנשים עם מוגבלות",
+      "legal_privacy_page_title": "מדיניות פרטיות - Peleg Group LLC",
+      "opportunities_page_title": "אדמות פרימיום למכירה בשוק האמריקאי — Peleg Group LLC",
+      "privacy_meta_description": "מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם",
+      "legal_accessibility_li_19": "תמיכה בניווט באמצעות מקלדת",
+      "legal_accessibility_li_20": "תמיכה בקוראי מסך",
+      "legal_accessibility_li_21": "ניגודיות צבעים מתאימה",
+      "legal_accessibility_li_22": "גדלי פונט גמישים וניתנים להגדלה",
+      "legal_accessibility_li_23": "תיאורי תמונות (Alt text) מפורטים",
+      "legal_accessibility_li_24": "כותרות מובנות היררכית",
+      "legal_accessibility_li_25": "קישורים תיאוריים וברורים",
+      "legal_accessibility_li_26": "תמיכה בזום עד 200% ללא אובדן תוכן",
+      "legal_accessibility_li_27": "נתפס (Perceivable): המידע מוצג בדרכים שמשתמשים יכולים לתפוס",
+      "legal_accessibility_li_28": "פעיל (Operable): רכיבי הממשק ניתנים להפעלה",
+      "legal_accessibility_li_29": "מובן (Understandable): המידע וממשק המשתמש מובנים",
+      "legal_accessibility_li_30": "חזק (Robust): התוכן יכול להיות מפוענח על ידי מגוון טכנולוגיות",
+      "legal_accessibility_li_31": "NVDA (Windows)",
+      "legal_accessibility_li_32": "JAWS (Windows)",
+      "legal_accessibility_li_33": "VoiceOver (Mac/iOS)",
+      "legal_accessibility_li_34": "TalkBack (Android)",
+      "legal_accessibility_li_35": "Dragon NaturallySpeaking",
+      "legal_accessibility_li_36": "Switch navigation",
+      "legal_accessibility_li_37": "כלים אוטומטיים לבדיקת נגישות",
+      "legal_accessibility_li_38": "בדיקות ידניות עם קוראי מסך",
+      "legal_accessibility_li_39": "ניווט באמצעות מקלדת בלבד",
+      "legal_accessibility_li_40": "בדיקת ניגודיות צבעים",
+      "legal_accessibility_li_41": "בדיקה עם משתמשים עם מוגבלויות",
+      "legal_accessibility_li_42": "חברה: Peleg Group LLC",
+      "legal_accessibility_li_43": "אימייל: peleggroup1@gmail.com",
+      "legal_accessibility_li_44": "טלפון: 19849776997",
+      "legal_accessibility_div_45": "עדכון אחרון: 7.3.2026",
+      "legal_accessibility_div_46": "רמת נגישות: AA (תקן ישראלי ת\"י 5568)",
+      "legal_accessibility_link_17": "peleggroup1@gmail.com",
+      "legal_accessibility_link_18": "← חזרה לאתר",
+      "accessibility_meta_description": "הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית",
+      "due_diligence_meta_description": "שירותי בדיקת נאותות מקצועיים לרכישת קרקעות בארצות הברית. אנו בודקים כל פרט משפטי ופיזי כדי להבטיח השקעה בטוחה ורווחית. קבלו ייעוץ מומחים!",
+      "legal_accessibility_page_title": "הצהרת נגישות - Peleg Group LLC",
+      "opportunities_meta_description": "גלו אדמות למכירה ארצות הברית במיקומים אסטרטגיים. מגוון הזדמנויות השקעה בקרקעות עם פוטנציאל צמיחה גבוה. בדקו את הנכסים הזמינים שלנו עכשיו!"
+    }
+  },
+  "en": {
+    "translation": {
+      "home_h1_1": "American Land Investment, Mapped with Clarity",
+      "home_h2_2": "A Disciplined Way to Evaluate Land",
+      "home_h2_3": "Opportunities, Presented as Atlas Values.",
+      "home_h2_4": "Confidence is Born from Clarity.",
+      "home_h2_5": "Get the next atlas entry in your inbox.",
+      "home_h3_6": "Peleg Group LLC locates and presents US land opportunities with an atlas-like view: location context, parcel metrics, and due diligence signals—built for confident decisions.",
+      "home_h3_7": "Markets Covered",
+      "home_h3_8": "Parcel Types",
+      "home_h3_9": "Snapshot Fields",
+      "home_p_22": "Every opportunity is presented with full context—location, accessibility, zoning hints, and risk notes—so you can compare parcels like pages in an atlas.",
+      "home_p_23": "Selected US regions",
+      "home_p_24": "Rural, recreational, infill",
+      "home_p_25": "APN, acres, access, utilities",
+      "home_p_26": "Clear steps within days",
+      "home_p_27": "Investor-ready summaries",
+      "home_p_28": "Guided due diligence questions",
+      "home_p_29": "A curated collection of land parcels with clear snapshots – so you can quickly filter and ask the right due diligence questions.",
+      "home_p_30": "APN: 0542-183-09-0000",
+      "home_p_31": "County: Mohave County, AZ",
+      "home_p_32": "Area: 40 acres",
+      "home_p_33": "Open views with potential for future development near emerging transportation hubs.",
+      "home_p_34": "APN: 1205-447-22-0000",
+      "home_p_35": "County: Coconino County, AZ",
+      "home_p_36": "Area: 35 acres",
+      "home_p_37": "Quiet location in natural surroundings, perfect for investors seeking a recreational property.",
+      "home_p_38": "APN: 0309-621-15-0000",
+      "home_p_39": "County: Pinal County, AZ",
+      "home_p_40": "Area: 20 acres",
+      "home_p_41": "Proximity to urban expansion areas with long-term development possibilities.",
+      "home_p_42": "APN: 0418-305-08-0000",
+      "home_p_43": "County: Yavapai County, AZ",
+      "home_p_44": "Area: 10 acres",
+      "home_p_45": "Ideal for those seeking privacy and self-sufficient lifestyle in a natural area.",
+      "home_p_46": "APN: 0627-890-31-0000",
+      "home_p_47": "County: Maricopa County, AZ",
+      "home_p_48": "Area: 5 acres",
+      "home_p_49": "Stable investment in an area with existing infrastructure and convenient accessibility.",
+      "home_p_50": "APN: 0735-214-47-0000",
+      "home_p_51": "County: Navajo County, AZ",
+      "home_p_52": "Area: 15 acres",
+      "home_p_53": "Accessible land with commercial potential due to its central location.",
+      "home_p_54": "Investors appreciate a presentation that respects both the land's story and the discipline of numbers.",
+      "home_p_55": "\"The detailed documentation of the parcels, including maps and accurate area data, gave me the confidence to move forward with the investment. Every detail was transparent and clear.\"",
+      "home_p_56": "Investor, Long-term Holding Strategy",
+      "home_p_57": "\"The quick and professional response to every question, along with clearly presenting the next steps, made the process feel organized and accessible. I felt guided throughout the entire journey.\"",
+      "home_p_58": "Investor, Diversified Real Estate Portfolio",
+      "home_p_59": "\"The detailed maps and metrics provided me with a complete picture of the property and its potential. I felt I understood exactly what I was investing in, with no surprises.\"",
+      "home_p_60": "Investor, Agricultural Land Specialist",
+      "home_p_61": "Tell us what you're looking for—region, area range, access needs—and we'll respond with a customized starting point and in-depth overview focused on due diligence.",
+      "home_p_62": "Coordinates: 34.0522°N, 118.2437°W",
+      "home_p_63": "APN: 5421-003-017",
+      "home_p_64": "Area: 40 acres",
+      "home_p_65": "Access: Maintained dirt road, 1.2 miles from main road",
+      "home_p_66": "Notes: Check easements, water rights, and zoning regulations",
+      "home_p_67": "Peleg Group LLC - Leading in real estate with professional and customized solutions for every client.",
+      "home_p_68": "© 2026 Peleg Group LLC. All rights reserved.",
+      "home_h3_10": "Response Time",
+      "home_h3_11": "Documentation",
+      "home_h3_12": "Support",
+      "home_h3_13": "High Desert Land",
+      "home_h3_14": "Recreational Forest Land",
+      "home_h3_15": "Parcel Near Growth Corridor",
+      "home_h3_16": "Off-Grid Residential Land",
+      "home_h3_17": "Value Parcel for Long-Term Hold",
+      "home_h3_18": "Parcel with County Road Access",
+      "home_h3_19": "Quick Links",
+      "home_h3_20": "Contact",
+      "home_h3_21": "Follow Us",
+      "terms_h1_1": "Terms of Use",
+      "terms_h2_2": "1. Definitions",
+      "terms_h2_3": "2. Service Description",
+      "terms_h2_4": "3. Terms of Use",
+      "terms_h2_5": "4. User Obligations",
+      "terms_h2_6": "5. Payment and Refund Policy",
+      "terms_h2_7": "6. Limitation of Liability",
+      "terms_h2_8": "7. Copyright and Intellectual Property",
+      "terms_h2_9": "8. Privacy",
+      "terms_p_18": "Peleg Group LLC provides real estate services through the website. The services are subject to the terms detailed in this document \n            and may change from time to time.",
+      "terms_p_19": "Use of the website is conditional upon compliance with the following terms:",
+      "terms_p_20": "If the services include payment:",
+      "terms_p_21": "The services are provided \"as is\" without warranty of any kind. The company shall not be liable for indirect, \n            consequential or special damages arising from use of the website, except in cases where the law provides otherwise.",
+      "terms_p_22": "All content on the website, including texts, images, design and code, is protected by copyrights owned by Peleg Group LLC. \n            It is prohibited to copy, distribute or make commercial use of the content without written permission.",
+      "terms_p_23": "Collection and use of personal information is subject to our privacy policy. Use of the website constitutes agreement \n            to the privacy policy as detailed separately.",
+      "terms_p_24": "The company may change these terms of use at any time. Material changes will be published on the website with 30 days \n            advance notice. Continued use after the change constitutes agreement to the new terms.",
+      "terms_p_25": "The company may discontinue or restrict the service at any time, including in case of violation of the terms of use. \n            In case of service termination, the provisions of the relevant sections shall remain in effect.",
+      "terms_p_26": "These terms of use are subject to the laws of the State of Israel. Any dispute will be heard in the competent courts in Israel, \n            with preference given to arbitration or mediation where possible.",
+      "terms_p_27": "For questions or clarifications regarding the terms of use:",
+      "terms_p_28": "Peleg Group LLC - leaders in real estate with professional and customized solutions for every client.",
+      "terms_p_29": "© 2026 Peleg Group LLC. All rights reserved.",
+      "home_li_129": "Opportunities",
+      "home_li_130": "Due Diligence",
+      "home_li_131": "Contact",
+      "home_li_132": "peleggroup1@gmail.com",
+      "home_li_133": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_h2_10": "9. Modification of Terms of Use",
+      "terms_h2_11": "10. Service Termination",
+      "terms_h2_12": "11. Governing Law and Dispute Resolution",
+      "terms_h2_13": "12. General Provisions",
+      "terms_h2_14": "13. Contact Information",
+      "terms_h3_15": "Quick Links",
+      "terms_h3_16": "Contact",
+      "terms_h3_17": "Follow Us",
+      "terms_li_41": "\"The Company\" - Peleg Group LLC",
+      "terms_li_42": "\"The User\" - anyone who browses or uses the website",
+      "terms_li_43": "\"The Services\" - real estate services provided through the website",
+      "terms_li_44": "Using the website for legal purposes only",
+      "terms_li_45": "Not interfering with website operations or other users",
+      "terms_li_46": "Not uploading offensive, illegal, or harmful content",
+      "terms_li_47": "Respecting copyrights and intellectual property",
+      "terms_li_48": "Not performing actions that may harm website security",
+      "terms_li_49": "Providing accurate and correct information during registration or ordering",
+      "terms_li_50": "Maintaining confidentiality of account access details",
+      "terms_li_51": "Immediate notification of any unauthorized account use",
+      "terms_li_52": "Updating personal information as needed",
+      "terms_li_53": "Payments are processed through secure and encrypted systems",
+      "terms_li_54": "Prices include VAT as required by law",
+      "terms_li_55": "Right of transaction cancellation will stand in accordance with Consumer Protection Law",
+      "terms_li_56": "Refunds will be processed within 14 business days from cancellation approval",
+      "terms_li_57": "If part of the terms are declared invalid, the remaining terms will remain in effect",
+      "terms_li_58": "Non-enforcement of a right will not be considered a waiver of it",
+      "terms_li_59": "The terms of use constitute the entire agreement between the parties",
+      "terms_li_60": "Company: Peleg Group LLC",
+      "terms_li_61": "Email: info@company.com",
+      "terms_li_62": "Phone: 19849776997",
+      "terms_li_63": "Address: Company Address, Israel",
+      "terms_li_64": "Opportunities",
+      "terms_li_65": "Due Diligence",
+      "terms_li_66": "Contact Us",
+      "terms_li_67": "peleggroup1@gmail.com",
+      "terms_li_68": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_h1_1": "Request a Plot Status Report",
+      "contact_h2_2": "Tell us what you're looking for",
+      "contact_h2_3": "Clear, professional, and with a first-check obligation.",
+      "contact_h2_4": "Ready to explore land opportunities in the United States?",
+      "contact_h3_5": "Share your criteria and we'll respond with a customized starting point and a clear, professional overview",
+      "contact_h3_6": "Useful Details",
+      "contact_h3_7": "Concise Summary",
+      "contact_h3_8": "Direct Answers",
+      "contact_h3_9": "No Pressure",
+      "contact_p_14": "Preferred states or regions",
+      "contact_p_15": "Area Range (in acres)",
+      "contact_p_16": "Access and Infrastructure Preferences",
+      "contact_p_17": "Intended Use",
+      "contact_p_18": "Timeline and Decision Criteria",
+      "contact_p_19": "We typically respond with a clear step-by-step outline.",
+      "contact_p_20": "You receive a focused document with essential details: location, area, price, and initial due diligence risks. No unnecessary fluff – just the information needed to move forward.",
+      "contact_p_21": "We are available for clarifying questions and provide clear answers. If something is unclear or requires further investigation, we report this openly and professionally.",
+      "contact_p_22": "We don't apply pressure or push for quick decisions. Our role is to present the information, not to sell. The decision is always yours, after informed consideration.",
+      "contact_p_23": "Format: Concise",
+      "contact_p_24": "Note: Risks for verification",
+      "contact_p_25": "Action: Follow-up questions",
+      "contact_p_26": "Contact us with your criteria and we will get back to you with a tailored and clear starting point.",
+      "contact_p_27": "Peleg Group LLC - Leading in real estate with professional and personalized solutions for every client.",
+      "contact_p_28": "© 2026 Peleg Group LLC. All rights reserved.",
+      "home_alt_146": "Peleg Group LLC",
+      "home_alt_147": "Aerial view of American desert lands with parcel boundary lines",
+      "home_alt_148": "Peleg Group LLC",
+      "home_div_137": "Focus\n            Long-term land holdings",
+      "home_div_138": "Coverage\n            Selected U.S. markets",
+      "home_div_139": "Deliverables\n            Parcel report + due diligence checklist",
+      "home_div_140": "APN:\n            123-456-789-00",
+      "home_div_141": "Area:\n            5.2 acres",
+      "home_div_142": "Jurisdiction:\n            Mohave County, California",
+      "home_nav_143": "Opportunities",
+      "home_nav_144": "Due Diligence",
+      "home_nav_145": "Contact",
+      "home_span_69": "Focus",
+      "home_span_70": "Long-term Land Holdings",
+      "home_span_71": "Coverage",
+      "home_span_72": "Select US Markets",
+      "home_span_73": "Products",
+      "home_span_74": "Parcel Overview + Due Diligence Checklist",
+      "home_span_75": "APN:",
+      "home_span_76": "Area:",
+      "home_span_77": "5.2 acres",
+      "home_span_78": "Jurisdiction:",
+      "home_span_79": "Mohave County, California",
+      "home_span_80": "Recommended",
+      "home_span_81": "APN:",
+      "home_span_82": "County:",
+      "home_span_83": "Area:",
+      "home_span_84": "APN:",
+      "home_span_85": "County:",
+      "home_span_86": "Area:",
+      "home_span_87": "Potential",
+      "home_span_88": "APN:",
+      "home_span_89": "County:",
+      "home_span_90": "Area:",
+      "home_span_91": "APN:",
+      "home_span_92": "County:",
+      "home_span_93": "Area:",
+      "home_span_94": "APN:",
+      "home_span_95": "County:",
+      "home_span_96": "Area:",
+      "home_span_97": "APN:",
+      "home_span_98": "County:",
+      "home_span_99": "Area:",
+      "privacy_h1_1": "Privacy Policy",
+      "privacy_h2_2": "1. Information Collection",
+      "privacy_h2_3": "2. Use of Information",
+      "privacy_h2_4": "3. Information Sharing",
+      "privacy_h2_5": "4. User Rights",
+      "privacy_h2_6": "5. Cookies",
+      "privacy_h2_7": "6. Information Security",
+      "privacy_h2_8": "7. Policy Changes",
+      "privacy_h2_9": "8. Contact",
+      "privacy_p_13": "Peleg Group LLC (\"the Company\", \"we\", \"our\") is committed to protecting your privacy. This privacy policy explains how we collect, \n            use and protect your information when using the www.company.com website (\"the Service\").",
+      "privacy_p_14": "We may collect the following types of information:",
+      "privacy_p_15": "We use the collected information for the following purposes:",
+      "privacy_p_16": "We will not sell, lease or share your personal information with third parties, except in the following cases:",
+      "privacy_p_17": "In accordance with the Privacy Protection Law 5741-1981, you have the following rights:",
+      "privacy_p_18": "Our website uses cookies to improve user experience. You can manage cookies through your browser settings. \n            Disabling cookies may affect website functionality.",
+      "privacy_p_19": "We take reasonable security measures to protect your information, including encryption, firewalls and restricted access control. \n            However, no method of transmission or storage is 100% secure.",
+      "privacy_p_20": "We may update this privacy policy from time to time. Material changes will be posted on the website with 30 days advance notice.",
+      "privacy_p_21": "For questions or requests regarding this privacy policy, you can contact us:",
+      "privacy_p_22": "Database Registrar: For complaints, you can contact the Database Registrar at the Ministry of Justice",
+      "privacy_p_23": "Peleg Group LLC - Leaders in real estate with professional and customized solutions for every client.",
+      "privacy_p_24": "© 2026 Peleg Group LLC. All rights reserved.",
+      "terms_alt_74": "Peleg Group LLC",
+      "terms_alt_75": "Peleg Group LLC",
+      "terms_div_69": "Last updated: 27.2.2026",
+      "terms_div_70": "Using this website constitutes agreement to the terms of use detailed below. Please read carefully before use.",
+      "terms_nav_71": "Opportunities",
+      "terms_nav_72": "Due Diligence",
+      "terms_nav_73": "Contact Us",
+      "contact_h3_10": "Quick Links",
+      "contact_h3_11": "Contact Us",
+      "contact_h3_12": "Business Hours",
+      "contact_h3_13": "Follow Us",
+      "contact_li_61": "Opportunities",
+      "contact_li_62": "Due Diligence",
+      "contact_li_63": "Contact",
+      "contact_li_64": "peleggroup1@gmail.com",
+      "contact_li_65": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_li_66": "Monday: 08:00 - 20:00",
+      "contact_li_67": "Tuesday: 08:00 - 20:00",
+      "contact_li_68": "Wednesday: 08:00 - 20:00",
+      "contact_li_69": "Thursday: 08:00 - 20:00",
+      "contact_li_70": "Friday: 08:00 - 20:00",
+      "contact_li_71": "Saturday: Closed",
+      "contact_li_72": "Sunday: Closed",
+      "home_link_110": "View Opportunities",
+      "home_link_111": "Talk to Our Team",
+      "home_link_112": "Request Full Property Report",
+      "home_link_113": "Request Full Property Report",
+      "home_link_114": "Request Full Property Report",
+      "home_link_115": "Request Full Property Report",
+      "home_link_116": "Request Full Property Report",
+      "home_link_117": "Request Full Property Report",
+      "home_link_118": "Contact Peleg Group",
+      "home_link_119": "Explore Opportunities",
+      "home_link_120": "Opportunities",
+      "home_link_121": "Due Diligence",
+      "home_link_122": "Contact",
+      "home_link_123": "peleggroup1@gmail.com",
+      "home_link_124": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "home_link_125": "Privacy Policy",
+      "home_link_126": "Terms and Conditions",
+      "home_link_127": "Accessibility Statement",
+      "home_link_128": "Generated by Zappy",
+      "home_span_100": "Coordinates:",
+      "home_span_101": "34.0522°N, 118.2437°W",
+      "home_span_102": "APN:",
+      "home_span_103": "Area:",
+      "home_span_104": "40 acres",
+      "home_span_105": "Access:",
+      "home_span_106": "Maintained dirt road, 1.2 miles from main road",
+      "home_span_107": "Notes:",
+      "home_span_108": "Check easements, water rights, and zoning regulations",
+      "home_span_109": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "privacy_h3_10": "Quick Links",
+      "privacy_h3_11": "Contact Us",
+      "privacy_h3_12": "Follow Us",
+      "privacy_li_36": "Personal information: name, email address, phone number and address",
+      "privacy_li_37": "Technical information: IP address, browser type, operating system and website usage data",
+      "privacy_li_38": "Cookies: information stored on your computer to improve user experience",
+      "privacy_li_39": "Providing requested services",
+      "privacy_li_40": "Improving service and user experience",
+      "privacy_li_41": "Contacting you regarding our services",
+      "privacy_li_42": "Compliance with legal requirements",
+      "privacy_li_43": "With your explicit consent",
+      "privacy_li_44": "When required by law",
+      "privacy_li_45": "To protect our rights or the security of our users",
+      "privacy_li_46": "With service providers who assist in operating the service (under confidentiality agreements)",
+      "privacy_li_47": "Right to access personal information stored about you",
+      "privacy_li_48": "Right to correct incorrect or inaccurate information",
+      "privacy_li_49": "Right to delete personal information under certain circumstances",
+      "privacy_li_50": "Right to object to information processing for marketing purposes",
+      "privacy_li_51": "Right to file a complaint with the Data Registrar",
+      "privacy_li_52": "Company: Peleg Group LLC",
+      "privacy_li_53": "Email: info@company.com",
+      "privacy_li_54": "Phone: 19849776997",
+      "privacy_li_55": "Address: Company address, Israel",
+      "privacy_li_56": "Opportunities",
+      "privacy_li_57": "Due Diligence",
+      "privacy_li_58": "Contact Us",
+      "privacy_li_59": "peleggroup1@gmail.com",
+      "privacy_li_60": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_link_31": "info@company.com",
+      "terms_link_32": "Opportunities",
+      "terms_link_33": "Due Diligence",
+      "terms_link_34": "Contact",
+      "terms_link_35": "peleggroup1@gmail.com",
+      "terms_link_36": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "terms_link_37": "Privacy Policy",
+      "terms_link_38": "Terms and Conditions",
+      "terms_link_39": "Accessibility Statement",
+      "terms_link_40": "Generated by Zappy",
+      "terms_span_30": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_alt_81": "Peleg Group LLC",
+      "contact_alt_82": "Aerial view of land in the United States",
+      "contact_alt_83": "Peleg Group LLC",
+      "contact_btn_56": "Send Message",
+      "contact_div_73": "Investment Example",
+      "contact_div_74": "APN: 123-456-789-00",
+      "contact_div_75": "County/State: Mohave, Arizona",
+      "contact_div_76": "Area: 2.5 acres",
+      "contact_div_77": "Access: Maintained dirt road",
+      "contact_nav_78": "Opportunities",
+      "contact_nav_79": "Due Diligence",
+      "contact_nav_80": "Contact Us",
+      "home_quote_134": "\"The detailed documentation of the parcels, including maps and accurate area data, gave me the confidence to move forward with the investment. Every detail was transparent and clear.\"",
+      "home_quote_135": "\"The quick and professional response to every question, along with clear presentation of the next steps, made the process feel organized and accessible. I felt guided throughout the entire journey.\"",
+      "home_quote_136": "\"The detailed maps and measurements provided me with a complete picture of the property and its potential. I felt I understood exactly what I was investing in, with no surprises.\"",
+      "privacy_alt_65": "Peleg Group LLC",
+      "privacy_alt_66": "Peleg Group LLC",
+      "privacy_div_61": "Last updated: 27.2.2026",
+      "privacy_nav_62": "Opportunities",
+      "privacy_nav_63": "Due Diligence",
+      "privacy_nav_64": "Contact Us",
+      "contact_link_44": "Send Your Criteria",
+      "contact_link_45": "Send Message",
+      "contact_link_46": "View Opportunities",
+      "contact_link_47": "Opportunities",
+      "contact_link_48": "Due Diligence",
+      "contact_link_49": "Contact",
+      "contact_link_50": "peleggroup1@gmail.com",
+      "contact_link_51": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_link_52": "Privacy Policy",
+      "contact_link_53": "Terms and Conditions",
+      "contact_link_54": "Accessibility Statement",
+      "contact_link_55": "Generated by Zappy",
+      "contact_span_29": "APN:",
+      "contact_span_30": "County/State:",
+      "contact_span_31": "Mohave, Arizona",
+      "contact_span_32": "Area:",
+      "contact_span_33": "2.5 acres",
+      "contact_span_34": "Access:",
+      "contact_span_35": "Maintained dirt road",
+      "contact_span_36": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_span_37": "Monday: 08:00 - 20:00",
+      "contact_span_38": "Tuesday: 08:00 - 20:00",
+      "contact_span_39": "Wednesday: 08:00 - 20:00",
+      "contact_span_40": "Thursday: 08:00 - 20:00",
+      "contact_span_41": "Friday: 08:00 - 20:00",
+      "contact_span_42": "Saturday: Closed",
+      "contact_span_43": "Sunday: Closed",
+      "home_page_title": "American Land Investment with Guaranteed Returns — Peleg Group LLC",
+      "privacy_link_26": "info@company.com",
+      "privacy_link_27": "Opportunities",
+      "privacy_link_28": "Due Diligence",
+      "privacy_link_29": "Contact Us",
+      "privacy_link_30": "peleggroup1@gmail.com",
+      "privacy_link_31": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "privacy_link_32": "Privacy Policy",
+      "privacy_link_33": "Terms and Conditions",
+      "privacy_link_34": "Accessibility Statement",
+      "privacy_link_35": "Generated by Zappy",
+      "privacy_span_25": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "contact_label_57": "Full Name",
+      "contact_label_58": "Email",
+      "contact_label_59": "Phone",
+      "contact_label_60": "Message",
+      "legal_terms_h1_1": "Terms of Use",
+      "legal_terms_h2_2": "1. Definitions",
+      "legal_terms_h2_3": "2. Service Description",
+      "legal_terms_h2_4": "3. Terms of Use",
+      "legal_terms_h2_5": "4. User Obligations",
+      "legal_terms_h2_6": "5. Payment and Refund Policy",
+      "legal_terms_h2_7": "6. Limitation of Liability",
+      "legal_terms_h2_8": "7. Copyrights and Intellectual Property",
+      "legal_terms_h2_9": "8. Privacy",
+      "legal_terms_p_15": "Peleg Group LLC provides general services through the website. The services are subject to the terms detailed in this document \nand may change from time to time.",
+      "legal_terms_p_16": "Use of the website is conditional upon compliance with the following terms:",
+      "legal_terms_p_17": "If the services include payment:",
+      "legal_terms_p_18": "The services are provided \"as is\" without warranty of any kind. The company will not be liable for indirect, \nconsequential or special damages arising from use of the website, except in cases where the law provides otherwise.",
+      "legal_terms_p_19": "All content on the website, including texts, images, design and code, are protected by copyrights belonging to Peleg Group LLC. \nIt is prohibited to copy, distribute or make commercial use of the content without written permission.",
+      "legal_terms_p_20": "Collection and use of personal information is subject to our privacy policy. Use of the website constitutes agreement \nto the privacy policy as detailed separately.",
+      "legal_terms_p_21": "The company may change these terms of use at any time. Material changes will be published on the website with advance notice \nof 30 days. Continued use after the change constitutes agreement to the new terms.",
+      "legal_terms_p_22": "The company may discontinue or limit the service at any time, including in case of violation of the terms of use. \nIn case of service termination, the provisions of the relevant sections will remain in effect.",
+      "legal_terms_p_23": "These terms of use are subject to the laws of the State of Israel. Any dispute will be heard in the competent courts in Israel, \nwith preference given to arbitration or mediation where possible.",
+      "legal_terms_p_24": "For questions or clarifications regarding the terms of use:",
+      "terms_page_title": "Terms of Use",
+      "legal_terms_h2_10": "9. Modification of Terms of Use",
+      "legal_terms_h2_11": "10. Service Termination",
+      "legal_terms_h2_12": "11. Applicable Law and Dispute Resolution",
+      "legal_terms_h2_13": "12. General Provisions",
+      "legal_terms_h2_14": "13. Contact Information",
+      "legal_terms_li_27": "\"The Company\" - Peleg Group LLC",
+      "legal_terms_li_28": "\"The User\" - anyone who browses or uses the website",
+      "legal_terms_li_29": "\"The Services\" - general services provided through the website",
+      "legal_terms_li_30": "Using the website for legal purposes only",
+      "legal_terms_li_31": "Not interfering with the website's operation or other users",
+      "legal_terms_li_32": "Not uploading offensive, illegal or harmful content",
+      "legal_terms_li_33": "Respecting copyrights and intellectual property",
+      "legal_terms_li_34": "Not performing actions that could harm website security",
+      "legal_terms_li_35": "Providing correct and accurate information during registration or ordering",
+      "legal_terms_li_36": "Maintaining confidentiality of account access details",
+      "legal_terms_li_37": "Immediate notification of any unauthorized use of the account",
+      "legal_terms_li_38": "Updating personal information as needed",
+      "legal_terms_li_39": "Payments are processed through secure and encrypted systems",
+      "legal_terms_li_40": "Prices include VAT as required by law",
+      "legal_terms_li_41": "Right of transaction cancellation will stand in accordance with consumer protection law",
+      "legal_terms_li_42": "Refunds will be processed within 14 business days from cancellation approval",
+      "legal_terms_li_43": "If part of the terms is declared invalid, the remaining terms will remain in effect",
+      "legal_terms_li_44": "Non-enforcement of a right will not be considered a waiver of it",
+      "legal_terms_li_45": "The terms of use constitute the entire agreement between the parties",
+      "legal_terms_li_46": "Company: Peleg Group LLC",
+      "legal_terms_li_47": "Email: peleggroup1@gmail.com",
+      "legal_terms_li_48": "Phone: 19849776997",
+      "legal_terms_li_49": "Address: 500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_h1_1": "Accessibility Statement",
+      "accessibility_h2_2": "1. Accessibility Policy",
+      "accessibility_h2_3": "2. Website Accessibility Arrangements",
+      "accessibility_h2_4": "3. Supported Assistive Technologies",
+      "accessibility_h2_5": "4. Accessibility Testing",
+      "accessibility_h2_6": "5. Ongoing Improvements",
+      "accessibility_h2_7": "6. Contact and Feedback",
+      "accessibility_h3_8": "WCAG 2.1 Compliance",
+      "accessibility_h3_9": "Quick Links",
+      "accessibility_p_12": "Peleg Group LLC is committed to making services accessible to the general public. We work to implement the guidelines of the Israeli Standard \n            (IS 5568) based on WCAG 2.1 guidelines at AA level.",
+      "accessibility_p_13": "We believe in equal rights and in every person's right to receive information and services independently and equally. \n            This website was designed and built with special emphasis on accessibility for people with disabilities.",
+      "accessibility_p_14": "The website complies with WCAG 2.1 AA level standard, which includes:",
+      "accessibility_p_15": "The website was tested using:",
+      "accessibility_p_16": "We work continuously to improve website accessibility and update it according to technological developments and user feedback.",
+      "accessibility_p_17": "If you encountered an accessibility issue on the website or need assistance, please contact us:",
+      "accessibility_p_18": "Response times: We respond to accessibility inquiries within 3 business days and work toward resolution within 10 business days.",
+      "accessibility_p_19": "Complaints: You can file a complaint with the Ministry of Justice - Commissioner for Equal Rights for People with Disabilities",
+      "accessibility_p_20": "Peleg Group LLC - Leading in real estate with professional and personalized solutions for every client.",
+      "accessibility_p_21": "© 2026 Peleg Group LLC. All rights reserved.",
+      "contact_page_title": "Talk to Us About US Land Investment — Peleg Group LLC",
+      "due_diligence_h2_1": "Due Diligence, Presented as a Clear Checklist",
+      "due_diligence_h2_2": "What to Check Before Moving Forward",
+      "due_diligence_h2_3": "Examples of Due Diligence Thinking",
+      "due_diligence_h2_4": "Resources and Questions",
+      "due_diligence_h2_5": "Want a Review with Inspection Tips?",
+      "due_diligence_h3_6": "Access and Right of Way",
+      "due_diligence_h3_7": "Zoning and Permitted Use",
+      "due_diligence_h3_8": "Infrastructure and Feasibility",
+      "due_diligence_h3_9": "Topography and Drainage",
+      "due_diligence_p_25": "Before purchasing land in the United States, it's essential to conduct comprehensive due diligence. We recommend verifying property access, zoning and land use, infrastructure availability (electricity, water, sewer), and flood or fire risks. Additionally, it's important to check local regulations, taxation, and relevant building permits.",
+      "due_diligence_p_26": "Our goal is to provide you with all the information needed to make informed and secure decisions. Peleg Group accompanies you at every step, from property identification to closing the deal, ensuring you're equipped with all the necessary data for a successful investment in American land.",
+      "due_diligence_p_27": "Use this page as a conversation guide when requesting a detailed property overview.",
+      "due_diligence_p_28": "Verify legal access route and recorded rights of way",
+      "due_diligence_p_29": "Check if there's an approved private or public road",
+      "due_diligence_p_30": "Ensure there are no future restrictions on access rights",
+      "due_diligence_p_31": "Ask the county about minimum distances and permitted uses",
+      "due_diligence_p_32": "Check zoning regulations and future building restrictions",
+      "due_diligence_p_33": "Ensure the designation matches your development plans",
+      "due_diligence_p_34": "Determine availability of electricity, water, and sewer in the area",
+      "due_diligence_p_35": "Estimate costs for connecting to public utilities",
+      "due_diligence_p_36": "Check alternative options like private well or solar system",
+      "due_diligence_p_37": "Survey the land to identify slopes and drainage areas",
+      "due_diligence_p_38": "Check flood risks and extreme weather history",
+      "due_diligence_p_39": "Ensure the soil is suitable for construction and doesn't require expensive work",
+      "due_diligence_p_40": "Check history of property tax and assessment payments",
+      "due_diligence_p_41": "Verify there are no liens or debts recorded on the property",
+      "due_diligence_p_42": "Estimate annual tax costs for budget planning",
+      "due_diligence_p_43": "Tour the area to identify factories, busy roads, or noise",
+      "due_diligence_p_44": "Check future development plans that might affect the property",
+      "due_diligence_p_45": "Talk to local residents to get a complete picture",
+      "due_diligence_p_46": "Understand the building permit process in the county",
+      "due_diligence_p_47": "Determine estimated waiting times and special requirements",
+      "due_diligence_p_48": "Consult with a local contractor about known challenges",
+      "due_diligence_p_49": "Assess resale potential and demand in the area",
+      "due_diligence_p_50": "Check local market trends and recent transaction prices",
+      "due_diligence_p_51": "Plan a clear exit strategy before making the purchase",
+      "due_diligence_p_52": "A property that appears adjacent to a public road may be separated from it by a private right-of-way strip or reserved strip with no legal access. We checked historical ownership records and discovered that the nearby road is not recorded as a right of way for the property in question, and previous owners used an unrecorded neighbor agreement. Without legal updating, the buyer could find themselves without legal access.",
+      "due_diligence_p_53": "Key lesson: Checking rights of way in county records is essential even when access appears straightforward.",
+      "due_diligence_p_54": "A power line running 200 meters from the property doesn't guarantee cheap or even possible connection. We checked with the local electric company and discovered that extending the line would cost over $50,000, and the company requires advance guarantee. In other cases, the nearest water source was a neighbor's private well, with no shared usage rights. Early coordination with service providers reveals the true costs.",
+      "due_diligence_p_55": "Key lesson: Physical proximity to services doesn't equal legal or economic availability—check with providers.",
+      "due_diligence_p_56": "Zoning regulations in rural counties are sometimes vague or not updated on the website. We spoke directly with the planning department and they clarified that a certain agricultural area requires a minimum of 10 acres for residential construction, not 5 as written in an old document. Additionally, we discovered restrictions on certain building types that don't appear in online searches. A short phone call saves months of frustration.",
+      "due_diligence_p_57": "Key lesson: Direct coordination with county authorities provides accurate answers and prevents legal surprises.",
+      "due_diligence_p_58": "Check future zoning plans, building restrictions, and planned projects in the area. This information is crucial for understanding the property's long-term potential.",
+      "due_diligence_p_59": "Get access to official maps, APN numbers, tax history, and property values. This information allows you to assess annual maintenance costs and ensure coordination with ownership records.",
+      "due_diligence_p_60": "Verify legal access to the parcel, existing rights of way, and condition of adjacent roads. Parcels without proven access can be problematic for future sale or development.",
+      "due_diligence_p_61": "Check FEMA maps for flood risks and federal fire risk ratings. Understanding natural risks is essential for insurance, obtaining credit, and future planning.",
+      "due_diligence_p_62": "Intended use: Are you looking for land for residential, investment, agricultural, or commercial development?",
+      "due_diligence_p_63": "Preferred area: Specific states or counties that interest you in the United States?",
+      "due_diligence_p_64": "Access requirements: Do you need paved access, electricity or water connection, or are you interested in remote land?",
+      "due_diligence_p_65": "We'll share with you a concise overview and the worthwhile questions to ask going forward for the parcels you're considering.",
+      "due_diligence_p_66": "To verify: Type of access",
+      "due_diligence_p_67": "To ask: Zoning notes",
+      "due_diligence_p_68": "To confirm: Tax status",
+      "due_diligence_p_69": "To check: Authority limitations",
+      "due_diligence_p_70": "Peleg Group LLC - Leading in real estate with professional and customized solutions for every client.",
+      "due_diligence_p_71": "© 2026 Peleg Group LLC. All rights reserved.",
+      "legal_privacy_h1_1": "Privacy Policy",
+      "legal_privacy_h2_2": "1. Information Collection",
+      "legal_privacy_h2_3": "2. Use of Information",
+      "legal_privacy_h2_4": "3. Information Sharing",
+      "legal_privacy_h2_5": "4. User Rights",
+      "legal_privacy_h2_6": "5. Cookies",
+      "legal_privacy_h2_7": "6. Information Security",
+      "legal_privacy_h2_8": "7. Policy Changes",
+      "legal_privacy_h2_9": "8. Contact",
+      "legal_privacy_p_10": "Peleg Group LLC (\"the Company\", \"we\", \"our\") is committed to protecting your privacy. This privacy policy explains how we collect, \nuse and protect your information when using the website www.company.com (\"the Service\").",
+      "legal_privacy_p_11": "We may collect the following types of information:",
+      "legal_privacy_p_12": "We use the collected information for the following purposes:",
+      "legal_privacy_p_13": "We will not sell, lease, or share your personal information with third parties, except in the following cases:",
+      "legal_privacy_p_14": "In accordance with the Privacy Protection Law 5741-1981, you have the following rights:",
+      "legal_privacy_p_15": "Our website uses cookies to improve user experience. You can manage cookies through your browser settings.\n            Disabling cookies may affect website functionality.",
+      "legal_privacy_p_16": "We implement reasonable security measures to protect your information, including encryption, firewalls, and restricted access control.\n            However, no method of transmission or storage is 100% secure.",
+      "legal_privacy_p_17": "We may update this privacy policy from time to time. Material changes will be published on the website with 30 days advance notice.",
+      "legal_privacy_p_18": "For questions or requests regarding this privacy policy, you can contact us:",
+      "legal_privacy_p_19": "Database Registrar: For complaints, you can contact the Database Registrar at the Ministry of Justice",
+      "legal_terms_div_50": "Last updated: 7.3.2026",
+      "legal_terms_div_51": "Use of this website constitutes agreement to the terms of use detailed below. Please read carefully before use.",
+      "opportunities_h2_1": "Current Land Opportunities.",
+      "opportunities_h2_2": "From the Preferred List for Complete Security.",
+      "opportunities_h2_3": "Frequently Asked Questions",
+      "opportunities_h2_4": "Request a Parcel Overview.",
+      "opportunities_h3_5": "Desert View Parcel",
+      "opportunities_h3_6": "Tell Us What You're Looking For",
+      "opportunities_h3_7": "Receive a Professional Overview",
+      "opportunities_h3_8": "Review the Checklist",
+      "opportunities_h3_9": "Decide on the Next Step",
+      "opportunities_p_20": "A selection of US land packages presented with consistent overviews—so you can quickly compare and request details when a parcel fits your strategy.",
+      "opportunities_p_21": "APN + Jurisdiction",
+      "opportunities_p_22": "Size + Access",
+      "opportunities_p_23": "Infrastructure Hints",
+      "opportunities_p_24": "Risk Notes + Next Steps",
+      "opportunities_p_25": "Add your text content here. This is placeholder text that can be edited.",
+      "opportunities_p_26": "APN: 542-180-34-00",
+      "opportunities_p_27": "County/State: Mohave, AZ",
+      "opportunities_p_28": "Size: 5.2 acres",
+      "opportunities_p_29": "Access appears via maintained county road; verify easement rights and utility connections.",
+      "opportunities_p_30": "Request Full File",
+      "opportunities_p_31": "When you come to us with a preferred list or specific criteria, we don't just send links – we prepare a professional overview for you. You'll receive a detailed summary of each parcel, precise location context, and a list of warning signs worth checking with local authorities or agents. This isn't a substitute for full due diligence, but it gives you the tools to decide whether to move forward or move to the next option.",
+      "opportunities_p_32": "Our process is built to save you time and provide clarity. Instead of navigating alone through public documents and complex maps, you receive an organized and structured information package – with all the relevant details needed to ask the right questions and move forward with confidence.",
+      "opportunities_p_33": "Share your criteria with us – parcel size, preferred area, budget, or any special requirements. This can be a brief conversation or detailed form, depending on what's comfortable for you.",
+      "opportunities_p_34": "We'll send you an organized document with parcel details, precise location, satellite images, and basic area data. Everything in one place, ready for review.",
+      "opportunities_p_35": "We'll highlight critical points for verification – access rights, zoning restrictions, available infrastructure, and more. These are the questions worth asking the county or agent before making a final decision.",
+      "opportunities_p_36": "With all the information in hand, you can decide with confidence – proceed to full due diligence, request additional details, or move to another option. You're in complete control.",
+      "opportunities_p_37": "Detailed parcel overview with all basic data",
+      "opportunities_p_38": "Complete location context – maps, access, proximity to infrastructure and services",
+      "opportunities_p_39": "Risk list and verification points with authorities and agents",
+      "opportunities_p_40": "Suggested questions to ask before making a final decision",
+      "opportunities_p_41": "We analyze market trends, demand data, development potential, and accessibility. Each parcel undergoes comprehensive due diligence to ensure it meets high investment standards and offers long-term growth potential for our investors.",
+      "opportunities_p_42": "Yes, we provide detailed analysis of comparable sales in the area, market trends, and current valuation data. Our information package includes maps, legal documentation, and financial data to help you make informed decisions.",
+      "opportunities_p_43": "It's recommended to verify property rights, zoning restrictions, access rights, water rights, and environmental history. We provide basic documents, but it's advisable to consult with a local attorney or real estate expert for complete verification.",
+      "opportunities_p_44": "After receiving all information and completing due diligence, most transactions can close within 2-4 weeks. The process depends on your financing approval speed, document review, and closing times with the title company.",
+      "opportunities_p_45": "We specialize in growth areas throughout the United States, including Texas, Arizona, Florida, and southeastern states. We identify markets with strong infrastructure development, population growth, and positive economic conditions.",
+      "opportunities_p_46": "Contact us through our contact page or email us directly. We'll provide you with a detailed information package including maps, legal documents, financial analysis, and parcel photos.",
+      "opportunities_p_47": "We'll respond with a clear summary and next due diligence steps—no noise, no pressure.",
+      "opportunities_p_48": "Response: One business day timing",
+      "opportunities_p_49": "Format: Concise overview",
+      "opportunities_p_50": "Focus: Clarity first",
+      "opportunities_p_51": "Peleg Group LLC - Leading in real estate with professional and personalized solutions for every client.",
+      "opportunities_p_52": "© 2026 Peleg Group LLC. All rights reserved.",
+      "privacy_page_title": "Privacy Policy",
+      "accessibility_h3_10": "Contact Us",
+      "accessibility_h3_11": "Follow Us",
+      "accessibility_li_33": "Keyboard navigation support",
+      "accessibility_li_34": "Screen reader support",
+      "accessibility_li_35": "Appropriate color contrast",
+      "accessibility_li_36": "Flexible and scalable font sizes",
+      "accessibility_li_37": "Detailed image descriptions (Alt text)",
+      "accessibility_li_38": "Hierarchically structured headings",
+      "accessibility_li_39": "Descriptive and clear links",
+      "accessibility_li_40": "Zoom support up to 200% without content loss",
+      "accessibility_li_41": "Perceivable: Information is presented in ways users can perceive",
+      "accessibility_li_42": "Operable: Interface components are operable",
+      "accessibility_li_43": "Understandable: Information and user interface are understandable",
+      "accessibility_li_44": "Robust: Content can be interpreted by a variety of technologies",
+      "accessibility_li_45": "NVDA (Windows)",
+      "accessibility_li_46": "JAWS (Windows)",
+      "accessibility_li_47": "VoiceOver (Mac/iOS)",
+      "accessibility_li_48": "TalkBack (Android)",
+      "accessibility_li_49": "Dragon NaturallySpeaking",
+      "accessibility_li_50": "Switch navigation",
+      "accessibility_li_51": "Automated accessibility testing tools",
+      "accessibility_li_52": "Manual testing with screen readers",
+      "accessibility_li_53": "Keyboard-only navigation",
+      "accessibility_li_54": "Color contrast testing",
+      "accessibility_li_55": "Testing with users with disabilities",
+      "accessibility_li_56": "Company: Peleg Group LLC",
+      "accessibility_li_57": "Email: info@company.com",
+      "accessibility_li_58": "Phone: 19849776997",
+      "accessibility_li_59": "Opportunities",
+      "accessibility_li_60": "Due Diligence",
+      "accessibility_li_61": "Contact Us",
+      "accessibility_li_62": "peleggroup1@gmail.com",
+      "accessibility_li_63": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_h3_10": "Taxes and Liens",
+      "due_diligence_h3_11": "Neighboring Nuisances",
+      "due_diligence_h3_12": "Permitting Expectations",
+      "due_diligence_h3_13": "Exit Considerations",
+      "due_diligence_h3_14": "When Access Seems Clear—But Isn't",
+      "due_diligence_h3_15": "Area Services vs. Available Services",
+      "due_diligence_h3_16": "Interpreting County Regulations Without Guesswork",
+      "due_diligence_h3_17": "County Planning Office",
+      "due_diligence_h3_18": "Appraisers and Parcel Maps",
+      "due_diligence_h3_19": "Road Records and Rights of Way",
+      "due_diligence_h3_20": "Flood and Fire Risk Information",
+      "due_diligence_h3_21": "Questions to Send with Your Inquiry",
+      "due_diligence_h3_22": "Quick Links",
+      "due_diligence_h3_23": "Contact Us",
+      "due_diligence_h3_24": "Follow Us",
+      "due_diligence_li_87": "Opportunities",
+      "due_diligence_li_88": "Due Diligence",
+      "due_diligence_li_89": "Contact Us",
+      "due_diligence_li_90": "peleggroup1@gmail.com",
+      "due_diligence_li_91": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_privacy_li_22": "Personal information: name, email address, phone number, and address",
+      "legal_privacy_li_23": "Technical information: IP address, browser type, operating system, and website usage data",
+      "legal_privacy_li_24": "Cookies: information stored on your computer to improve user experience",
+      "legal_privacy_li_25": "Providing requested services",
+      "legal_privacy_li_26": "Improving service and user experience",
+      "legal_privacy_li_27": "Contacting you regarding our services",
+      "legal_privacy_li_28": "Compliance with legal requirements",
+      "legal_privacy_li_29": "With your explicit consent",
+      "legal_privacy_li_30": "When required by law",
+      "legal_privacy_li_31": "To protect our rights or the security of our users",
+      "legal_privacy_li_32": "With service providers who assist in operating the service (under confidentiality agreements)",
+      "legal_privacy_li_33": "Right to access personal information stored about you",
+      "legal_privacy_li_34": "Right to correct incorrect or inaccurate information",
+      "legal_privacy_li_35": "Right to delete personal information under certain circumstances",
+      "legal_privacy_li_36": "Right to object to information processing for marketing purposes",
+      "legal_privacy_li_37": "Right to file a complaint with the Database Registrar",
+      "legal_privacy_li_38": "Company: Peleg Group LLC",
+      "legal_privacy_li_39": "Email: peleggroup1@gmail.com",
+      "legal_privacy_li_40": "Phone: 19849776997",
+      "legal_privacy_li_41": "Address: 500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_terms_link_25": "peleggroup1@gmail.com",
+      "legal_terms_link_26": "← Back to website",
+      "opportunities_h3_10": "What You'll Receive:",
+      "opportunities_h3_11": "How Are Parcels Selected?",
+      "opportunities_h3_12": "Do You Provide Comparison Reports?",
+      "opportunities_h3_13": "What Due Diligence Should I Perform?",
+      "opportunities_h3_14": "How Quickly Can I Move Forward?",
+      "opportunities_h3_15": "Which Markets Do You Focus On?",
+      "opportunities_h3_16": "How Do I Request Additional Details?",
+      "opportunities_h3_17": "Quick Links",
+      "opportunities_h3_18": "Contact Us",
+      "opportunities_h3_19": "Follow Us",
+      "opportunities_li_71": "Opportunities",
+      "opportunities_li_72": "Due Diligence",
+      "opportunities_li_73": "Contact Us",
+      "opportunities_li_74": "peleggroup1@gmail.com",
+      "opportunities_li_75": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_alt_69": "Peleg Group LLC",
+      "accessibility_alt_70": "Peleg Group LLC",
+      "accessibility_div_64": "Last updated: 27.2.2026",
+      "accessibility_div_65": "Accessibility level: AA (Israeli Standard IS 5568)",
+      "accessibility_nav_66": "Opportunities",
+      "accessibility_nav_67": "Due Diligence",
+      "accessibility_nav_68": "Contact",
+      "due_diligence_alt_96": "Peleg Group LLC",
+      "due_diligence_alt_97": "Illustrative vignette map of a state in the United States with county lines",
+      "due_diligence_alt_98": "Aerial photograph of rural land plot in the United States with visible property boundaries",
+      "due_diligence_alt_99": "Aerial photograph of undeveloped land in the United States with utility infrastructure in the vicinity",
+      "due_diligence_div_92": "Recommended Checklist",
+      "due_diligence_nav_93": "Opportunities",
+      "due_diligence_nav_94": "Due Diligence",
+      "due_diligence_nav_95": "Contact Us",
+      "legal_privacy_div_42": "Last updated: 7.3.2026",
+      "opportunities_alt_79": "Peleg Group LLC",
+      "opportunities_alt_80": "Desert landscape with scattered vegetation and distant mountains",
+      "opportunities_alt_81": "Peleg Group LLC",
+      "opportunities_nav_76": "Opportunities",
+      "opportunities_nav_77": "Due Diligence",
+      "opportunities_nav_78": "Contact Us",
+      "accessibility_link_23": "info@company.com",
+      "accessibility_link_24": "Opportunities",
+      "accessibility_link_25": "Due Diligence",
+      "accessibility_link_26": "Contact Us",
+      "accessibility_link_27": "peleggroup1@gmail.com",
+      "accessibility_link_28": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "accessibility_link_29": "Privacy Policy",
+      "accessibility_link_30": "Terms and Conditions",
+      "accessibility_link_31": "Accessibility Statement",
+      "accessibility_link_32": "Generated by Zappy",
+      "accessibility_span_22": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_alt_100": "Aerial photograph of rural agricultural land plots in the United States with boundary and zone markings",
+      "due_diligence_alt_101": "Peleg Group LLC",
+      "due_diligence_link_77": "Start a conversation",
+      "due_diligence_link_78": "Opportunities",
+      "due_diligence_link_79": "Due Diligence",
+      "due_diligence_link_80": "Contact Us",
+      "due_diligence_link_81": "peleggroup1@gmail.com",
+      "due_diligence_link_82": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "due_diligence_link_83": "Privacy Policy",
+      "due_diligence_link_84": "Terms and Conditions",
+      "due_diligence_link_85": "Accessibility Statement",
+      "due_diligence_link_86": "Generated by Zappy",
+      "due_diligence_span_72": "To verify:",
+      "due_diligence_span_73": "To ask:",
+      "due_diligence_span_74": "To confirm:",
+      "due_diligence_span_75": "To check:",
+      "due_diligence_span_76": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "home_meta_description": "Land sales in the United States with full professional guidance. Peleg Group specializes in profitable land investments in the American market. Discover unique investment opportunities today!",
+      "legal_privacy_link_20": "peleggroup1@gmail.com",
+      "legal_privacy_link_21": "← Back to website",
+      "opportunities_link_59": "Request Full Portfolio",
+      "opportunities_link_60": "Contact Us",
+      "opportunities_link_61": "Back to Home",
+      "opportunities_link_62": "Opportunities",
+      "opportunities_link_63": "Due Diligence",
+      "opportunities_link_64": "Contact Us",
+      "opportunities_link_65": "peleggroup1@gmail.com",
+      "opportunities_link_66": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "opportunities_link_67": "Privacy Policy",
+      "opportunities_link_68": "Terms and Conditions",
+      "opportunities_link_69": "Accessibility Statement",
+      "opportunities_link_70": "Generated by Zappy",
+      "opportunities_span_53": "APN:",
+      "opportunities_span_54": "County/State:",
+      "opportunities_span_55": "Mohave, AZ",
+      "opportunities_span_56": "Area:",
+      "opportunities_span_57": "5.2 acres",
+      "opportunities_span_58": "500 Westover Dr #30382, Sanford, Sanford, NC, 27330, United States",
+      "legal_terms_page_title": "Terms of Use - Peleg Group LLC",
+      "terms_meta_description": "Website Terms of Use - User Rights and Obligations",
+      "legal_accessibility_p_9": "Peleg Group LLC is committed to making services accessible to the general public. We work to implement the Israeli Standard\n            (IS 5568) guidelines based on WCAG 2.1 Level AA guidelines.",
+      "accessibility_page_title": "Accessibility Statement",
+      "contact_meta_description": "Contact Peleg Group experts for personalized consultation on land sales in the United States. We're happy to answer any questions and offer customized investment opportunities. Call today!",
+      "due_diligence_page_title": "Comprehensive Due Diligence for US Land — Peleg Group LLC",
+      "legal_accessibility_h1_1": "Accessibility Statement",
+      "legal_accessibility_h2_2": "1. Accessibility Policy",
+      "legal_accessibility_h2_3": "2. Website Accessibility Arrangements",
+      "legal_accessibility_h2_4": "3. Supported Assistive Technologies",
+      "legal_accessibility_h2_5": "4. Accessibility Testing",
+      "legal_accessibility_h2_6": "5. Continuous Improvements",
+      "legal_accessibility_h2_7": "6. Contact and Feedback",
+      "legal_accessibility_h3_8": "WCAG 2.1 Compliance",
+      "legal_accessibility_p_10": "We believe in equal rights and in every person's right to receive information and services independently and equally.\n            This website was designed and built with special emphasis on accessibility for people with disabilities.",
+      "legal_accessibility_p_11": "The website complies with Level AA of the WCAG 2.1 standard, which includes:",
+      "legal_accessibility_p_12": "The website has been tested using:",
+      "legal_accessibility_p_13": "We work continuously to improve website accessibility and update it according to technological developments and user feedback.",
+      "legal_accessibility_p_14": "If you encounter an accessibility issue on the website or need assistance, please contact us:",
+      "legal_accessibility_p_15": "Response times: We respond to accessibility inquiries within 3 business days and work toward resolution within 10 business days.",
+      "legal_accessibility_p_16": "Complaints: You can file a complaint with the Ministry of Justice - Commissioner for Equal Rights for People with Disabilities",
+      "legal_privacy_page_title": "Privacy Policy - Peleg Group LLC",
+      "opportunities_page_title": "Premium Land for Sale in the American Market — Peleg Group LLC",
+      "privacy_meta_description": "Our privacy policy - how we collect, use and protect your information",
+      "legal_accessibility_li_19": "Keyboard navigation support",
+      "legal_accessibility_li_20": "Screen reader support",
+      "legal_accessibility_li_21": "Appropriate color contrast",
+      "legal_accessibility_li_22": "Flexible and scalable font sizes",
+      "legal_accessibility_li_23": "Detailed image descriptions (Alt text)",
+      "legal_accessibility_li_24": "Hierarchically structured headings",
+      "legal_accessibility_li_25": "Descriptive and clear links",
+      "legal_accessibility_li_26": "Zoom support up to 200% without content loss",
+      "legal_accessibility_li_27": "Perceivable: Information is presented in ways users can perceive",
+      "legal_accessibility_li_28": "Operable: Interface components are operable",
+      "legal_accessibility_li_29": "Understandable: Information and user interface are understandable",
+      "legal_accessibility_li_30": "Robust: Content can be interpreted by a variety of technologies",
+      "legal_accessibility_li_31": "NVDA (Windows)",
+      "legal_accessibility_li_32": "JAWS (Windows)",
+      "legal_accessibility_li_33": "VoiceOver (Mac/iOS)",
+      "legal_accessibility_li_34": "TalkBack (Android)",
+      "legal_accessibility_li_35": "Dragon NaturallySpeaking",
+      "legal_accessibility_li_36": "Switch navigation",
+      "legal_accessibility_li_37": "Automated accessibility testing tools",
+      "legal_accessibility_li_38": "Manual testing with screen readers",
+      "legal_accessibility_li_39": "Keyboard-only navigation",
+      "legal_accessibility_li_40": "Color contrast testing",
+      "legal_accessibility_li_41": "Testing with users with disabilities",
+      "legal_accessibility_li_42": "Company: Peleg Group LLC",
+      "legal_accessibility_li_43": "Email: peleggroup1@gmail.com",
+      "legal_accessibility_li_44": "Phone: 19849776997",
+      "legal_accessibility_div_45": "Last updated: 7.3.2026",
+      "legal_accessibility_div_46": "Accessibility level: AA (Israeli Standard IS 5568)",
+      "legal_accessibility_link_17": "peleggroup1@gmail.com",
+      "legal_accessibility_link_18": "← Back to website",
+      "accessibility_meta_description": "Our accessibility statement - our commitment to digital accessibility",
+      "due_diligence_meta_description": "Professional due diligence services for land acquisition in the United States. We examine every legal and physical detail to ensure safe and profitable investment. Get expert consultation!",
+      "legal_accessibility_page_title": "Accessibility Statement - Peleg Group LLC",
+      "opportunities_meta_description": "Discover land for sale in the United States in strategic locations. Variety of land investment opportunities with high growth potential. Check out our available properties now!"
+    }
+  }
+};
+  
+  // RTL languages
+  const rtlLanguages = ["he"];
+  
+  // Available languages
+  const availableLanguages = ["he","en"];
+  
+  // Language display info with SVG flag images for cross-platform compatibility
+  const languageInfo = {"he":{"name":"Hebrew","nativeName":"עברית","flag":"🇮🇱","flagIcon":"circle-flags:il","dir":"rtl","flagImg":"<img src=\"https://api.iconify.design/circle-flags/il.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"},"en":{"name":"English","nativeName":"English","flag":"🇺🇸","flagIcon":"circle-flags:us","dir":"ltr","flagImg":"<img src=\"https://api.iconify.design/circle-flags/us.svg\" width=\"20\" height=\"20\" alt=\"\" style=\"display:inline-block;vertical-align:middle;border-radius:50%;\" />"}};
+  
+  // Detect stored language preference - only use stored value, not browser language
+  // This ensures the site respects its original design (e.g., RTL Hebrew site stays RTL by default)
+  function detectLanguage() {
+    const stored = localStorage.getItem('zappy_lang');
+    if (stored && availableLanguages.includes(stored)) return stored;
+    
+    // Always default to the site's default language, not browser language
+    // This prevents breaking the original site layout on first visit
+    return 'he';
+  }
+  
+  // Callbacks for language change events (e.g., e-commerce content refresh)
+  const languageChangeCallbacks = [];
+  
+  // Simple i18n implementation (no external dependency)
+  const zappyI18n = {
+    language: detectLanguage(),
+    resources: resources,
+    t: function(key) {
+      const langResources = this.resources[this.language];
+      if (langResources && langResources.translation && langResources.translation[key]) {
+        return langResources.translation[key];
+      }
+      // Fallback to default language
+      const fallbackResources = this.resources['he'];
+      if (fallbackResources && fallbackResources.translation && fallbackResources.translation[key]) {
+        return fallbackResources.translation[key];
+      }
+      return key;
+    },
+    changeLanguage: function(lang) {
+      if (!availableLanguages.includes(lang)) return Promise.resolve();
+      var oldLang = this.language;
+      this.language = lang;
+      localStorage.setItem('zappy_lang', lang);
+      updateContent();
+      updateDirection();
+      // Re-detect icon color after direction change (background may differ)
+      fixLanguageSwitcherColor();
+      // Also re-check after a short delay to ensure styles are applied
+      setTimeout(fixLanguageSwitcherColor, 100);
+      
+      // Call all registered language change callbacks (e.g., e-commerce content refresh)
+      languageChangeCallbacks.forEach(function(callback) {
+        try {
+          callback(lang, oldLang);
+        } catch (e) {
+          console.error('[i18n] Language change callback error:', e);
+        }
+      });
+      
+      return Promise.resolve();
+    },
+    getCurrentLanguage: function() { return this.language; },
+    getAvailableLanguages: function() { return availableLanguages; },
+    // Register a callback to be called when language changes
+    onLanguageChange: function(callback) {
+      if (typeof callback === 'function') {
+        languageChangeCallbacks.push(callback);
+      }
+    }
+  };
+  
+  // Update all translatable content
+  function updateContent() {
+    // Newline character for detection
+    var newlineChar = String.fromCharCode(10);
+    // HTML tag pattern for detection (common formatting tags)
+    var htmlTagPattern = /<(font|b|i|u|strong|em|span|br|a|sub|sup|mark|del|ins|s|small|big)[^>]*>/i;
+    
+    // Update text content - use innerHTML when text contains line breaks or HTML tags
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      var translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        var hasNewlines = translation.indexOf(newlineChar) !== -1;
+        var hasHtmlTags = htmlTagPattern.test(translation);
+        var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
+        var elementHasBr = /<br\s*\/?>/i.test(el.innerHTML);
+        
+        if (hasNewlines || hasHtmlTags || hasEntities || elementHasBr) {
+          el.innerHTML = translation.split(newlineChar).join('<br>');
+        } else {
+          el.textContent = translation;
+        }
+      }
+    });
+    
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('placeholder', translation);
+      }
+    });
+    
+    // Update alt attributes
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-alt');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('alt', translation);
+      }
+    });
+    
+    // Update title attributes
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-title');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('title', translation);
+      }
+    });
+    
+    // Update meta description
+    document.querySelectorAll('[data-i18n-content]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-content');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        el.setAttribute('content', translation);
+      }
+    });
+    
+    // Update page title
+    const titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+      const key = titleEl.getAttribute('data-i18n');
+      const translation = zappyI18n.t(key);
+      if (translation && translation !== key) {
+        document.title = translation;
+      }
+    }
+  }
+  
+  // Update document direction based on language
+  function updateDirection() {
+    const currentLang = zappyI18n.language;
+    const isRTL = rtlLanguages.includes(currentLang);
+    const html = document.documentElement;
+    const body = document.body;
+    const newDir = isRTL ? 'rtl' : 'ltr';
+    
+    // Update html element - only direction, NOT text-align (preserve centered elements)
+    html.setAttribute('lang', currentLang);
+    html.setAttribute('dir', newDir);
+    html.style.direction = newDir;
+    
+    // Update body element - only direction
+    if (body) {
+      body.setAttribute('dir', newDir);
+      body.style.direction = newDir;
+    }
+    
+    // Update major content containers - only direction, NOT text-align
+    // This preserves centered hero sections, titles, etc.
+    document.querySelectorAll('main, article, section, .content, .container, .wrapper').forEach(function(el) {
+      el.style.direction = newDir;
+      // Do NOT set text-align - preserve original alignment (center, left, right)
+    });
+    
+    // ONLY apply text-align to legal page content
+    document.querySelectorAll('.legal-content, .terms-content, .privacy-content').forEach(function(el) {
+      el.style.direction = newDir;
+      el.style.textAlign = isRTL ? 'right' : 'left';
+    });
+    
+    // Swap inline text-align on content elements when direction changes.
+    // RTL-primary sites have text-align:right baked into inline styles;
+    // these must become text-align:left when viewing in LTR, and vice versa.
+    var defaultIsRTL = rtlLanguages.includes('he');
+    var needsSwap = isRTL !== defaultIsRTL;
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
+      if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
+      var ta = el.style.textAlign;
+      if (!ta || ta === 'center' || ta === 'justify' || ta === 'start' || ta === 'end') return;
+      if (!el.hasAttribute('data-ta-orig')) {
+        el.setAttribute('data-ta-orig', ta);
+      }
+      var origTA = el.getAttribute('data-ta-orig');
+      if (needsSwap) {
+        el.style.textAlign = origTA === 'right' ? 'left' : 'right';
+      } else {
+        el.style.textAlign = origTA;
+      }
+    });
+    
+    // Update catalog menu RTL class to match current direction
+    // This is critical for e-commerce sites with category navigation
+    document.querySelectorAll('.zappy-catalog-menu').forEach(function(el) {
+      if (isRTL) {
+        el.classList.add('rtl');
+        el.setAttribute('dir', 'rtl');
+      } else {
+        el.classList.remove('rtl');
+        el.removeAttribute('dir');
+      }
+    });
+    
+    // IMPORTANT: Do NOT set direction on navigation flex containers!
+    // V2 sites have layouts designed for a specific direction.
+    // Changing inline direction on flex containers reverses the item order, breaking layouts.
+    // Instead, we rely on the dir attribute on <html> for text direction,
+    // and let the original CSS handle navigation layout.
+    
+    // Remove dir ATTRIBUTE from nav elements - they should inherit from <html>
+    // V2 sites may have hardcoded dir="rtl" on nav elements which needs to be removed
+    document.querySelectorAll('header, nav, .navbar, .nav-container, .header-container, .nav-links, .menu, nav ul, header ul, #navMenu').forEach(function(el) {
+      // Remove dir attribute so element inherits from <html>
+      el.removeAttribute('dir');
+      // Remove all layout-affecting inline styles - let original CSS take over
+      el.style.removeProperty('direction');
+      el.style.removeProperty('flex-direction');
+      el.style.removeProperty('justify-content');
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // SPECIAL HANDLING for nav elements
+    document.querySelectorAll('.nav-menu, #navMenu, .nav-right-group').forEach(function(el) {
+      el.removeAttribute('dir');
+      el.style.removeProperty('direction');
+      el.style.removeProperty('flex-direction');
+      el.style.removeProperty('justify-content');
+      if (isRTL) {
+        el.style.removeProperty('margin-left');
+        el.style.removeProperty('margin-right');
+      } else {
+        // In LTR: override CSS margin-left:auto with 0 for nav-menu elements
+        el.style.setProperty('margin-left', '0', 'important');
+        el.style.removeProperty('margin-right');
+      }
+    });
+    
+    // CRITICAL FIX FOR V2 SITES: Move lang-switcher INSIDE nav-cta-container
+    // V2 sites use margin-left:auto on nav-cta-container to push it right.
+    // If lang-switcher is a sibling, it gets left behind. Moving it inside keeps them grouped.
+    document.querySelectorAll('.lang-switcher').forEach(function(el) {
+      var ctaContainer = el.parentElement ? el.parentElement.querySelector('.nav-cta-container') : null;
+      if (ctaContainer && el.parentElement === ctaContainer.parentElement) {
+        // Move lang-switcher as first child of CTA container
+        ctaContainer.insertBefore(el, ctaContainer.firstChild);
+        // Ensure vertical alignment when lang-switcher and CTA button are siblings
+        ctaContainer.style.setProperty('align-items', 'center', 'important');
+      }
+      // Clear any margin overrides
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // CRITICAL FIX FOR E-COMMERCE SITES: Move lang-switcher inside nav-icons-left
+    // E-commerce sites have a nav-icons-left container with search box.
+    // For RTL: lang-switcher should appear to the RIGHT of search box
+    // For LTR: lang-switcher should appear to the LEFT of search box
+    document.querySelectorAll('.lang-switcher').forEach(function(el) {
+      var navIconsLeft = document.querySelector('.nav-icons-left');
+      var searchBox = document.querySelector('.nav-search-box');
+      
+      // Only move if not already inside nav-icons-left and the elements exist
+      if (navIconsLeft && searchBox && !el.closest('.nav-icons-left')) {
+        // Insert before search box - in RTL this visually appears to the RIGHT
+        navIconsLeft.insertBefore(el, searchBox);
+      }
+    });
+    
+    // Remove any previously set margins on nav links and logo
+    document.querySelectorAll('header > a, nav > a, .nav-menu > a, .nav-links > a, nav ul li, header ul li, .logo, .site-logo, .brand, .navbar-brand, .nav-brand').forEach(function(el) {
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // NOTE: Removed old code that set margin-left:auto on .lang-switcher
+    // This conflicted with V2 layouts. The margin handling is now done in the 
+    // special handling section above that sets margin-left:0 in LTR mode.
+    
+    // CTA buttons - remove any inline margin styles to let CSS handle positioning
+    document.querySelectorAll('header .btn, header .button, header .cta, nav .btn, nav .button, .navbar .btn, .nav-cta-container, .cta-container, .header-cta, .nav-cta').forEach(function(el) {
+      el.style.removeProperty('margin-left');
+      el.style.removeProperty('margin-right');
+    });
+    
+    // Globe icon SVG for language switcher button (minimal design, no chevron)
+    // Read the icon color from the data attribute (set by server based on navbar color detection)
+    var langSwitcher = document.querySelector('.lang-switcher');
+    var iconColor = langSwitcher ? langSwitcher.getAttribute('data-icon-color') : 'currentColor';
+    if (!iconColor) iconColor = 'currentColor';
+    
+    var globeIconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="' + iconColor + '" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>';
+    
+    // Update language switcher display - just the globe icon, no arrow
+    var currentLangEl = document.querySelector('.lang-switcher-current');
+    if (currentLangEl) {
+      currentLangEl.innerHTML = globeIconSvg;
+    }
+    
+    // Update dropdown options (show all except current)
+    document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
+      dropdown.innerHTML = availableLanguages
+        .filter(function(lang) { return lang !== currentLang; })
+        .map(function(lang) {
+          const info = languageInfo[lang] || { flag: '🌐', flagImg: '🌐', nativeName: lang };
+          // Use flagImg (SVG) for cross-platform compatibility, fallback to emoji flag
+          return '<button class="lang-option" data-lang="' + lang + '" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;">' + (info.flagImg || info.flag) + ' ' + info.nativeName + '</button>';
+        })
+        .join('');
+      
+      // Re-attach event listeners
+      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
+        option.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const lang = this.getAttribute('data-lang');
+          zappyI18n.changeLanguage(lang);
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          dropdown.style.transform = 'translateY(-8px)';
+        });
+      });
+    });
+    
+    // FIX: Update mobile button positions when language/direction changes
+    // CSS handles positioning based on html[dir] attribute.
+    // We just need to remove any inline left/right styles so CSS can take over.
+    if (window.innerWidth < 768) {
+      var mobileToggle = document.querySelector('.mobile-toggle');
+      var phoneBtn = document.querySelector('.phone-header-btn');
+      var navCtaContainer = document.querySelector('.nav-cta-container');
+      
+      // Remove inline left/right - CSS will position based on html[dir]
+      if (mobileToggle) {
+        mobileToggle.style.removeProperty('left');
+        mobileToggle.style.removeProperty('right');
+        console.log('[i18n] Cleared mobile toggle inline position - CSS will handle based on dir:', newDir);
+      }
+      
+      if (phoneBtn) {
+        phoneBtn.style.removeProperty('left');
+        phoneBtn.style.removeProperty('right');
+        console.log('[i18n] Cleared phone button inline position - CSS will handle based on dir:', newDir);
+      }
+      
+      if (navCtaContainer) {
+        navCtaContainer.style.removeProperty('left');
+        navCtaContainer.style.removeProperty('right');
+        console.log('[i18n] Cleared nav-cta-container inline position - CSS will handle based on dir:', newDir);
+      }
+    }
+    
+    // Update mobile language submenu in hamburger
+    updateMobileLangMenu();
+  }
+  
+  // Initialize language switcher dropdown
+  function initLanguageSwitcher() {
+    const switchers = document.querySelectorAll('.lang-switcher');
+    if (!switchers.length) return;
+    
+    switchers.forEach(function(switcher) {
+      const dropdown = switcher.querySelector('.lang-switcher-dropdown');
+      const current = switcher.querySelector('.lang-switcher-current');
+      
+      if (!current || !dropdown) return;
+      
+      // Ensure dropdown is hidden initially (inline style fallback)
+      dropdown.style.opacity = '0';
+      dropdown.style.visibility = 'hidden';
+      dropdown.style.transform = 'translateY(-8px)';
+      
+      // Toggle dropdown with inline styles
+      current.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = dropdown.style.opacity === '1';
+        if (isOpen) {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          dropdown.style.transform = 'translateY(-8px)';
+        } else {
+          dropdown.style.opacity = '1';
+          dropdown.style.visibility = 'visible';
+          dropdown.style.transform = 'translateY(0)';
+        }
+      });
+      
+      // Handle language selection
+      dropdown.querySelectorAll('.lang-option').forEach(function(option) {
+        option.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const lang = this.getAttribute('data-lang');
+          zappyI18n.changeLanguage(lang);
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          dropdown.style.transform = 'translateY(-8px)';
+        });
+      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.lang-switcher-dropdown').forEach(function(dropdown) {
+        dropdown.style.opacity = '0';
+        dropdown.style.visibility = 'hidden';
+        dropdown.style.transform = 'translateY(-8px)';
+      });
+    });
+  }
+  
+  // ==============================================
+  // MOBILE LANGUAGE SUBMENU (inside hamburger menu)
+  // ==============================================
+  
+  // Create mobile language menu inside hamburger
+  function injectMobileLangCss() {
+    if (document.getElementById('mobile-lang-menu-css')) return;
+    var style = document.createElement('style');
+    style.id = 'mobile-lang-menu-css';
+    style.textContent = '@media (max-width: 768px) {' +
+      '.lang-switcher, .nav-cta-container .lang-switcher, .nav-container .lang-switcher,' +
+      '.navbar .lang-switcher, .navbar .nav-cta-container .lang-switcher,' +
+      '.nav-icons-left .lang-switcher, .nav-ecommerce-icons .lang-switcher { display: none !important; }' +
+      '.zappy-lang-switcher-container { display: none !important; }' +
+      '.mobile-lang-menu { list-style: none !important; width: 100%; border-top: 1px solid rgba(128,128,128,0.2); margin-top: 8px; padding-top: 8px; }' +
+      '.mobile-lang-toggle { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; color: inherit; font-size: 15px; font-family: inherit; }' +
+      '.mobile-lang-toggle span { flex: 1; }' +
+      'html[dir="rtl"] .mobile-lang-toggle span, html[lang="he"] .mobile-lang-toggle span, html[lang="ar"] .mobile-lang-toggle span { text-align: right; }' +
+      'html:not([dir="rtl"]) .mobile-lang-toggle span { text-align: left; }' +
+      '.mobile-lang-chevron { transition: transform 0.3s ease; flex-shrink: 0; }' +
+      '.mobile-lang-options { display: none; flex-direction: column; padding: 0 16px 8px 46px; }' +
+      'html[dir="rtl"] .mobile-lang-options, html[lang="he"] .mobile-lang-options, html[lang="ar"] .mobile-lang-options { padding: 0 46px 8px 16px; }' +
+      '.mobile-lang-options.open { display: flex; }' +
+      '.mobile-lang-option { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: none; border: none; cursor: pointer; color: inherit; font-size: 14px; font-family: inherit; border-radius: 6px; transition: background-color 0.2s; width: 100%; }' +
+      'html[dir="rtl"] .mobile-lang-option, html[lang="he"] .mobile-lang-option, html[lang="ar"] .mobile-lang-option { text-align: right; }' +
+      'html:not([dir="rtl"]) .mobile-lang-option { text-align: left; }' +
+      '.mobile-lang-option:hover { background: rgba(128,128,128,0.1); }' +
+      '.mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; display: inline-block; vertical-align: middle; }' +
+      '}';
+    document.head.appendChild(style);
+  }
+
+  function createMobileLangMenu() {
+    if (window.innerWidth > 768) return;
+    if (document.querySelector('.mobile-lang-menu')) return;
+    if (availableLanguages.length < 2) return;
+    
+    injectMobileLangCss();
+    
+    var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu');
+    if (!navMenu) return;
+    
+    var currentLang = zappyI18n.language;
+    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang, flagImg: '' };
+    
+    var langSwitcher = document.querySelector('.lang-switcher');
+    var iconColor = langSwitcher ? langSwitcher.getAttribute('data-icon-color') : 'currentColor';
+    if (!iconColor) iconColor = 'currentColor';
+    
+    var optionsHtml = availableLanguages
+      .filter(function(lang) { return lang !== currentLang; })
+      .map(function(lang) {
+        var info = languageInfo[lang] || { nativeName: lang, flagImg: '' };
+        return '<button class="mobile-lang-option" data-lang="' + lang + '">' +
+          (info.flagImg || info.flag || '') + ' ' + info.nativeName + '</button>';
+      })
+      .join('');
+    
+    var li = document.createElement('li');
+    li.className = 'mobile-lang-menu';
+    li.innerHTML =
+      '<button class="mobile-lang-toggle" type="button">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="' + iconColor + '" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421,6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>' +
+        '<span>' + currentInfo.nativeName + '</span>' +
+        '<svg class="mobile-lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"></polyline></svg>' +
+      '</button>' +
+      '<div class="mobile-lang-options">' + optionsHtml + '</div>';
+    
+    navMenu.appendChild(li);
+    
+    // Match nav link color for visual consistency
+    var firstNavLink = navMenu.querySelector('li:not(.mobile-lang-menu) > a');
+    if (firstNavLink) {
+      var navLinkColor = window.getComputedStyle(firstNavLink).color;
+      if (navLinkColor && navLinkColor !== 'rgba(0, 0, 0, 0)') {
+        li.style.color = navLinkColor;
+        // Update globe SVG fill to match nav link color
+        var globeSvg = li.querySelector('.mobile-lang-toggle > svg:first-child');
+        if (globeSvg) globeSvg.setAttribute('fill', navLinkColor);
+      }
+    }
+    
+    console.log('[i18n] Mobile language submenu created in hamburger menu');
+  }
+  
+  // Wire up mobile language submenu event handlers
+  function initMobileLangSwitcher() {
+    var toggle = document.querySelector('.mobile-lang-toggle');
+    var options = document.querySelector('.mobile-lang-options');
+    if (!toggle || !options) return;
+    
+    var newToggle = toggle.cloneNode(true);
+    toggle.parentNode.replaceChild(newToggle, toggle);
+    var optionsEl = newToggle.parentNode.querySelector('.mobile-lang-options');
+    
+    newToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = optionsEl.classList.contains('open');
+      if (isOpen) {
+        optionsEl.classList.remove('open');
+        optionsEl.style.display = 'none';
+      } else {
+        optionsEl.classList.add('open');
+        optionsEl.style.display = 'flex';
+      }
+      var chevron = newToggle.querySelector('.mobile-lang-chevron');
+      if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+    });
+    
+    optionsEl.querySelectorAll('.mobile-lang-option').forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.getAttribute('data-lang');
+        zappyI18n.changeLanguage(lang);
+        optionsEl.classList.remove('open');
+        optionsEl.style.display = 'none';
+        var chevron = newToggle.querySelector('.mobile-lang-chevron');
+        if (chevron) chevron.style.transform = '';
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu');
+        if (navMenu) navMenu.classList.remove('active');
+        var hamburgerIcon = document.querySelector('.hamburger-icon');
+        var closeIcon = document.querySelector('.close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  
+  // Update mobile language menu after language change
+  function updateMobileLangMenu() {
+    var menuItem = document.querySelector('.mobile-lang-menu');
+    if (!menuItem) {
+      createMobileLangMenu();
+      initMobileLangSwitcher();
+      return;
+    }
+    
+    var currentLang = zappyI18n.language;
+    var currentInfo = languageInfo[currentLang] || { nativeName: currentLang };
+    
+    var toggleSpan = menuItem.querySelector('.mobile-lang-toggle span');
+    if (toggleSpan) toggleSpan.textContent = currentInfo.nativeName;
+    
+    var optionsContainer = menuItem.querySelector('.mobile-lang-options');
+    if (!optionsContainer) return;
+    
+    optionsContainer.innerHTML = availableLanguages
+      .filter(function(lang) { return lang !== currentLang; })
+      .map(function(lang) {
+        var info = languageInfo[lang] || { nativeName: lang, flagImg: '' };
+        return '<button class="mobile-lang-option" data-lang="' + lang + '">' +
+          (info.flagImg || info.flag || '') + ' ' + info.nativeName + '</button>';
+      })
+      .join('');
+    
+    optionsContainer.querySelectorAll('.mobile-lang-option').forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.getAttribute('data-lang');
+        zappyI18n.changeLanguage(lang);
+        optionsContainer.classList.remove('open');
+        optionsContainer.style.display = 'none';
+        var chevron = menuItem.querySelector('.mobile-lang-chevron');
+        if (chevron) chevron.style.transform = '';
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu');
+        if (navMenu) navMenu.classList.remove('active');
+        var hamburgerIcon = document.querySelector('.hamburger-icon');
+        var closeIcon = document.querySelector('.close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    optionsContainer.classList.remove('open');
+    optionsContainer.style.display = 'none';
+  }
+  
+  // Fix mobile menu inline styles that may have been incorrectly persisted
+  // This is needed because inline styles override CSS media queries
+  function fixMobileMenuStyles() {
+    // Only run on mobile
+    if (window.innerWidth >= 768) return;
+    
+    // Remove inline flex-direction from nav menus so CSS can take over
+    document.querySelectorAll('.nav-menu, #navMenu, nav ul, header ul').forEach(function(el) {
+      if (el.style.flexDirection) {
+        el.style.removeProperty('flex-direction');
+      }
+    });
+  }
+  
+  // Fix mobile button positioning based on current page direction
+  // Clear any inline left/right styles so CSS can take over based on html[dir]
+  function fixMobileButtonPositioning() {
+    // Only run on mobile
+    if (window.innerWidth >= 768) return;
+    
+    var mobileToggle = document.querySelector('.mobile-toggle');
+    var phoneBtn = document.querySelector('.phone-header-btn');
+    var navCtaContainer = document.querySelector('.nav-cta-container');
+    
+    // Clear inline left/right - CSS will position based on html[dir]
+    if (mobileToggle) {
+      mobileToggle.style.removeProperty('left');
+      mobileToggle.style.removeProperty('right');
+    }
+    
+    if (phoneBtn) {
+      phoneBtn.style.removeProperty('left');
+      phoneBtn.style.removeProperty('right');
+    }
+    
+    if (navCtaContainer) {
+      navCtaContainer.style.removeProperty('left');
+      navCtaContainer.style.removeProperty('right');
+    }
+    
+    console.log('[i18n] Cleared inline button positions - CSS handles based on html[dir]:', document.documentElement.dir);
+  }
+  
+  // ============================================
+  // LANGUAGE SWITCHER ICON COLOR DETECTION
+  // Dynamically detect if navbar has light/dark background
+  // and set the globe icon color accordingly
+  // ============================================
+  function fixLanguageSwitcherColor() {
+    var switcher = document.querySelector('.lang-switcher-current');
+    var svg = switcher ? switcher.querySelector('svg') : null;
+    if (!switcher || !svg) return;
+    
+    // Find the navbar or header element
+    var navbar = document.querySelector('.navbar') || 
+                 document.querySelector('nav') || 
+                 document.querySelector('header');
+    if (!navbar) return;
+    
+    // Get the effective background color by walking up the DOM tree
+    function getEffectiveBackgroundColor(element) {
+      var el = element;
+      var maxDepth = 10; // Prevent infinite loops
+      
+      while (el && maxDepth > 0) {
+        var style = window.getComputedStyle(el);
+        var bg = style.backgroundColor;
+        
+        // Skip transparent backgrounds
+        if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
+          return bg;
+        }
+        
+        // Check background-image for gradients
+        var bgImage = style.backgroundImage;
+        if (bgImage && bgImage !== 'none') {
+          // Extract first color from gradient
+          var gradientMatch = bgImage.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{3,8}/);
+          if (gradientMatch) {
+            return gradientMatch[0];
+          }
+        }
+        
+        el = el.parentElement;
+        maxDepth--;
+      }
+      
+      // Default to white if no background found (assume light)
+      return 'rgb(255, 255, 255)';
+    }
+    
+    // Parse color string to RGB values
+    function parseColor(colorStr) {
+      if (!colorStr) return null;
+      
+      // Handle rgb/rgba
+      var rgbMatch = colorStr.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if (rgbMatch) {
+        return {
+          r: parseInt(rgbMatch[1], 10),
+          g: parseInt(rgbMatch[2], 10),
+          b: parseInt(rgbMatch[3], 10)
+        };
+      }
+      
+      // Handle hex
+      var hexMatch = colorStr.match(/#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/);
+      if (hexMatch) {
+        return {
+          r: parseInt(hexMatch[1], 16),
+          g: parseInt(hexMatch[2], 16),
+          b: parseInt(hexMatch[3], 16)
+        };
+      }
+      
+      // Handle 3-digit hex
+      var hex3Match = colorStr.match(/#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/);
+      if (hex3Match) {
+        return {
+          r: parseInt(hex3Match[1] + hex3Match[1], 16),
+          g: parseInt(hex3Match[2] + hex3Match[2], 16),
+          b: parseInt(hex3Match[3] + hex3Match[3], 16)
+        };
+      }
+      
+      return null;
+    }
+    
+    // Calculate relative luminance (WCAG formula)
+    function getLuminance(rgb) {
+      if (!rgb) return 0.5; // Default to middle
+      
+      var r = rgb.r / 255;
+      var g = rgb.g / 255;
+      var b = rgb.b / 255;
+      
+      // Apply gamma correction
+      r = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+      g = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
+      b = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
+      
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    }
+    
+    // Get the effective background color
+    var bgColor = getEffectiveBackgroundColor(navbar);
+    var rgb = parseColor(bgColor);
+    var luminance = getLuminance(rgb);
+    
+    // Threshold: 0.5 is middle, lower = darker background
+    // Use 0.4 as threshold for better contrast
+    var isLightBackground = luminance > 0.4;
+    
+    // Set icon color based on background
+    // Light background = dark icon (#1a1a1a)
+    // Dark background = light icon (#F3FAFF)
+    var iconColor = isLightBackground ? '#1a1a1a' : '#F3FAFF';
+    
+    svg.style.fill = iconColor;
+    switcher.style.color = iconColor;
+    
+    console.log('[i18n] Language switcher icon color:', iconColor, 
+                '(bg luminance:', luminance.toFixed(2), 
+                ', isLight:', isLightBackground, ')');
+  }
+  
+  // Initialize on DOM ready
+  function init() {
+    updateContent();
+    updateDirection();
+    initLanguageSwitcher();
+    createMobileLangMenu();
+    initMobileLangSwitcher();
+    fixMobileMenuStyles();
+    fixMobileButtonPositioning();
+    fixLanguageSwitcherColor();
+    
+    // Also fix on resize (in case user rotates device)
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        // Desktop: remove mobile lang menu if it exists
+        var mobileLangEl = document.querySelector('.mobile-lang-menu');
+        if (mobileLangEl) mobileLangEl.remove();
+        var mobileCssEl = document.getElementById('mobile-lang-menu-css');
+        if (mobileCssEl) mobileCssEl.remove();
+      } else {
+        createMobileLangMenu();
+        initMobileLangSwitcher();
+      }
+      fixMobileMenuStyles();
+      fixMobileButtonPositioning();
+      fixLanguageSwitcherColor();
+    });
+    
+    // Re-check color after a delay to catch dynamically loaded backgrounds
+    setTimeout(fixLanguageSwitcherColor, 500);
+    setTimeout(fixLanguageSwitcherColor, 1500);
+  }
+  
+  // Expose to global scope
+  window.zappyI18n = zappyI18n;
+  
+  // Run initialization
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 
     <script src="/script.js"></script>
 

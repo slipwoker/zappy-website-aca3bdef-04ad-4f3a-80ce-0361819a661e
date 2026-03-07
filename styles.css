@@ -171,9 +171,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
+}html[dir="rtl"]{
   font-size: 16px !important;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -1058,46 +1056,28 @@ html[lang="fr"] .nav-cta-container {
 /* ============================================
    RTL DESKTOP LAYOUT (Hebrew, Arabic)
    ============================================ */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
+html[lang="ar"] .nav-container{flex-direction: row-reverse;justify-content: space-between;}
 
 /* CTA on the left in RTL */
-html[dir="rtl"] .nav-cta-container,
+.nav-cta-container,
 html[lang="he"] .nav-cta-container,
-html[lang="ar"] .nav-cta-container {
-  order: -1;
-  margin: 0;
-}
+html[lang="ar"] .nav-cta-container{order: -1;margin: 0;}
 
 /* Wrapper groups menu and logo together on the right */
-html[dir="rtl"] .nav-right-group,
+.nav-right-group,
 html[lang="he"] .nav-right-group,
-html[lang="ar"] .nav-right-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  order: 1;
-  flex: 1;
-  min-width: 0;
-  flex-direction: row-reverse;
-}
+html[lang="ar"] .nav-right-group{display: flex;align-items: center;gap: 1rem;order: 1;flex: 1;min-width: 0;flex-direction: row-reverse;}
 
 /* Within wrapper: Logo on far right, menu to its left */
-html[dir="rtl"] .nav-right-group .nav-brand,
+.nav-right-group .nav-brand,
 html[lang="he"] .nav-right-group .nav-brand,
-html[lang="ar"] .nav-right-group .nav-brand {
-  order: 2;
-}
+html[lang="ar"] .nav-right-group .nav-brand{order: 2;}
 
-html[dir="rtl"] .nav-right-group .nav-menu,
+.nav-right-group .nav-menu,
 html[lang="he"] .nav-right-group .nav-menu,
-html[lang="ar"] .nav-right-group .nav-menu {
-  order: 1;
-}
+html[lang="ar"] .nav-right-group .nav-menu{order: 1;}
 
 /* ============================================
    DROPDOWN MENUS (Desktop)
@@ -1152,12 +1132,9 @@ html[lang="ar"] .nav-right-group .nav-menu {
   margin: 0;
 }
 
-html[dir="rtl"] .dropdown-menu,
+.dropdown-menu,
 html[lang="he"] .dropdown-menu,
-html[lang="ar"] .dropdown-menu {
-  right: 0;
-  left: auto;
-}
+html[lang="ar"] .dropdown-menu{right: 0;left: auto;}
 
 html[dir="ltr"] .dropdown-menu,
 html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
@@ -1326,20 +1303,12 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
      which breaks AI centering hacks (top:50% + margin-top:-Npx).
      Use explicit left/right + transform for robust vertical centering. */
   .nav-brand,
-  html[dir="rtl"] .nav-brand,
+  .nav-brand,
   html[lang="he"] .nav-brand,
   html[lang="ar"] .nav-brand,
-  html[dir="rtl"] .nav-right-group .nav-brand,
+  .nav-right-group .nav-brand,
   html[lang="he"] .nav-right-group .nav-brand,
-  html[lang="ar"] .nav-right-group .nav-brand {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    text-align: center;
-    order: 0 !important;
-  }
+  html[lang="ar"] .nav-right-group .nav-brand{position: absolute !important;left: 50% !important;top: 50% !important;transform: translate(-50%, -50%) !important;margin: 0 !important;text-align: center;order: 0 !important;}
   
   /* Logo responsive sizing */
   .logo {
@@ -1450,11 +1419,9 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
     font-size: 0.9em;
   }
   
-  html[dir="rtl"] .dropdown-menu li a,
+  .dropdown-menu li a,
   html[lang="he"] .dropdown-menu li a,
-  html[lang="ar"] .dropdown-menu li a {
-    padding: 12px 50px 12px 30px !important;
-  }
+  html[lang="ar"] .dropdown-menu li a{padding: 12px 50px 12px 30px !important;}
 
   /* Mobile submenu links: use nav panel text color instead of desktop submenu color.
      Desktop submenu uses light bg + dark text, but mobile submenu is inline (transparent)
@@ -1514,32 +1481,21 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
    Uses !important to override any inline styles
    ============================================ */
 @media (max-width: 768px) {
-  html[dir="rtl"] .mobile-toggle,
+  .mobile-toggle,
   html[lang="he"] .mobile-toggle,
-  html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 12px !important;
-  }
+  html[lang="ar"] .mobile-toggle{left: auto !important;right: 12px !important;}
   
-  html[dir="rtl"] .phone-header-btn,
+  .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 12px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 12px !important;right: auto !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    right: 0 !important;
-    left: auto !important;
-  }
+  html[lang="ar"] .nav-menu{right: 0 !important;left: auto !important;}
   
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[lang="he"] .nav-menu a,
-  html[lang="ar"] .nav-menu a {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu a{text-align: right !important;}
   
   /* Hide desktop language switcher on mobile - hamburger menu handles it */
   /* High specificity to override stored CSS */
@@ -1597,73 +1553,51 @@ nav.navbar {
 
 /* RTL layout for cloned sites (without nav-right-group) */
 /* Base RTL styles - apply to all screens */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  justify-content: space-between !important;
-}
+html[lang="ar"] .nav-container{justify-content: space-between !important;}
 
 /* Logo stays on right in RTL - DESKTOP ONLY */
 /* On mobile, logo should be centered (handled by mobile media query) */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-brand,
-  html[dir="rtl"] .logo-link,
+  .nav-brand,
+  .logo-link,
   html[lang="he"] .nav-brand,
   html[lang="he"] .logo-link,
   html[lang="ar"] .nav-brand,
-  html[lang="ar"] .logo-link {
-    order: 2 !important;
-    margin-left: 1.5rem !important;
-  }
+  html[lang="ar"] .logo-link{order: 2 !important;margin-left: 1.5rem !important;}
 }
 
 /* Base RTL nav-menu styles - display:flex but NOT flex-direction (that's desktop-only) */
-html[dir="rtl"] .nav-menu,
+.nav-menu,
 html[lang="he"] .nav-menu,
-html[lang="ar"] .nav-menu {
-  order: 1 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-menu{order: 1 !important;margin-right: 0 !important;margin-left: 0 !important;}
 
 /* CTA button pushed to far left in RTL */
-html[dir="rtl"] .cta-button,
-html[dir="rtl"] a.cta-button,
+.cta-button,
+a.cta-button,
 html[dir="rtl"] .nav-cta-btn,
 html[lang="he"] .cta-button,
 html[lang="he"] a.cta-button,
 html[lang="he"] .nav-cta-btn,
 html[lang="ar"] .cta-button,
 html[lang="ar"] a.cta-button,
-html[lang="ar"] .nav-cta-btn {
-  order: 0 !important;
-  margin-right: auto !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-cta-btn{order: 0 !important;margin-right: auto !important;margin-left: 0 !important;}
 
 /* DESKTOP ONLY: Horizontal flex layout for RTL navbar - prevents breaking mobile vertical menu */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-container,
+  .nav-container,
   html[lang="he"] .nav-container,
-  html[lang="ar"] .nav-container {
-    flex-direction: row-reverse !important;
-  }
+  html[lang="ar"] .nav-container{flex-direction: row-reverse !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    /* flex:1 ensures menu fills space between brand and CTA so items
+  html[lang="ar"] .nav-menu{display: flex !important;flex-direction: row !important;align-items: center !important;gap: 1.5rem !important;/* flex:1 ensures menu fills space between brand and CTA so items
        stay adjacent to the logo instead of centering when the
        .nav-right-group wrapper is absent (cloned sites, etc.).
        justify-content: flex-start pushes items toward the logo
        (in RTL, flex-start = right side, adjacent to the brand). */
-    flex: 1 !important;
-    justify-content: flex-start !important;
-  }
+    flex: 1 !important;justify-content: flex-start !important;}
 }
 
 /* ============================================
@@ -1675,20 +1609,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 
 /* Footer Styles */
-:root{--primary:#2563EB;--secondary:#E11D48;--accent:#F59E0B;--bg-light:#FFF7ED;--bg-dark:#0B1220;--text-dark:#0B1220;--text-light:#FFF7ED;--text-muted:#475569;--border-light:#CBD5E1;--border-dark:#1F2937}.site-footer{background-color:var(--bg-dark);color:var(--text-light);padding:3.5rem 0 0;direction:rtl;font-family: 'Rubik', sans-serif}.footer-container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border-dark)}@media(min-width:768px){.footer-top{grid-template-columns:2fr 1fr 1.5fr 1fr}}.footer-column h3.footer-heading{font-size:1.125rem;font-weight:700;margin-bottom:1.25rem;color:var(--text-light);position:relative;padding-bottom:0.5rem}.footer-column h3.footer-heading::after{content:'';position:absolute;bottom:0;right:0;width:40px;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}.footer-about .logo{margin-bottom:1rem;display:block;max-width:150px;height:auto;filter:brightness(0)invert(1)}.footer-description{font-size:0.9rem;line-height:1.6;color:var(--text-light);opacity:0.9;margin-top:1rem}.footer-nav{list-style:none;padding:0;margin:0}.footer-nav li{margin-bottom:0.75rem}.footer-nav a{color:var(--text-light);text-decoration:none;font-size:0.95rem;transition:all 0.3s ease;display:inline-block;opacity:0.9}.footer-nav a:hover{color:var(--accent);transform:translateX(-5px);opacity:1}.contact-list{list-style:none;padding:0;margin:0}.contact-list li{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem;font-size:0.9rem;color:var(--text-light);opacity:0.9}.contact-list i{color:var(--accent);margin-top:0.2rem;font-size:1rem;min-width:20px}.contact-list a{color:var(--text-light);text-decoration:none;transition:color 0.3s ease}.contact-list a:hover{color:var(--accent)}.social-links{display:flex;gap:1rem;flex-wrap:wrap}.social-links a{display:flex;align-items:center;justify-content:center;width:45px;height:45px;background-color:rgba(255,255,255,0.1);border-radius:50%;color:var(--text-light);font-size:1.25rem;text-decoration:none;transition:all 0.3s ease;border:1px solid transparent}.social-links a:hover{background-color:var(--accent);transform:translateY(-3px);box-shadow:0 4px 12px rgba(245,158,11,0.3)}.footer-bottom{padding:1.5rem 0}.footer-bottom-content{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}@media(min-width:768px){.footer-bottom-content{flex-direction:row;justify-content:space-between;text-align:right}}.copyright{font-size:0.875rem;color:var(--text-light);opacity:0.8;margin:0}.footer-legal{display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;font-size:0.875rem;justify-content:center}@media(min-width:768px){.footer-legal{justify-content:flex-end}}.footer-legal a{color:var(--text-light);text-decoration:none;transition:color 0.3s ease;opacity:0.8}.footer-legal a:hover{color:var(--accent);opacity:1}.footer-legal .separator{color:var(--text-light);opacity:0.5}.zappy-attribution{color:var(--text-light)!important;opacity:0.7!important;font-style:italic}.zappy-attribution:hover{color:var(--accent)!important;opacity:1!important}@media(max-width:767px){.footer-top{grid-template-columns:1fr;gap:2.5rem}.footer-column{text-align:center}.footer-column h3.footer-heading::after{right:50%;transform:translateX(50%)}.footer-about .logo{margin:0 auto 1rem}.social-links{justify-content:center}.contact-list li{justify-content:center}.footer-nav a:hover{transform:translateX(0)}}
-
-/* index-hero */
-.index-hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: visible;
-  padding-bottom: 120px;
-  direction: rtl;
-}
+:root{--primary:#2563EB;--secondary:#E11D48;--accent:#F59E0B;--bg-light:#FFF7ED;--bg-dark:#0B1220;--text-dark:#0B1220;--text-light:#FFF7ED;--text-muted:#475569;--border-light:#CBD5E1;--border-dark:#1F2937}.site-footer{background-color:var(--bg-dark);color:var(--text-light);padding:3.5rem 0 0;font-family: 'Rubik', sans-serif;}html[dir="rtl"] .site-footer{direction:rtl;}.footer-container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border-dark)}@media(min-width:768px){.footer-top{grid-template-columns:2fr 1fr 1.5fr 1fr}}.footer-column h3.footer-heading{font-size:1.125rem;font-weight:700;margin-bottom:1.25rem;color:var(--text-light);position:relative;padding-bottom:0.5rem}.footer-column h3.footer-heading::after{content:'';position:absolute;bottom:0;right:0;width:40px;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}.footer-about .logo{margin-bottom:1rem;display:block;max-width:150px;height:auto;filter:brightness(0)invert(1)}.footer-description{font-size:0.9rem;line-height:1.6;color:var(--text-light);opacity:0.9;margin-top:1rem}.footer-nav{list-style:none;padding:0;margin:0}.footer-nav li{margin-bottom:0.75rem}.footer-nav a{color:var(--text-light);text-decoration:none;font-size:0.95rem;transition:all 0.3s ease;display:inline-block;opacity:0.9}.footer-nav a:hover{color:var(--accent);transform:translateX(-5px);opacity:1}.contact-list{list-style:none;padding:0;margin:0}.contact-list li{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem;font-size:0.9rem;color:var(--text-light);opacity:0.9}.contact-list i{color:var(--accent);margin-top:0.2rem;font-size:1rem;min-width:20px}.contact-list a{color:var(--text-light);text-decoration:none;transition:color 0.3s ease}.contact-list a:hover{color:var(--accent)}.social-links{display:flex;gap:1rem;flex-wrap:wrap}.social-links a{display:flex;align-items:center;justify-content:center;width:45px;height:45px;background-color:rgba(255,255,255,0.1);border-radius:50%;color:var(--text-light);font-size:1.25rem;text-decoration:none;transition:all 0.3s ease;border:1px solid transparent}.social-links a:hover{background-color:var(--accent);transform:translateY(-3px);box-shadow:0 4px 12px rgba(245,158,11,0.3)}.footer-bottom{padding:1.5rem 0}.footer-bottom-content{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}@media(min-width:768px){.footer-bottom-content{flex-direction:row;justify-content:space-between;text-align:right}}.copyright{font-size:0.875rem;color:var(--text-light);opacity:0.8;margin:0}.footer-legal{display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;font-size:0.875rem;justify-content:center}@media(min-width:768px){.footer-legal{justify-content:flex-end}}.footer-legal a{color:var(--text-light);text-decoration:none;transition:color 0.3s ease;opacity:0.8}.footer-legal a:hover{color:var(--accent);opacity:1}.footer-legal .separator{color:var(--text-light);opacity:0.5}.zappy-attribution{color:var(--text-light)!important;opacity:0.7!important;font-style:italic}.zappy-attribution:hover{color:var(--accent)!important;opacity:1!important}@media(max-width:767px){.footer-top{grid-template-columns:1fr;gap:2.5rem}.footer-column{text-align:center}.footer-column h3.footer-heading::after{right:50%;transform:translateX(50%)}.footer-about .logo{margin:0 auto 1rem}.social-links{justify-content:center}.contact-list li{justify-content:center}.footer-nav a:hover{transform:translateX(0)}}/* index-hero */
+.index-hero-section{position: relative;width: 100%;min-height: 100vh;display: flex;align-items: center;justify-content: flex-start;overflow: visible;padding-bottom: 120px;}html[dir="rtl"] /* index-hero */
+.index-hero-section{direction: rtl;}
 
 .index-hero-section .hero-bg {
   position: absolute;
@@ -1891,21 +1814,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .index-hero-section .index-hero-divider-wrapper {
     height: 80px;
   }
-}
-
-/* index-stats */
-.index-stats-section {
-  position: relative;
-  overflow: visible;
-  background-color: #FBF5EE;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cg fill='none' stroke='%23475569' stroke-width='0.8' opacity='0.08'%3E%3Ccircle cx='200' cy='150' r='80'/%3E%3Ccircle cx='200' cy='150' r='120'/%3E%3Ccircle cx='200' cy='150' r='160'/%3E%3Ccircle cx='600' cy='400' r='100'/%3E%3Ccircle cx='600' cy='400' r='140'/%3E%3Ccircle cx='600' cy='400' r='180'/%3E%3Ccircle cx='1000' cy='600' r='90'/%3E%3Ccircle cx='1000' cy='600' r='130'/%3E%3Ccircle cx='1000' cy='600' r='170'/%3E%3Cpath d='M0,200 Q300,180 600,200 T1200,200' /%3E%3Cpath d='M0,400 Q300,380 600,400 T1200,400' /%3E%3Cpath d='M0,600 Q300,580 600,600 T1200,600' /%3E%3C/g%3E%3C/svg%3E");
-  background-size: 1200px 800px;
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding: 80px 16px 80px;
-  color: var(--text-dark);
-  direction: rtl;
-}
+}/* index-stats */
+.index-stats-section{position: relative;overflow: visible;background-color: #FBF5EE;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cg fill='none' stroke='%23475569' stroke-width='0.8' opacity='0.08'%3E%3Ccircle cx='200' cy='150' r='80'/%3E%3Ccircle cx='200' cy='150' r='120'/%3E%3Ccircle cx='200' cy='150' r='160'/%3E%3Ccircle cx='600' cy='400' r='100'/%3E%3Ccircle cx='600' cy='400' r='140'/%3E%3Ccircle cx='600' cy='400' r='180'/%3E%3Ccircle cx='1000' cy='600' r='90'/%3E%3Ccircle cx='1000' cy='600' r='130'/%3E%3Ccircle cx='1000' cy='600' r='170'/%3E%3Cpath d='M0,200 Q300,180 600,200 T1200,200' /%3E%3Cpath d='M0,400 Q300,380 600,400 T1200,400' /%3E%3Cpath d='M0,600 Q300,580 600,600 T1200,600' /%3E%3C/g%3E%3C/svg%3E");background-size: 1200px 800px;background-position: center top;background-repeat: no-repeat;padding: 80px 16px 80px;color: var(--text-dark);}html[dir="rtl"] /* index-stats */
+.index-stats-section{direction: rtl;}
 
 .index-stats-section .index-stats-container {
   max-width: 1200px;
@@ -2092,17 +2003,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .index-stats-section .index-stats-snapshot-row {
     font-size: 12px;
   }
-}
-
-/* index-showcase */
-.index-showcase-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 140px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* index-showcase */
+.index-showcase-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 140px;overflow: visible;}html[dir="rtl"] /* index-showcase */
+.index-showcase-section{direction: rtl;}
 
 .index-showcase-section .showcase-container {
   max-width: 1200px;
@@ -2316,17 +2219,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .index-showcase-section .badge-warm {
     align-self: flex-end;
   }
-}
-
-/* index-testimonials */
-.index-testimonials-section {
-  position: relative;
-  overflow: visible;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 140px;
-  direction: rtl;
-}
+}/* index-testimonials */
+.index-testimonials-section{position: relative;overflow: visible;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 140px;}html[dir="rtl"] /* index-testimonials */
+.index-testimonials-section{direction: rtl;}
 
 .index-testimonials-section .index-testimonials-container {
   max-width: 1200px;
@@ -2453,17 +2348,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .index-testimonials-section .index-testimonial-attribution {
     font-size: 11px;
   }
-}
-
-/* index-cta */
-.index-cta-section {
-  position: relative;
-  background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);
-  color: var(--text-light);
-  padding: 80px 16px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* index-cta */
+.index-cta-section{position: relative;background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);color: var(--text-light);padding: 80px 16px;overflow: visible;}html[dir="rtl"] /* index-cta */
+.index-cta-section{direction: rtl;}
 
 .index-cta-container {
   max-width: 1200px;
@@ -2638,21 +2525,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .index-cta-topo-decoration {
     width: 400px;
   }
-}
-
-/* opportunities-intro */
-.opportunities-intro-section {
-  position: relative;
-  background-color: #FBF5EE;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23E6D7C6' stroke-width='1' opacity='0.35'%3E%3Cpath d='M-20 40 C 40 10, 80 70, 140 40 S 220 10, 280 40'/%3E%3Cpath d='M-20 80 C 40 50, 80 110, 140 80 S 220 50, 280 80'/%3E%3Cpath d='M-20 120 C 40 90, 80 150, 140 120 S 220 90, 280 120'/%3E%3Cpath d='M-20 160 C 40 130, 80 190, 140 160 S 220 130, 280 160'/%3E%3Cpath d='M-20 200 C 40 170, 80 230, 140 200 S 220 170, 280 200'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 240px 240px;
-  background-repeat: repeat;
-  background-position: top right;
-  color: var(--text-dark);
-  padding: 140px 16px 140px 16px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* opportunities-intro */
+.opportunities-intro-section{position: relative;background-color: #FBF5EE;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23E6D7C6' stroke-width='1' opacity='0.35'%3E%3Cpath d='M-20 40 C 40 10, 80 70, 140 40 S 220 10, 280 40'/%3E%3Cpath d='M-20 80 C 40 50, 80 110, 140 80 S 220 50, 280 80'/%3E%3Cpath d='M-20 120 C 40 90, 80 150, 140 120 S 220 90, 280 120'/%3E%3Cpath d='M-20 160 C 40 130, 80 190, 140 160 S 220 130, 280 160'/%3E%3Cpath d='M-20 200 C 40 170, 80 230, 140 200 S 220 170, 280 200'/%3E%3C/g%3E%3C/svg%3E");background-size: 240px 240px;background-repeat: repeat;background-position: top right;color: var(--text-dark);padding: 140px 16px 140px 16px;overflow: visible;}html[dir="rtl"] /* opportunities-intro */
+.opportunities-intro-section{direction: rtl;}
 
 .opportunities-intro-section .opportunities-intro-container {
   max-width: 1200px;
@@ -2684,15 +2559,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   color: var(--text-dark);
   margin: 0;
   max-width: 720px;
-}
-
-.opportunities-intro-section .opportunities-intro-guide {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
-  direction: rtl;
-}
+}.opportunities-intro-section .opportunities-intro-guide{display: flex;flex-wrap: wrap;gap: 12px;justify-content: flex-start;}html[dir="rtl"] .opportunities-intro-section .opportunities-intro-guide{direction: rtl;}
 
 .opportunities-intro-section .opportunities-intro-chip {
   background: transparent;
@@ -2766,29 +2633,14 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .opportunities-intro-section .opportunities-intro-divider-wrapper {
     height: 80px;
   }
-}
-
-/* opportunities-catalog */
-.opportunities-catalog-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 120px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* opportunities-catalog */
+.opportunities-catalog-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 120px;overflow: visible;}html[dir="rtl"] /* opportunities-catalog */
+.opportunities-catalog-section{direction: rtl;}
 
 .opportunities-catalog-section .opportunities-catalog-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.opportunities-catalog-section .opportunities-catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  direction: rtl;
-}
+}.opportunities-catalog-section .opportunities-catalog-grid{display: grid;grid-template-columns: repeat(3, 1fr);gap: 32px;}html[dir="rtl"] .opportunities-catalog-section .opportunities-catalog-grid{direction: rtl;}
 
 .opportunities-catalog-section .opportunity-card {
   background: #FBF5EE;
@@ -2967,18 +2819,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .opportunities-catalog-section .opportunities-catalog-divider-wrapper {
     height: 50px;
   }
-}
-
-/* opportunities-process */
-.opportunities-process-section {
-  position: relative;
-  background-color: #FBF5EE;
-  background-image: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 120px 16px 80px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* opportunities-process */
+.opportunities-process-section{position: relative;background-color: #FBF5EE;background-image: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 120px 16px 80px;overflow: visible;}html[dir="rtl"] /* opportunities-process */
+.opportunities-process-section{direction: rtl;}
 
 .opportunities-process-section .opportunities-process-container {
   max-width: 1200px;
@@ -3181,17 +3024,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .opportunities-process-section .opportunities-process-callout h3 {
     font-size: 20px;
   }
-}
-
-/* opportunities-faq */
-.opportunities-faq-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 120px 16px 90px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* opportunities-faq */
+.opportunities-faq-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 120px 16px 90px;overflow: visible;}html[dir="rtl"] /* opportunities-faq */
+.opportunities-faq-section{direction: rtl;}
 
 .opportunities-faq-section .opportunities-faq-container {
   max-width: 1200px;
@@ -3496,17 +3331,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .opportunities-cta-section .opportunities-cta-micro {
     font-size: 0.8125rem;
   }
-}
-
-/* due-diligence-editorial */
-.due-diligence-editorial-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 120px 16px 100px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* due-diligence-editorial */
+.due-diligence-editorial-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 120px 16px 100px;overflow: visible;}html[dir="rtl"] /* due-diligence-editorial */
+.due-diligence-editorial-section{direction: rtl;}
 
 .due-diligence-editorial-section .due-diligence-editorial-container {
   max-width: 1200px;
@@ -3631,18 +3458,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .due-diligence-editorial-section .due-diligence-editorial-divider-wrapper {
     height: 60px;
   }
-}
-
-/* due-diligence-checklist */
-.due-diligence-checklist-section {
-  position: relative;
-  background-color: #FBF5EE;
-  background-image: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 120px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* due-diligence-checklist */
+.due-diligence-checklist-section{position: relative;background-color: #FBF5EE;background-image: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 120px;overflow: visible;}html[dir="rtl"] /* due-diligence-checklist */
+.due-diligence-checklist-section{direction: rtl;}
 
 .due-diligence-checklist-container {
   max-width: 1200px;
@@ -3658,14 +3476,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   color: var(--text-dark);
   text-align: center;
   margin-bottom: 48px;
-}
-
-.due-diligence-checklist-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  direction: rtl;
-}
+}.due-diligence-checklist-grid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 24px;}html[dir="rtl"] .due-diligence-checklist-grid{direction: rtl;}
 
 .due-diligence-checklist-card {
   position: relative;
@@ -3784,17 +3595,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .due-diligence-checklist-divider-wrapper {
     height: 50px;
   }
-}
-
-/* due-diligence-case-studies */
-.due-diligence-case-studies-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 120px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* due-diligence-case-studies */
+.due-diligence-case-studies-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 120px;overflow: visible;}html[dir="rtl"] /* due-diligence-case-studies */
+.due-diligence-case-studies-section{direction: rtl;}
 
 .due-diligence-case-studies-section .case-studies-container {
   max-width: 1200px;
@@ -3826,27 +3629,10 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 .due-diligence-case-studies-section .case-study-block:last-of-type {
   margin-bottom: 0;
-}
-
-/* Block 1: Content START (right), Image END (left) */
-.due-diligence-case-studies-section .case-study-block-1 {
-  direction: rtl;
-}
-
-/* Block 2: Image START (right), Content END (left) */
-.due-diligence-case-studies-section .case-study-block-2 {
-  direction: ltr;
-}
-
-.due-diligence-case-studies-section .case-study-block-2 .case-study-content {
-  direction: rtl;
-  text-align: right;
-}
-
-/* Block 3: Content START (right), Image END (left) */
-.due-diligence-case-studies-section .case-study-block-3 {
-  direction: rtl;
-}
+}html[dir="rtl"] /* Block 1: Content START (right), Image END (left) */
+.due-diligence-case-studies-section .case-study-block-1{direction: rtl;}html[dir="ltr"] /* Block 2: Image START (right), Content END (left) */
+.due-diligence-case-studies-section .case-study-block-2{direction: ltr;}.due-diligence-case-studies-section .case-study-block-2 .case-study-content{text-align: right;}html[dir="rtl"] .due-diligence-case-studies-section .case-study-block-2 .case-study-content{direction: rtl;}html[dir="rtl"] /* Block 3: Content START (right), Image END (left) */
+.due-diligence-case-studies-section .case-study-block-3{direction: rtl;}
 
 .due-diligence-case-studies-section .case-study-content {
   padding: 0;
@@ -3930,18 +3716,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
   .due-diligence-case-studies-section .case-studies-header h2 {
     font-size: 24px;
-  }
-
-  .due-diligence-case-studies-section .case-study-block {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-    margin-bottom: 48px;
-    direction: rtl !important;
-  }
-
-  .due-diligence-case-studies-section .case-study-block-2 .case-study-content {
-    direction: rtl;
-  }
+  }.due-diligence-case-studies-section .case-study-block{grid-template-columns: 1fr !important;gap: 24px;margin-bottom: 48px;}html[dir="rtl"] .due-diligence-case-studies-section .case-study-block{direction: rtl !important;}html[dir="rtl"] .due-diligence-case-studies-section .case-study-block-2 .case-study-content{direction: rtl;}
 
   .due-diligence-case-studies-section .case-study-content h3 {
     font-size: 20px;
@@ -3960,17 +3735,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .due-diligence-case-studies-section .case-studies-divider-wrapper {
     height: 60px;
   }
-}
-
-/* due-diligence-resources */
-.due-diligence-resources-section {
-  position: relative;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 100px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* due-diligence-resources */
+.due-diligence-resources-section{position: relative;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 100px;overflow: visible;}html[dir="rtl"] /* due-diligence-resources */
+.due-diligence-resources-section{direction: rtl;}
 
 .due-diligence-resources-section .due-diligence-resources-container {
   max-width: 1200px;
@@ -4114,17 +3881,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
     font-size: 20px;
     margin-bottom: 16px;
   }
-}
-
-/* due-diligence-cta */
-.due-diligence-cta-section {
-  position: relative;
-  background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);
-  color: var(--text-light);
-  padding: 80px 16px;
-  overflow: visible;
-  direction: rtl;
-}
+}/* due-diligence-cta */
+.due-diligence-cta-section{position: relative;background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);color: var(--text-light);padding: 80px 16px;overflow: visible;}html[dir="rtl"] /* due-diligence-cta */
+.due-diligence-cta-section{direction: rtl;}
 
 .due-diligence-cta-section .due-diligence-cta-container {
   max-width: 1200px;
@@ -4244,18 +4003,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .due-diligence-cta-section .due-diligence-panel-items {
     gap: 14px;
   }
-}
-
-/* contact-hero */
-.contact-hero-section {
-  position: relative;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: visible;
-  direction: rtl;
-}
+}/* contact-hero */
+.contact-hero-section{position: relative;min-height: 520px;display: flex;align-items: center;justify-content: flex-start;overflow: visible;}html[dir="rtl"] /* contact-hero */
+.contact-hero-section{direction: rtl;}
 
 .contact-hero-section__bg-wrapper {
   position: absolute;
@@ -4390,17 +4140,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .contact-hero-section__scrim {
     background: linear-gradient(180deg, rgba(18,26,43,0.2) 0%, rgba(18,26,43,0.75) 50%, rgba(18,26,43,0.85) 100%);
   }
-}
-
-/* contact-contact */
-.contact-contact-section {
-  position: relative;
-  overflow: visible;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 120px;
-  direction: rtl;
-}
+}/* contact-contact */
+.contact-contact-section{position: relative;overflow: visible;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 120px;}html[dir="rtl"] /* contact-contact */
+.contact-contact-section{direction: rtl;}
 
 .contact-contact-container {
   max-width: 1200px;
@@ -4452,21 +4194,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   font-weight: 600;
   color: var(--text-dark);
   text-align: right;
-}
-
-.contact-form-input,
-.contact-form-textarea {
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  color: var(--text-dark);
-  background: #FBF5EE;
-  border: 1px solid var(--border-light);
-  border-radius: 2px;
-  padding: 12px 16px;
-  transition: all 0.2s ease;
-  text-align: right;
-  direction: rtl;
-}
+}.contact-form-input,
+.contact-form-textarea{font-family: 'Rubik', sans-serif;font-size: 16px;color: var(--text-dark);background: #FBF5EE;border: 1px solid var(--border-light);border-radius: 2px;padding: 12px 16px;transition: all 0.2s ease;text-align: right;}html[dir="rtl"] .contact-form-input,
+.contact-form-textarea{direction: rtl;}
 
 .contact-form-input:focus,
 .contact-form-textarea:focus {
@@ -4643,17 +4373,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .contact-response-note {
     padding-top: 16px;
   }
-}
-
-/* contact-details */
-.contact-details-section {
-  position: relative;
-  overflow: visible;
-  background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);
-  color: var(--text-dark);
-  padding: 80px 16px 120px;
-  direction: rtl;
-}
+}/* contact-details */
+.contact-details-section{position: relative;overflow: visible;background: linear-gradient(180deg, #FBF5EE 0%, #F2E6D9 100%);color: var(--text-dark);padding: 80px 16px 120px;}html[dir="rtl"] /* contact-details */
+.contact-details-section{direction: rtl;}
 
 .contact-details-section .contact-details-container {
   max-width: 1200px;
@@ -4803,18 +4525,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   .contact-details-section .contact-details-notation-item {
     font-size: 11px;
   }
-}
-
-/* contact-cta */
-.contact-cta-section {
-  position: relative;
-  background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);
-  color: var(--text-light);
-  padding: 80px 16px;
-  overflow: visible;
-  text-align: right;
-  direction: rtl;
-}
+}/* contact-cta */
+.contact-cta-section{position: relative;background: linear-gradient(180deg, #1F2A44 0%, #121A2B 100%);color: var(--text-light);padding: 80px 16px;overflow: visible;text-align: right;}html[dir="rtl"] /* contact-cta */
+.contact-cta-section{direction: rtl;}
 
 .contact-cta-section .contact-cta-container {
   max-width: 1200px;
@@ -4946,14 +4659,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   color: var(--text-light);
   opacity: 0.7;
   font-weight: 600;
-}
-
-.contact-cta-section .snapshot-value {
-  color: var(--text-light);
-  opacity: 0.95;
-  text-align: left;
-  direction: ltr;
-}
+}.contact-cta-section .snapshot-value{color: var(--text-light);opacity: 0.95;text-align: left;}html[dir="ltr"] .contact-cta-section .snapshot-value{direction: ltr;}
 
 .contact-cta-section .contact-cta-texture {
   position: absolute;
@@ -5629,24 +5335,15 @@ body.accessibility-widget-visible ._access-menu {
   body.accessibility-widget-visible ._access-menu {
     display: none !important;
   }
-}
-
-/* ═══════════════════════════════════════════════════════════
+}/* ═══════════════════════════════════════════════════════════
    V2 REGENERATED SECTION CSS (בית-hero)
    Added: 2026-03-03T20:59:34.045Z
    ═══════════════════════════════════════════════════════════ */
-.index-hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-  background-color: #1F2A44;
-  padding-bottom: 100px;
-  direction: rtl;
-}
+.index-hero-section{position: relative;width: 100%;min-height: 100vh;display: flex;align-items: center;justify-content: center;overflow: visible;background-color: #1F2A44;padding-bottom: 100px;}html[dir="rtl"] /* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (בית-hero)
+   Added: 2026-03-03T20:59:34.045Z
+   ═══════════════════════════════════════════════════════════ */
+.index-hero-section{direction: rtl;}
 
 .index-hero-section__media-layer {
   position: absolute;
@@ -5863,15 +5560,547 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* ============================================
+   DIRECTION OVERRIDE STYLES
+   Only set direction property, NOT text-align
+   This preserves centered elements
+   ============================================ */
+
+/* Base direction for LTR */
+html[dir="ltr"], html[dir="ltr"] body {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] main,
+html[dir="ltr"] article,
+html[dir="ltr"] section,
+html[dir="ltr"] .content,
+html[dir="ltr"] .container,
+html[dir="ltr"] .wrapper {
+  direction: ltr !important;
+}
+
+/* ONLY apply text-align to legal page content that needs LTR alignment */
+html[dir="ltr"] .legal-content,
+html[dir="ltr"] .terms-content,
+html[dir="ltr"] .privacy-content,
+html[dir="ltr"] .legal-content p,
+html[dir="ltr"] .terms-content p,
+html[dir="ltr"] .privacy-content p,
+html[dir="ltr"] .legal-content li,
+html[dir="ltr"] .terms-content li,
+html[dir="ltr"] .privacy-content li {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Base direction for RTL */
+html[dir="rtl"], html[dir="rtl"] body {
+  direction: rtl !important;
+}
+
+html[dir="rtl"] main,
+html[dir="rtl"] article,
+html[dir="rtl"] section,
+html[dir="rtl"] .content,
+html[dir="rtl"] .container,
+html[dir="rtl"] .wrapper {
+  direction: rtl !important;
+}
+
+/* ONLY apply text-align to legal page content that needs RTL alignment */
+.legal-content,
+html[dir="rtl"] .terms-content,
+html[dir="rtl"] .privacy-content,
+html[dir="rtl"] .legal-content p,
+html[dir="rtl"] .terms-content p,
+html[dir="rtl"] .privacy-content p,
+html[dir="rtl"] .legal-content li,
+html[dir="rtl"] .terms-content li,
+html[dir="rtl"] .privacy-content li{text-align: right !important;}html[dir="rtl"] .legal-content,
+html[dir="rtl"] .terms-content,
+html[dir="rtl"] .privacy-content,
+html[dir="rtl"] .legal-content p,
+html[dir="rtl"] .terms-content p,
+html[dir="rtl"] .privacy-content p,
+html[dir="rtl"] .legal-content li,
+html[dir="rtl"] .terms-content li,
+html[dir="rtl"] .privacy-content li{direction: rtl !important;}
+
+
+/* ============================================
+   V2 NAVIGATION FIX
+   CRITICAL: For V2 sites created in RTL (Hebrew), the nav elements
+   inherit direction:rtl from the body. This reverses how flex order
+   is interpreted. For LTR pages, we MUST set direction:ltr on nav
+   containers to make the flex order work correctly.
+   
+   This section is ONLY included for V2 sites (detected by nav-right-group
+   or nav-cta-container classes) to avoid affecting V1 site layouts.
+   ============================================ */
+
+/* Fix V2 navbar layout for LTR pages */
+/* Direction must apply to all screen sizes, but flex-direction: row is desktop-only */
+html[dir="ltr"] header,
+html[dir="ltr"] nav,
+html[dir="ltr"] .navbar,
+html[dir="ltr"] .nav-container {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-right-group {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+html[dir="ltr"] .nav-cta-container {
+  direction: ltr !important;
+  order: 1 !important;
+  margin-left: auto !important;
+}
+
+html[dir="ltr"] .nav-menu,
+html[dir="ltr"] #navMenu {
+  direction: ltr !important;
+}
+
+html[dir="ltr"] .nav-brand {
+  direction: ltr !important;
+  order: -1 !important;
+}
+
+/* DESKTOP ONLY: Horizontal flex layout for navbar elements */
+@media (min-width: 769px) {
+  html[dir="ltr"] header,
+  html[dir="ltr"] nav,
+  html[dir="ltr"] .navbar,
+  html[dir="ltr"] .nav-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-right-group,
+  html[dir="ltr"] .nav-cta-container {
+    flex-direction: row !important;
+  }
+  
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] #navMenu {
+    flex-direction: row !important;
+  }
+}
+
+
+/* Language Switcher Container - Fixed Position */
+.zappy-lang-switcher-container {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* RTL: Move to left side */
+.zappy-lang-switcher-container{right: auto;left: 12px;}
+
+/* Language Switcher Styles */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Language switcher positioning - minimal, only gap spacing */
+/* NOTE: Removed margin-left:auto rules that broke V2 layouts */
+/* V2 layouts handle positioning via flexbox, we just add small gap */
+header .lang-switcher,
+nav .lang-switcher,
+.navbar .lang-switcher {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.lang-switcher-current {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.lang-switcher-current:hover {
+  opacity: 0.7;
+}
+
+/* ===========================================
+   LANGUAGE DROPDOWN POSITIONING
+   CRITICAL: position: absolute !important overrides any
+   mobile responsive CSS that resets absolute positioning
+   to relative. The dropdown MUST be absolutely positioned
+   relative to its parent .lang-switcher.
+   
+   HIGH SPECIFICITY SELECTORS needed to override:
+   [style*="position: absolute"]:not(...) { position: relative !important }
+   That selector has specificity ~0,4,0 so we need 0,5,0+ to win
+   =========================================== */
+.lang-switcher-dropdown,
+.lang-switcher .lang-switcher-dropdown,
+div.lang-switcher-dropdown,
+.nav-cta-container .lang-switcher .lang-switcher-dropdown,
+.navbar .nav-cta-container .lang-switcher-dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align dropdown's left edge to switcher's left edge */
+  left: 0;
+  right: auto;
+  margin-top: 6px;
+  min-width: 150px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  z-index: 1002 !important;
+}
+
+/* Ultra-high specificity override for problematic mobile responsive CSS */
+/* The problematic rule [style*="position: absolute"]:not():not():not() has specificity 0,4,0 */
+/* We need 0,5,0+ to win, so we add extra class/attribute selectors */
+.lang-switcher .lang-switcher-dropdown[style*="position: absolute"],
+.lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
+.nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
+.navbar .nav-cta-container .lang-switcher-dropdown[style],
+div.lang-switcher > div.lang-switcher-dropdown[style] {
+  position: absolute !important;
+  top: 100% !important;
+  /* Default LTR: align to left */
+  left: 0;
+  right: auto;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.15s ease;
+}
+
+.lang-option{text-align: right;}
+
+/* RTL: align dropdown's right edge to switcher's right edge */
+.lang-switcher-dropdown,
+html[lang="he"] .lang-switcher-dropdown,
+html[lang="ar"] .lang-switcher-dropdown{right: 0;left: auto;}
+
+.lang-option:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  /* Hide desktop lang-switcher on mobile - hamburger menu handles it */
+  /* High specificity needed to override stored CSS: .nav-cta-container .lang-switcher { display: flex !important } */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+  
+  .zappy-lang-switcher-container {
+    display: none !important;
+  }
+  
+  /* ===========================================
+     MOBILE LANGUAGE SUBMENU (inside hamburger)
+     =========================================== */
+  .mobile-lang-menu {
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+  
+  .mobile-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+    text-align: left;
+  }
+  
+  .mobile-lang-toggle{text-align: right;}
+  
+  .mobile-lang-chevron {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  
+  .mobile-lang-chevron{margin-left: 0;margin-right: auto;}
+  
+  .mobile-lang-options {
+    display: none;
+    flex-direction: column;
+    padding: 0 0 8px 0;
+  }
+  
+  .mobile-lang-options.open {
+    display: flex !important;
+  }
+  
+  .mobile-lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 30px 12px 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  
+  .mobile-lang-option{text-align: right;padding: 12px 50px 12px 30px;}
+  
+  .mobile-lang-option:hover,
+  .mobile-lang-option:active {
+    opacity: 1;
+  }
+  
+  .mobile-lang-option img {
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+/* ===========================================
+   RTL MOBILE HORIZONTAL OVERFLOW FIX
+   Prevents left whitespace gap in RTL mobile
+   caused by elements extending past viewport
+   =========================================== */
+
+/* Prevent horizontal scroll on RTL pages */
+/* Using 'clip' instead of 'hidden' to avoid breaking position:sticky */
+/* 'hidden' causes overflow-y to compute as 'auto', creating a scroll container */
+,
+html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
+
+/* Ensure carousel containers clip overflow to prevent horizontal scroll */
+.zappy-carousel-container,
+.zappy-carousel-wrapper,
+.benefits-section,
+.testimonials-section,
+[class*="carousel"] {
+  overflow-x: hidden !important;
+}
+
+/* Ensure lang-switcher parent clips its positioned children */
+.lang-switcher {
+  overflow: visible; /* Keep visible for dropdown to show */
+}
+
+/* ===========================================
+   MOBILE NAV BUTTON POSITIONING
+   CSS handles positioning based on html[dir] attribute.
+   This allows dynamic RTL/LTR switching without inline styles.
+   
+   LTR (default): hamburger LEFT (20px), phone RIGHT (20px)
+   RTL: hamburger RIGHT (20px), phone LEFT (20px) - mirrored
+   =========================================== */
+@media (max-width: 768px) {
+  /* Base positioning and visibility for mobile nav buttons */
+  /* CRITICAL: display: flex overrides any desktop display: none rules */
+  .mobile-toggle,
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    display: flex !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1001 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Phone button color - use accent color for visibility */
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn {
+    color: var(--accent, #f59e0b) !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]) .phone-header-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+    fill: currentColor !important;
+  }
+  
+  /* LTR positioning (default) - hamburger LEFT, phone RIGHT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle,
+  html[dir="ltr"] .mobile-toggle {
+    left: 20px !important;
+    right: auto !important;
+  }
+  
+  html:not([data-zappy-site-type="ecommerce"]):not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn,
+  html:not([data-zappy-site-type="ecommerce"])[dir="ltr"] .phone-header-btn {
+    right: 20px !important;
+    left: auto !important;
+  }
+  
+  /* LTR mobile menu slides from LEFT */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html[dir="ltr"] .nav-menu {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  /* ===========================================
+     MOBILE NAV MENU - VERTICAL LAYOUT FIX
+     CRITICAL: Override any desktop flex-direction: row rules
+     The mobile menu MUST stack vertically (column), not horizontally (row)
+     =========================================== */
+  html[dir="ltr"] .nav-menu,
+  html[dir="ltr"] .nav-menu.active,
+  html[dir="ltr"] #navMenu,
+  html[dir="ltr"] #navMenu.active,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu.active {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  /* RTL mobile menu - also vertical layout */
+  .nav-menu,
+  html[dir="rtl"] .nav-menu.active,
+  html[dir="rtl"] #navMenu,
+  html[dir="rtl"] #navMenu.active,
+  html[lang="he"] .nav-menu,
+  html[lang="he"] .nav-menu.active,
+  html[lang="ar"] .nav-menu,
+  html[lang="ar"] .nav-menu.active{flex-direction: column !important;align-items: stretch !important;}
+  
+  /* LTR mobile menu text alignment - left aligned */
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu li,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-menu a,
+  html[dir="ltr"] .nav-menu li,
+  html[dir="ltr"] .nav-menu a {
+    text-align: left !important;
+  }
+  
+  /* ===========================================
+     LTR MOBILE NAV-CONTAINER LAYOUT FIX
+     V2 sites have nav-container with flex-direction: row-reverse
+     for RTL. For LTR, we need flex-direction: row and centered logo.
+     =========================================== */
+  html[dir="ltr"] .nav-container,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  /* LTR: Center the logo/nav-brand in mobile navbar */
+  html[dir="ltr"] .nav-brand,
+  html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .nav-brand {
+    order: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  /* RTL: Center the logo/nav-brand in mobile navbar */
+  .nav-brand,
+  html[lang="he"] .nav-brand,
+  html[lang="ar"] .nav-brand{order: 0 !important;margin: 0 auto !important;}
+  
+  /* RTL lang-switcher dropdown constraint */
+  .lang-switcher{position: relative;}
+  
+  .lang-switcher-dropdown{left: auto !important;right: 0 !important;max-width: calc(100vw - 20px);}
+  
+  /* ===========================================
+     RTL MOBILE NAV BUTTON POSITIONING
+     In RTL: hamburger RIGHT, phone LEFT (mirror of LTR)
+     =========================================== */
+  .mobile-toggle,
+  html[lang="he"] .mobile-toggle,
+  html[lang="ar"] .mobile-toggle{left: auto !important;right: 20px !important;}
+  
+  :not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="he"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn,
+  html[lang="ar"]:not([data-zappy-site-type="ecommerce"]) .phone-header-btn{left: 20px !important;right: auto !important;}
+
+  /* Explicitly hide phone button on e-commerce sites (cleaner than fighting with e-commerce CSS). */
+  html[data-zappy-site-type="ecommerce"] .phone-header-btn {
+    display: none !important;
+  }
+  
+  /* RTL mobile menu slides from RIGHT */
+  .nav-menu,
+  html[lang="he"] .nav-menu,
+  html[lang="ar"] .nav-menu{left: auto !important;right: 0 !important;}
+  
+  /* ===========================================
+     MOBILE LANGUAGE SWITCHER
+     Desktop lang-switcher is hidden on mobile.
+     Language selection is handled by the hamburger
+     menu submenu (.mobile-lang-menu) instead.
+     High specificity to override stored CSS.
+     =========================================== */
+  .lang-switcher,
+  .nav-cta-container .lang-switcher,
+  .nav-container .lang-switcher,
+  .navbar .lang-switcher,
+  .navbar .nav-cta-container .lang-switcher,
+  .nav-icons-left .lang-switcher,
+  .nav-ecommerce-icons .lang-switcher {
+    display: none !important;
+  }
+}
+
+
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
-/* NOTE: Includes both html[dir="rtl"] AND [dir="rtl"] selectors as fallback */
+/* NOTE: Includes both AND [dir="rtl"] selectors as fallback */
 /* because some pages may be wrapped with <html lang="en"> (missing dir="rtl" on html) */
 /* but still have dir="rtl" on <body> or other ancestor elements */
 
-@media (max-width: 768px) {
-  /* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
+@media (max-width: 768px){/* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
   /* Using multiple parent selectors for higher specificity */
   html[dir="rtl"] .navbar .mobile-toggle,
   html[dir="rtl"] nav .mobile-toggle,
@@ -5885,12 +6114,10 @@ body.accessibility-widget-visible ._access-menu {
   [dir="rtl"] .mobile-toggle,
   html[lang="he"] .mobile-toggle,
   html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 15px !important;
-  }
+    left: auto !important;right: 15px !important;}
   
   /* RTL Phone Button - positioned on LEFT */
-  html[dir="rtl"] .navbar .phone-header-btn,
+  .navbar .phone-header-btn,
   html[dir="rtl"] nav .phone-header-btn,
   html[dir="rtl"] header .phone-header-btn,
   html[dir="rtl"] .nav-container .phone-header-btn,
@@ -5901,13 +6128,10 @@ body.accessibility-widget-visible ._access-menu {
   [dir="rtl"] .nav-container .phone-header-btn,
   [dir="rtl"] .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 15px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 15px !important;right: auto !important;}
   
   /* RTL Mobile Menu - slides from RIGHT */
-  html[dir="rtl"] .navbar .nav-menu,
+  .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
   html[dir="rtl"] .nav-container .nav-menu,
@@ -5918,22 +6142,17 @@ body.accessibility-widget-visible ._access-menu {
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    left: auto !important;
-    right: 0 !important;
-  }
+  html[lang="ar"] .nav-menu{left: auto !important;right: 0 !important;}
   
   /* RTL Mobile Menu Links - text align right */
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[dir="rtl"] .nav-menu li,
   [dir="rtl"] .nav-menu a,
   [dir="rtl"] .nav-menu li,
   html[lang="he"] .nav-menu a,
   html[lang="he"] .nav-menu li,
   html[lang="ar"] .nav-menu a,
-  html[lang="ar"] .nav-menu li {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu li{text-align: right !important;}
 }
 
 /* ========== END RTL MOBILE NAVBAR FIX ========== */
